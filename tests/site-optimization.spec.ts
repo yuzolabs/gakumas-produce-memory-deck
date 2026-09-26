@@ -118,6 +118,40 @@ test('browser-only storage is explained and backup reminders track output and re
   await expect(storageNotice).toContainText('バックアップをまだ出力していません。');
 });
 
+test('mobile controls and important labels stay readable without horizontal overflow', async ({
+  page,
+}) => {
+  for (const width of [320, 390, 600]) {
+    await page.setViewportSize({ width, height: 844 });
+    for (const path of ['/', '/memories/new?card=card-295', '/settings']) {
+      await page.goto(path);
+      await expect(page.locator('main h1')).toBeVisible();
+      const sizes = await page.evaluate(() => ({
+        viewport: window.innerWidth,
+        content: document.documentElement.scrollWidth,
+        controls: [...document.querySelectorAll('input, select')]
+          .filter((element) => element.checkVisibility())
+          .map((element) => Number.parseFloat(getComputedStyle(element).fontSize)),
+        bonusLabels: [...document.querySelectorAll('.bonus-column .field label')].map((element) =>
+          Number.parseFloat(getComputedStyle(element).fontSize),
+        ),
+      }));
+      expect(sizes.content, `${width}px ${path}`).toBeLessThanOrEqual(sizes.viewport);
+      expect(sizes.controls.length).toBeGreaterThan(0);
+      expect(sizes.controls.every((size) => size >= 16)).toBe(true);
+      expect(sizes.bonusLabels.every((size) => size >= 14)).toBe(true);
+    }
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/memories/new');
+  await page.getByRole('combobox', { name: 'カード名で検索' }).fill('スポット');
+  const cardName = page.getByRole('option').first().locator('strong');
+  await expect(cardName).toBeVisible();
+  expect(
+    await cardName.evaluate((element) => Number.parseFloat(getComputedStyle(element).fontSize)),
+  ).toBeGreaterThanOrEqual(14);
+});
+
 test('a failed route download offers a full-page recovery link', async ({ page }) => {
   await page.route('**/assets/memory-settings-*.js', (route) => route.abort());
   await page.goto('/settings');

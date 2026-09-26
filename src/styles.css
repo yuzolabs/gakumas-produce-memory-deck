@@ -1018,6 +1018,30 @@ main:focus {
   }
 }
 @media (max-width: 600px) {
+  body,
+  input,
+  select {
+    font-size: 1rem;
+  }
+  .field label,
+  .block-choice legend,
+  .bonus-column .field label,
+  .skill-search-selection,
+  .skill-search-results [role='option'] .skill-option-text,
+  .summary-details dd,
+  .comparison-table {
+    font-size: 0.875rem;
+  }
+  .bonus-column small,
+  .summary-details dt,
+  .bonus-value span,
+  .bonus-value small,
+  .customization-label small,
+  .skill-search-results .skill-option-text > span,
+  .comparison-table td::before,
+  .record-date {
+    font-size: 0.75rem;
+  }
   .backup-layout {
     grid-template-columns: 1fr;
   }
@@ -1055,7 +1079,7 @@ main:focus {
     font-size: 14px;
   }
   .card-identity > span {
-    font-size: 10px;
+    font-size: 0.75rem;
   }
   .card-add {
     padding-inline: 4px;
