@@ -31,11 +31,24 @@ export type ProduceMemory = z.infer<typeof produceMemorySchema>;
 /** Branded memory IDs cannot be accidentally substituted with card IDs. */
 export type ProduceMemoryId = ProduceMemory['id'];
 
+/**
+ * `crypto.randomUUID` only exists in secure contexts, so plain-HTTP access
+ * from LAN addresses falls back to getRandomValues with UUID v4 formatting.
+ */
+function newMemoryUuid(): string {
+  if (typeof crypto.randomUUID === 'function') return crypto.randomUUID();
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = Array.from(bytes, (byte) => byte.toString(16).padStart(2, '0')).join('');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
 /** Creates an unsaved draft; no owned data is written until the user confirms. */
 export function createMemoryDraft(cardId = '', master = memoryMaster): ProduceMemory {
   const now = new Date().toISOString();
   return {
-    id: produceMemoryIdSchema.parse(crypto.randomUUID()),
+    id: produceMemoryIdSchema.parse(newMemoryUuid()),
     cardId: cardId as ProduceMemory['cardId'],
     acquisitionTimingId: master.acquisitionTimings.find((t) => !t.retired)!.id,
     customizations: [],
