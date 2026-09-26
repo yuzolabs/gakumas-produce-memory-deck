@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "bun run validate:master && tsc --noEmit && vite build",
     "validate:master": "bun scripts/validate-memory-master.ts",
+    "fonts:build": "uv run --locked scripts/build-heading-font.py",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

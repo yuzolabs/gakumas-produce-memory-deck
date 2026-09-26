@@ -1,7 +1,15 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
-@import '@fontsource/zen-maru-gothic/700.css';
+/* Subset of Zen Maru Gothic 700; regenerate with `bun run fonts:build`.
+   License: licenses/zen-maru-gothic-LICENSE.txt (SIL OFL 1.1). */
+@font-face {
+  font-family: 'Zen Maru Gothic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/heading-font.woff2') format('woff2');
+}
 
 @theme inline {
   --font-sans: 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
