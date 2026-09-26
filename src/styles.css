@@ -145,7 +145,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 11px;
   color: #21354a;
   line-height: 1.5;
   flex-shrink: 0;
@@ -969,14 +968,6 @@ main:focus {
     padding: 14px 16px 0;
     gap: 12px;
     flex-wrap: wrap;
-  }
-  .brand br {
-    display: none;
-  }
-  .brand span {
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
   }
   .brand strong {
     font-size: 20px;

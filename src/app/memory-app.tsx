@@ -20,7 +20,7 @@ function MemoryLayout() {
   const location = useLocation();
   const [recoveryError, setRecoveryError] = useState('');
   useEffect(() => {
-    document.title = `${location.pathname === '/' ? '一覧' : location.pathname === '/settings' ? 'バックアップ' : '登録・編集'} | プロデュースメモリー帳`;
+    document.title = `${location.pathname === '/' ? '一覧' : location.pathname === '/settings' ? 'バックアップ' : '登録・編集'} | 学マスメモリー帳`;
     window.scrollTo(0, 0);
     document.getElementById('main-content')?.focus({ preventScroll: true });
   }, [location.pathname, location.search]);
@@ -41,9 +41,7 @@ function MemoryLayout() {
           <Link className="brand" to="/">
             <BookOpen aria-hidden="true" />
             <span>
-              プロデュース
-              <br />
-              <strong>メモリー帳</strong>
+              <strong>学マスメモリー帳</strong>
             </span>
           </Link>
           <nav aria-label="メインナビゲーション">
