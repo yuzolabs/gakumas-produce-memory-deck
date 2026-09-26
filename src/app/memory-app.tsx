@@ -79,7 +79,9 @@ function MemoryLayout() {
         )}
       </main>
       <footer className="site-footer">
-        <span>非公式ファンツール/©2026 学マスメモリー帳</span>
+        <span>
+          非公式ファンツール / Made by <a href="https://x.com/yuzora_yu">@yuzora_yu</a>
+        </span>
       </footer>
     </>
   );
