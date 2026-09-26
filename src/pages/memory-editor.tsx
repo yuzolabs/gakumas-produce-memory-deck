@@ -123,9 +123,6 @@ function MemoryEditorForm({
     <>
       <div className="page-heading">
         <div>
-          <Link className="back-link" to="/">
-            一覧に戻る
-          </Link>
           <h1>{editing ? 'メモリーを編集' : copying ? 'メモリーを複製' : 'メモリーを登録'}</h1>
         </div>
       </div>

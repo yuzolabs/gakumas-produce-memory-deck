@@ -348,10 +348,10 @@ test('continuous registration resets a draft and protects it from navigation', a
     'スポットライト+',
   );
   await page.getByLabel('取得タイミング', { exact: true }).selectOption('after-first-exam');
-  await page.getByRole('link', { name: '一覧に戻る' }).click();
+  await page.getByRole('link', { name: '一覧', exact: true }).click();
   await page.getByRole('alertdialog').getByRole('button', { name: 'キャンセル' }).click();
   await expect(page.getByLabel('取得タイミング', { exact: true })).toHaveValue('after-first-exam');
-  await page.getByRole('link', { name: '一覧に戻る' }).click();
+  await page.getByRole('link', { name: '一覧', exact: true }).click();
   await page.getByRole('alertdialog').getByRole('button', { name: '破棄して移動' }).click();
   await expect(page).toHaveURL('/');
 });
