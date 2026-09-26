@@ -233,9 +233,6 @@ main:focus {
   font-size: 12px;
   color: #52677a;
 }
-.site-footer a {
-  text-decoration: underline;
-}
 .editor-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 330px;

@@ -79,9 +79,7 @@ function MemoryLayout() {
         )}
       </main>
       <footer className="site-footer">
-        <span>このブラウザだけに保存 · ログイン不要</span>
-        <Link to="/settings">データを守るためにバックアップを</Link>
-        <span>非公式ファンツール · 画像は使用していません</span>
+        <span>非公式ファンツール</span>
       </footer>
     </>
   );
