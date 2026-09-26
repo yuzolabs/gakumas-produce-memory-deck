@@ -8,6 +8,7 @@ export function SelectionField({
   options,
   disabled = false,
   hint,
+  hideLabel = false,
 }: {
   label: string;
   value: string;
@@ -15,11 +16,15 @@ export function SelectionField({
   options: { value: string; label: string; disabled?: boolean }[];
   disabled?: boolean;
   hint?: string;
+  /** Keeps the label for screen readers and getByLabel while hiding the visible text. */
+  hideLabel?: boolean;
 }) {
   const id = useId();
   return (
     <div className="field">
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} className={hideLabel ? 'visually-hidden' : undefined}>
+        {label}
+      </label>
       <select
         id={id}
         value={value}

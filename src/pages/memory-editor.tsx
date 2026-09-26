@@ -127,7 +127,6 @@ function MemoryEditorForm({
             一覧に戻る
           </Link>
           <h1>{editing ? 'メモリーを編集' : copying ? 'メモリーを複製' : 'メモリーを登録'}</h1>
-          <p>手元のメモリーと見比べて、条件を選んでください。</p>
         </div>
       </div>
       {notice && (
@@ -158,7 +157,6 @@ function MemoryEditorForm({
               options={memoryMaster.acquisitionTimings
                 .filter((t) => !t.retired || (editing && t.id === initial.acquisitionTimingId))
                 .map((t) => ({ value: t.id, label: t.label }))}
-              hint="カード効果の「開始時手札に入る」とは別の項目です。"
             />
           </fieldset>
           <fieldset className="form-section" disabled={store.busy || !card}>
@@ -205,11 +203,9 @@ function MemoryEditorForm({
           </fieldset>
           <fieldset className="form-section" disabled={store.busy || !card}>
             <legend>HIFアビリティ</legend>
-            <p className="section-hint">
-              獲得カードとは別に、効果の発動対象カードを選びます。重複発動不可。
-            </p>
             <SelectionField
               label="HIFの発動対象カード"
+              hideLabel
               value={draft.hif?.abilityId ?? ''}
               onChange={(id) => {
                 const selected = memoryMaster.abilities.find((a) => a.id === id);
@@ -237,9 +233,6 @@ function MemoryEditorForm({
           </fieldset>
           <fieldset className="form-section" disabled={store.busy}>
             <legend>パラメーターボーナス</legend>
-            <p className="section-hint">
-              割合と初期加算を分けて記録します。付いていない項目は0です。
-            </p>
             <div className="bonus-fields">
               {memoryMaster.attributes.map((attribute) => (
                 <div className={`bonus-column ${attribute.id}`} key={attribute.id}>
