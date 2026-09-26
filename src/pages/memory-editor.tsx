@@ -4,6 +4,7 @@ import { memoryMaster } from '../domain/memory-master';
 import { createMemoryDraft, getMemoryIssues, type ProduceMemory } from '../domain/produce-memory';
 import { describeStorageError, useMemoryStore } from '../storage/memory-store';
 import { SelectionField } from '../components/selection-field';
+import { BlockChoiceField } from '../components/block-choice-field';
 import { SkillCardSearch } from '../components/skill-card-search';
 import { CustomizationStepper } from '../components/customization-stepper';
 import { MemorySummary } from '../components/memory-summary';
@@ -123,11 +124,7 @@ function MemoryEditorForm({
     <>
       <div className="page-heading">
         <div>
-          <Link className="back-link" to="/">
-            一覧に戻る
-          </Link>
           <h1>{editing ? 'メモリーを編集' : copying ? 'メモリーを複製' : 'メモリーを登録'}</h1>
-          <p>手元のメモリーと見比べて、条件を選んでください。</p>
         </div>
       </div>
       {notice && (
@@ -151,23 +148,21 @@ function MemoryEditorForm({
               onSelect={selectCard}
               disabled={store.busy}
             />
-            <SelectionField
+          </fieldset>
+          <fieldset className="form-section" disabled={store.busy}>
+            <legend>取得タイミング</legend>
+            <BlockChoiceField
+              hideLabel
               label="取得タイミング"
               value={draft.acquisitionTimingId}
               onChange={(value) => updateDraft({ ...draft, acquisitionTimingId: value })}
               options={memoryMaster.acquisitionTimings
                 .filter((t) => !t.retired || (editing && t.id === initial.acquisitionTimingId))
                 .map((t) => ({ value: t.id, label: t.label }))}
-              hint="カード効果の「開始時手札に入る」とは別の項目です。"
             />
           </fieldset>
           <fieldset className="form-section" disabled={store.busy || !card}>
             <legend>カスタム</legend>
-            <p className="section-hint">
-              {card
-                ? `合計 ${selectedCost} / ${card.maxCustomizations}段階。−／＋で調整し、0でカスタムなしに戻します。数値は効果の最終値ではなく、特別指導の回数です。`
-                : '先にカードを選択してください。'}
-            </p>
             {card?.customizationIds.length === 0 && (
               <p>このカードには選択可能なカスタムがありません。</p>
             )}
@@ -205,11 +200,9 @@ function MemoryEditorForm({
           </fieldset>
           <fieldset className="form-section" disabled={store.busy || !card}>
             <legend>HIFアビリティ</legend>
-            <p className="section-hint">
-              獲得カードとは別に、効果の発動対象カードを選びます。重複発動不可。
-            </p>
             <SelectionField
               label="HIFの発動対象カード"
+              hideLabel
               value={draft.hif?.abilityId ?? ''}
               onChange={(id) => {
                 const selected = memoryMaster.abilities.find((a) => a.id === id);
@@ -237,9 +230,6 @@ function MemoryEditorForm({
           </fieldset>
           <fieldset className="form-section" disabled={store.busy}>
             <legend>パラメーターボーナス</legend>
-            <p className="section-hint">
-              割合と初期加算を分けて記録します。付いていない項目は0です。
-            </p>
             <div className="bonus-fields">
               {memoryMaster.attributes.map((attribute) => (
                 <div className={`bonus-column ${attribute.id}`} key={attribute.id}>
@@ -311,9 +301,6 @@ function MemoryEditorForm({
         <aside className="preview-panel" aria-label="入力内容のプレビュー">
           <h2>登録するメモリー</h2>
           <MemorySummary memory={draft} />
-          <p className="section-hint">
-            保存先はこのブラウザです。定期的なバックアップをおすすめします。
-          </p>
         </aside>
       </div>
       <MemoryConfirmDialog
@@ -322,7 +309,6 @@ function MemoryEditorForm({
           if (!open) setConfirmation(null);
         }}
         title="この内容で保存しますか？"
-        description="スキルカード・取得タイミング・ボーナスをご確認ください。"
         action={confirmation === 'next' ? '保存して次を登録' : '保存する'}
         busy={store.busy}
         error={error}

@@ -3,7 +3,7 @@ import { test, expect, type Page } from '@playwright/test';
 
 async function enterScreenshotMemory(page: Page) {
   await page.goto('/memories/new?card=card-295');
-  await page.getByLabel('取得タイミング', { exact: true }).selectOption('after-first-exam');
+  await page.getByRole('radio', { name: '中間試験／1次オーディション後に獲得' }).check();
   await page.getByRole('button', { name: '好調+を増やす', exact: true }).click();
   await page.getByRole('button', { name: '好調+を増やす', exact: true }).click();
   await page.getByLabel('HIFの発動対象カード').selectOption('hif-card-288');
@@ -55,6 +55,16 @@ test('HIF target selection assigns its fixed effect without a separate effect se
   await confirmSave(page);
   const cleared = JSON.parse(await downloadBackup(page));
   expect(cleared.memories[0].hif).toBeNull();
+});
+
+test('clicking outside the confirm dialog dismisses it like cancel', async ({ page }) => {
+  await page.goto('/memories/new?card=card-295');
+  await page.getByRole('button', { name: '内容を確認して保存', exact: true }).click();
+  const dialog = page.getByRole('alertdialog');
+  await expect(dialog).toBeVisible();
+  await page.mouse.click(10, 10);
+  await expect(dialog).toHaveCount(0);
+  await expect(page.getByLabel('カード名で検索')).toHaveValue('スポットライト+');
 });
 
 test('customization +/- controls enforce limits and persist zero as no customization', async ({
@@ -231,7 +241,7 @@ test('register screenshot, reload, duplicate, edit, filter timing, delete and re
   await expect(group).toContainText('好調+ 2段階');
   await expect(group).toContainText('ひと呼吸使用後');
   await group.getByRole('link', { name: '複製', exact: true }).click();
-  await page.getByLabel('取得タイミング', { exact: true }).selectOption('start');
+  await page.getByRole('radio', { name: '開始時に獲得' }).check();
   await confirmSave(page);
   group = await ownedSpotlight(page);
   await group.getByRole('button', { name: /スポットライト\+/ }).click();
@@ -239,7 +249,7 @@ test('register screenshot, reload, duplicate, edit, filter timing, delete and re
   await page.getByLabel('取得タイミング', { exact: true }).selectOption('start');
   await expect(group).toContainText('条件一致 1枚');
   await group.getByRole('link', { name: '編集', exact: true }).first().click();
-  await expect(page.getByLabel('取得タイミング', { exact: true })).toHaveValue('start');
+  await expect(page.getByRole('radio', { name: '開始時に獲得' })).toBeChecked();
   await page.reload();
   await expect(page.getByLabel('Vo 初期ステータス加算', { exact: true })).toHaveValue('15');
   await page.getByLabel('Vo 初期ステータス加算', { exact: true }).selectOption('25');
@@ -347,11 +357,13 @@ test('continuous registration resets a draft and protects it from navigation', a
   await expect(page.getByRole('combobox', { name: 'カード名で検索' })).toHaveValue(
     'スポットライト+',
   );
-  await page.getByLabel('取得タイミング', { exact: true }).selectOption('after-first-exam');
-  await page.getByRole('link', { name: '一覧に戻る' }).click();
+  await page.getByRole('radio', { name: '中間試験／1次オーディション後に獲得' }).check();
+  await page.getByRole('link', { name: '一覧', exact: true }).click();
   await page.getByRole('alertdialog').getByRole('button', { name: 'キャンセル' }).click();
-  await expect(page.getByLabel('取得タイミング', { exact: true })).toHaveValue('after-first-exam');
-  await page.getByRole('link', { name: '一覧に戻る' }).click();
+  await expect(
+    page.getByRole('radio', { name: '中間試験／1次オーディション後に獲得' }),
+  ).toBeChecked();
+  await page.getByRole('link', { name: '一覧', exact: true }).click();
   await page.getByRole('alertdialog').getByRole('button', { name: '破棄して移動' }).click();
   await expect(page).toHaveURL('/');
 });
@@ -415,11 +427,13 @@ test('unsupported storage is recoverable without silent resets', async ({ page }
 
 test('direct routes, missing IDs, keyboard controls and mobile overflow', async ({ page }) => {
   await page.goto('/memories/new?card=card-295');
-  const timing = page.getByLabel('取得タイミング', { exact: true });
+  const timing = page.getByRole('radio', { name: '開始時に獲得' });
   await timing.focus();
   await page.keyboard.press('ArrowDown');
   await page.keyboard.press('Tab');
-  await expect(timing).toHaveValue('after-first-exam');
+  await expect(
+    page.getByRole('radio', { name: '中間試験／1次オーディション後に獲得' }),
+  ).toBeChecked();
   const save = page.getByRole('button', { name: '内容を確認して保存' });
   await save.focus();
   await page.keyboard.press('Enter');

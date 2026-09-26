@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 import { Download, Upload } from 'lucide-react';
 import { createMemoryBackup, parseMemoryBackup, type MemoryBackup } from '../domain/memory-backup';
-import { memoryMaster } from '../domain/memory-master';
 import { describeStorageError, useMemoryStore } from '../storage/memory-store';
 import { downloadMemoryJson } from '../lib/download-memory-json';
 import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
@@ -74,14 +73,7 @@ export function MemorySettingsPage() {
       <div className="page-heading">
         <div>
           <h1>バックアップ</h1>
-          <p>大切なメモリーを、ブラウザの外にも残しておきましょう。</p>
         </div>
-      </div>
-      <div className="backup-warning">
-        <h2>保存先はこのブラウザです</h2>
-        <p>
-          サイトデータの削除、ブラウザの変更、端末の故障で登録内容は失われます。クラウド同期はありません。ローカルと公開サイトのデータも別管理です。
-        </p>
       </div>
       {notice && (
         <p className="notice" role="status">
@@ -153,23 +145,6 @@ export function MemorySettingsPage() {
         </section>
       </div>
       <section className="master-notice">
-        <h2>収録範囲とデータの出典</h2>
-        <p>
-          マスターバージョン {memoryMaster.version}。通常のプロデュースカード（R・SR・SSR）
-          {memoryMaster.cards.length}
-          種を、強化前後を分けて収録しています。固有・サポート・基本・レジェンドカードは対象外です。
-        </p>
-        <p>
-          カスタムは効果の最終値ではなく段階数で記録します。HIFはプランごとの発動対象と固定効果を収録。画像・その他の通常アビリティ・自動評価は対象外です。
-        </p>
-        <p>
-          HIF対応：
-          <a href="https://wikiwiki.jp/gakumas/HIF/メモリーアビリティ">
-            学園アイドルマスターコンテストWiki
-          </a>
-          。ボーナス値：<a href="https://game8.jp/gakuen-idolmaster/613860">Game8のメモリー解説</a>
-          。
-        </p>
         <details>
           <summary>フォントのライセンス（SIL Open Font License）</summary>
           <pre>{fontLicense}</pre>

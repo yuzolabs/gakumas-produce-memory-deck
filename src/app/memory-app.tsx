@@ -20,7 +20,7 @@ function MemoryLayout() {
   const location = useLocation();
   const [recoveryError, setRecoveryError] = useState('');
   useEffect(() => {
-    document.title = `${location.pathname === '/' ? '一覧' : location.pathname === '/settings' ? 'バックアップ' : '登録・編集'} | プロデュースメモリー帳`;
+    document.title = `${location.pathname === '/' ? '一覧' : location.pathname === '/settings' ? 'バックアップ' : '登録・編集'} | 学マスメモリー帳`;
     window.scrollTo(0, 0);
     document.getElementById('main-content')?.focus({ preventScroll: true });
   }, [location.pathname, location.search]);
@@ -41,9 +41,7 @@ function MemoryLayout() {
           <Link className="brand" to="/">
             <BookOpen aria-hidden="true" />
             <span>
-              プロデュース
-              <br />
-              <strong>メモリー帳</strong>
+              <strong>学マスメモリー帳</strong>
             </span>
           </Link>
           <nav aria-label="メインナビゲーション">
@@ -81,9 +79,9 @@ function MemoryLayout() {
         )}
       </main>
       <footer className="site-footer">
-        <span>このブラウザだけに保存 · ログイン不要</span>
-        <Link to="/settings">データを守るためにバックアップを</Link>
-        <span>非公式ファンツール · 画像は使用していません</span>
+        <span>
+          非公式ファンツール / Made by <a href="https://x.com/yuzora_yu">@yuzora_yu</a>
+        </span>
       </footer>
     </>
   );

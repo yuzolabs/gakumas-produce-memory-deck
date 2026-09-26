@@ -49,9 +49,6 @@ export function MemoryFilterPanel({
       </div>
       <details className="advanced-filters">
         <summary>カスタム・HIF・ボーナス条件</summary>
-        <p className="section-hint">
-          すべての条件を、同じ1枚のメモリー内で満たすカードだけを表示します。
-        </p>
         <div className="field-grid">
           <SelectionField
             label="カスタムの種類"
@@ -126,7 +123,7 @@ export function MemoryFilterPanel({
         </div>
       </details>
       <div className="filter-footer">
-        <Button variant="ghost" onClick={() => onChange({ ...emptyMemoryFilters })}>
+        <Button variant="outline" onClick={() => onChange({ ...emptyMemoryFilters })}>
           条件をリセット
         </Button>
         <SelectionField
