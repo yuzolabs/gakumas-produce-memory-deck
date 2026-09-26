@@ -1,5 +1,8 @@
 node_modules
 .venv
+dist/
+test-results/
+playwright-report/
 
 .sisyphus
 .devcontainer/.git-container
