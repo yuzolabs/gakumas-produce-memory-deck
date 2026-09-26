@@ -1,0 +1,109 @@
+import { useEffect, useRef, useState } from 'react';
+import { Link, useBlocker, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { memoryMaster } from '../domain/memory-master';
+import { createMemoryDraft, getMemoryIssues, type ProduceMemory } from '../domain/produce-memory';
+import { describeStorageError, useMemoryStore } from '../storage/memory-store';
+import { SelectionField } from '../components/selection-field';
+import { MemorySummary } from '../components/memory-summary';
+import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
+import { Button } from '../components/ui/button';
+
+/** Invalid edit/copy links never create an accidental blank record. */
+export function MemoryEditorPage() {
+  const { id } = useParams();
+  const [search] = useSearchParams();
+  const { state } = useMemoryStore();
+  if (state.status !== 'ready') return null;
+  const copyId = search.get('copy');
+  const source = state.snapshot.memories.find(memory => memory.id === (id ?? copyId));
+  if ((id || copyId) && !source) return <section className="empty-state"><h1>メモリーが見つかりません</h1><p>削除されたか、URLが間違っています。</p><Link to="/">一覧に戻る</Link></section>;
+  const initial = source ? (copyId ? { ...structuredClone(source), ...createCopyIdentity() } : structuredClone(source)) : createMemoryDraft(search.get('card') ?? '');
+  return <MemoryEditorForm key={id ?? copyId ?? search.get('card') ?? 'new'} initial={initial} editing={Boolean(id)} copying={Boolean(copyId)} />;
+}
+function createCopyIdentity() {
+  const draft = createMemoryDraft();
+  return { id: draft.id, createdAt: draft.createdAt, updatedAt: draft.updatedAt };
+}
+
+function MemoryEditorForm({ initial, editing, copying }: { initial: ProduceMemory; editing: boolean; copying: boolean }) {
+  const [draft, setDraft] = useState(initial);
+  const [query, setQuery] = useState('');
+  const [error, setError] = useState('');
+  const [notice, setNotice] = useState('');
+  const [confirmation, setConfirmation] = useState<'save' | 'next' | null>(null);
+  const dirty = useRef(copying);
+  const blocker = useBlocker(() => dirty.current);
+  const navigate = useNavigate();
+  const store = useMemoryStore();
+  const card = memoryMaster.cards.find(c => c.id === draft.cardId);
+  const issues = getMemoryIssues(draft, memoryMaster, editing);
+  const ability = memoryMaster.abilities.find(a => a.id === draft.hif?.abilityId);
+  const selectedCost = draft.customizations.reduce((total, selected) => total + (memoryMaster.customizations.find(c => c.id === selected.definitionId)?.values.find(v => v.id === selected.valueId)?.cost ?? 0), 0);
+  useEffect(() => {
+    const guard = (event: BeforeUnloadEvent) => { if (dirty.current) event.preventDefault(); };
+    window.addEventListener('beforeunload', guard);
+    return () => window.removeEventListener('beforeunload', guard);
+  }, []);
+  function updateDraft(next: ProduceMemory) { dirty.current = true; setError(''); setNotice(''); setDraft(next); }
+  function selectCard(cardId: string) {
+    if (draft.cardId === cardId) return;
+    if ((draft.customizations.length || draft.hif) && !window.confirm('カードを変更するとカスタムとHIFアビリティの選択を解除します。変更しますか？')) return;
+    updateDraft({ ...draft, cardId: cardId as ProduceMemory['cardId'], customizations: [], hif: null });
+  }
+  async function saveMemory() {
+    try {
+      await store.save({ ...draft, updatedAt: new Date().toISOString() });
+      dirty.current = false;
+      if (confirmation === 'next') {
+        setDraft(createMemoryDraft(draft.cardId)); setConfirmation(null); setNotice('保存しました。同じカードの次のメモリーを登録できます。');
+      } else { setConfirmation(null); navigate('/', { state: { notice: 'メモリーを保存しました。' } }); }
+    } catch (caught) { setError(describeStorageError(caught)); }
+  }
+  const cardOptions = memoryMaster.cards.filter(c => (!c.retired || c.id === initial.cardId && editing) && (c.name.normalize('NFKC').includes(query.normalize('NFKC')) || c.id === draft.cardId));
+  return <>
+    <div className="page-heading"><div><Link className="back-link" to="/">一覧に戻る</Link><h1>{editing ? 'メモリーを編集' : copying ? 'メモリーを複製' : 'メモリーを登録'}</h1><p>手元のメモリーと見比べて、条件を選んでください。</p></div></div>
+    {notice && <p className="notice" role="status">{notice}</p>}
+    <div className="editor-layout">
+      <form onSubmit={event => { event.preventDefault(); setError(''); setConfirmation('save'); }}>
+        <fieldset className="form-section" disabled={store.busy}>
+          <legend>獲得するスキルカード</legend>
+          <div className="field"><label htmlFor="card-query">カード名で検索</label><input id="card-query" type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="例：スポットライト" /></div>
+          <SelectionField label="スキルカード" value={draft.cardId} onChange={selectCard} options={[{ value: '', label: 'カードを選択' }, ...cardOptions.map(c => ({ value: c.id, label: `${c.name} ｜ ${memoryMaster.plans.find(p => p.id === c.plan)?.label} / ${c.rarity}${c.retired ? '（廃止）' : ''}` }))]} />
+          <SelectionField label="取得タイミング" value={draft.acquisitionTimingId} onChange={value => updateDraft({ ...draft, acquisitionTimingId: value })} options={memoryMaster.acquisitionTimings.filter(t => !t.retired || editing && t.id === initial.acquisitionTimingId).map(t => ({ value: t.id, label: t.label }))} hint="カード効果の「開始時手札に入る」とは別の項目です。" />
+        </fieldset>
+        <fieldset className="form-section" disabled={store.busy || !card}>
+          <legend>カスタム</legend>
+          <p className="section-hint">{card ? `合計 ${selectedCost} / ${card.maxCustomizations}段階。段階は特別指導の回数です。効果の最終値ではありません。` : '先にカードを選択してください。'}</p>
+          {card?.customizationIds.length === 0 && <p>このカードには選択可能なカスタムがありません。</p>}
+          <div className="field-grid">{card?.customizationIds.map(id => {
+            const definition = memoryMaster.customizations.find(c => c.id === id)!;
+            const selected = draft.customizations.find(c => c.definitionId === id);
+            const oldSelected = initial.customizations.find(c => c.definitionId === id);
+            if (definition.retired && !(editing && oldSelected)) return null;
+            const ownCost = definition.values.find(v => v.id === selected?.valueId)?.cost ?? 0;
+            return <SelectionField key={id} label={definition.name} value={selected?.valueId ?? ''} onChange={valueId => updateDraft({ ...draft, customizations: [...draft.customizations.filter(c => c.definitionId !== id), ...(valueId ? [{ definitionId: id, valueId }] : [])] })} options={[{ value: '', label: 'なし' }, ...definition.values.filter(v => !v.retired || editing && v.id === oldSelected?.valueId).map(v => ({ value: v.id, label: v.label, disabled: selectedCost - ownCost + v.cost > card.maxCustomizations }))]} />;
+          })}</div>
+        </fieldset>
+        <fieldset className="form-section" disabled={store.busy || !card}>
+          <legend>HIFアビリティ</legend><p className="section-hint">獲得カードとは別に、効果の発動対象カードを選びます。重複発動不可。</p>
+          <SelectionField label="HIFの発動対象カード" value={draft.hif?.abilityId ?? ''} onChange={id => {
+            const selected = memoryMaster.abilities.find(a => a.id === id);
+            updateDraft({ ...draft, hif: selected ? { abilityId: selected.id, valueId: selected.values.find(v => !v.retired)!.id } : null });
+          }} options={[{ value: '', label: 'HIFアビリティなし' }, ...memoryMaster.abilities.filter(a => (!a.retired || editing && a.id === initial.hif?.abilityId) && (card?.plan === 'free' || card?.plan === a.plan)).map(a => ({ value: a.id, label: a.name }))]} />
+          {ability && <SelectionField label="HIFの効果・回数" value={draft.hif!.valueId} onChange={valueId => updateDraft({ ...draft, hif: { abilityId: ability.id, valueId } })} options={ability.values.filter(v => !v.retired || editing && v.id === initial.hif?.valueId).map(v => ({ value: v.id, label: v.label }))} />}
+        </fieldset>
+        <fieldset className="form-section" disabled={store.busy}>
+          <legend>パラメーターボーナス</legend><p className="section-hint">割合と初期加算を分けて記録します。付いていない項目は0です。</p>
+          <div className="bonus-fields">{memoryMaster.attributes.map(attribute => <div className={`bonus-column ${attribute.id}`} key={attribute.id}><h3>{attribute.label} <small>{attribute.name}</small></h3>
+            {memoryMaster.bonusDefinitions.map(definition => <SelectionField key={definition.id} label={`${attribute.label} ${definition.label}`} value={String(draft.bonuses[attribute.id][definition.id])} onChange={value => updateDraft({ ...draft, bonuses: { ...draft.bonuses, [attribute.id]: { ...draft.bonuses[attribute.id], [definition.id]: Number(value) } } })} options={definition.values.map(value => ({ value: String(value), label: `${value === 0 ? '' : '+'}${value}${definition.unit}` }))} />)}
+          </div>)}</div>
+        </fieldset>
+        {issues.length > 0 && <div className="validation-message" role="status"><p>保存するには次の項目を確認してください。</p><ul>{issues.map((issue, index) => <li key={index}>{issue}</li>)}</ul></div>}
+        <div className="form-actions"><Button type="submit" disabled={Boolean(issues.length) || store.busy}>内容を確認して保存</Button>{!editing && <Button variant="outline" type="button" disabled={Boolean(issues.length) || store.busy} onClick={() => { setError(''); setConfirmation('next'); }}>保存して次を登録</Button>}</div>
+      </form>
+      <aside className="preview-panel" aria-label="入力内容のプレビュー"><h2>登録するメモリー</h2><MemorySummary memory={draft} /><p className="section-hint">保存先はこのブラウザです。定期的なバックアップをおすすめします。</p></aside>
+    </div>
+    <MemoryConfirmDialog open={confirmation !== null} onOpenChange={open => { if (!open) setConfirmation(null); }} title="この内容で保存しますか？" description="スキルカード・取得タイミング・ボーナスをご確認ください。" action={confirmation === 'next' ? '保存して次を登録' : '保存する'} busy={store.busy} error={error} onConfirm={() => void saveMemory()}><MemorySummary memory={draft} /></MemoryConfirmDialog>
+    <MemoryConfirmDialog open={blocker.state === 'blocked'} onOpenChange={open => { if (!open && blocker.state === 'blocked') blocker.reset(); }} title="入力内容を破棄しますか？" description="まだ保存していない変更があります。" action="破棄して移動" onConfirm={() => { if (blocker.state === 'blocked') { dirty.current = false; blocker.proceed(); } }} />
+  </>;
+}
