@@ -123,7 +123,7 @@ export function MemoryFilterPanel({
         </div>
       </details>
       <div className="filter-footer">
-        <Button variant="ghost" onClick={() => onChange({ ...emptyMemoryFilters })}>
+        <Button variant="outline" onClick={() => onChange({ ...emptyMemoryFilters })}>
           条件をリセット
         </Button>
         <SelectionField
