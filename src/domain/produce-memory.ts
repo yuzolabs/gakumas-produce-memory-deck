@@ -106,7 +106,8 @@ export function getMemoryIssues(
     issues.push(`HIF付きメモリーの通常アビリティは${master.hifBonusSlots}枠までです`);
   if (!memory.hif && slots > master.normalBonusSlots)
     issues.push(`通常アビリティは${master.normalBonusSlots}枠までです`);
-  if (memory.updatedAt < memory.createdAt) issues.push('更新日時が登録日時より前です');
+  if (Date.parse(memory.updatedAt) < Date.parse(memory.createdAt))
+    issues.push('更新日時が登録日時より前です');
   return issues;
 }
 

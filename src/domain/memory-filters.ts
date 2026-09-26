@@ -90,8 +90,8 @@ export function filterMemoryCards(
   for (const memory of memories)
     byCard.set(memory.cardId, [...(byCard.get(memory.cardId) ?? []), memory]);
   const groups = master.cards.flatMap((card) => {
-    const owned = (byCard.get(card.id) ?? []).sort((a, b) =>
-      b.updatedAt.localeCompare(a.updatedAt),
+    const owned = (byCard.get(card.id) ?? []).sort(
+      (a, b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt),
     );
     if (card.retired && !owned.length) return [];
     if (
@@ -112,7 +112,9 @@ export function filterMemoryCards(
     if (filters.sort === 'owned' && a.owned.length !== b.owned.length)
       return b.owned.length - a.owned.length;
     if (filters.sort === 'updated') {
-      const difference = (b.owned[0]?.updatedAt ?? '').localeCompare(a.owned[0]?.updatedAt ?? '');
+      const difference =
+        (b.owned[0] ? Date.parse(b.owned[0].updatedAt) : 0) -
+        (a.owned[0] ? Date.parse(a.owned[0].updatedAt) : 0);
       if (difference) return difference;
     }
     return a.card.name.localeCompare(b.card.name, 'ja');

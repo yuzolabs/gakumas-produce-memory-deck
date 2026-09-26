@@ -4,6 +4,18 @@ import { createMemoryDraft } from './produce-memory';
 import { memoryMaster } from './memory-master';
 
 describe('same-memory filtering', () => {
+  it('sorts timestamps with different fractional-second precision chronologically', () => {
+    const earlier = createMemoryDraft('card-295');
+    earlier.updatedAt = '2026-01-01T00:00:00Z';
+    const later = createMemoryDraft('card-295');
+    later.updatedAt = '2026-01-01T00:00:00.123Z';
+    const groups = filterMemoryCards([earlier, later], {
+      ...emptyMemoryFilters,
+      ownership: 'owned',
+      sort: 'updated',
+    });
+    expect(groups[0].owned).toEqual([later, earlier]);
+  });
   it('does not synthesize a nonexistent combination from separate owned copies', () => {
     const customMemory = createMemoryDraft('card-295');
     customMemory.customizations = [

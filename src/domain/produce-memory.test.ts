@@ -3,6 +3,12 @@ import { memoryMaster, validateMemoryMaster } from './memory-master';
 import { createMemoryDraft, getMemoryIssues, produceMemorySchema } from './produce-memory';
 
 describe('memory master and rules', () => {
+  it('compares timestamps by time rather than fractional-second formatting', () => {
+    const memory = createMemoryDraft('card-295');
+    memory.createdAt = '2026-01-01T00:00:00Z';
+    memory.updatedAt = '2026-01-01T00:00:00.123Z';
+    expect(getMemoryIssues(produceMemorySchema.parse(memory))).toEqual([]);
+  });
   it('validates all imported references and representative screenshot values', () => {
     expect(validateMemoryMaster(memoryMaster).cards).toHaveLength(328);
     const card = memoryMaster.cards.find((c) => c.name === 'スポットライト+')!;
