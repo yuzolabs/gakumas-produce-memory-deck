@@ -84,13 +84,11 @@ test('register screenshot, reload, duplicate, edit, filter timing, delete and re
   await page.getByRole('alertdialog').getByRole('button', { name: '削除する' }).click();
   await expect(group.getByRole('link', { name: '編集', exact: true })).toHaveCount(1);
   await page.goto('/settings');
-  await page
-    .getByLabel('バックアップファイル（JSON・10MB以下）')
-    .setInputFiles({
-      name: 'backup.json',
-      mimeType: 'application/json',
-      buffer: Buffer.from(backupText),
-    });
+  await page.getByLabel('バックアップファイル（JSON・10MB以下）').setInputFiles({
+    name: 'backup.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(backupText),
+  });
   await page.getByRole('button', { name: '全件置換の確認へ' }).click();
   await expect(page.getByRole('alertdialog')).toContainText('現在の1枚');
   await page.getByRole('alertdialog').getByRole('button', { name: 'キャンセル' }).click();
