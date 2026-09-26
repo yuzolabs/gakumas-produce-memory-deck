@@ -6,6 +6,8 @@ import { describeStorageError, useMemoryStore } from '../storage/memory-store';
 import { downloadMemoryJson } from '../lib/download-memory-json';
 import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
 import { Button } from '../components/ui/button';
+import fontLicense from '../../licenses/zen-maru-gothic-LICENSE.txt?raw';
+import uiLicense from '../../licenses/shadcn-ui-LICENSE.txt?raw';
 
 /** Import is a validated, explicitly confirmed, all-or-nothing replacement. */
 export function MemorySettingsPage() {
@@ -168,6 +170,14 @@ export function MemorySettingsPage() {
           。ボーナス値：<a href="https://game8.jp/gakuen-idolmaster/613860">Game8のメモリー解説</a>
           。
         </p>
+        <details>
+          <summary>フォントのライセンス（SIL Open Font License）</summary>
+          <pre>{fontLicense}</pre>
+        </details>
+        <details>
+          <summary>shadcn/uiのライセンス（MIT）</summary>
+          <pre>{uiLicense}</pre>
+        </details>
       </section>
       <MemoryConfirmDialog
         open={confirming}
