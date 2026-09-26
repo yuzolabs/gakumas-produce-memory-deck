@@ -6,6 +6,7 @@ import { MemoryEditorPage } from '../pages/memory-editor';
 import { downloadMemoryJson } from '../lib/download-memory-json';
 import { Button } from '../components/ui/button';
 import { MemoryListPage } from '../pages/memory-list';
+import { MemorySettingsPage } from '../pages/memory-settings';
 
 function MemoryLayout() {
   const store = useMemoryStore();
@@ -35,7 +36,7 @@ const router = createBrowserRouter([{ element: <MemoryLayout />, errorElement: <
   { path: '/', element: <MemoryListPage /> },
   { path: '/memories/new', element: <MemoryEditorPage /> },
   { path: '/memories/:id/edit', element: <MemoryEditorPage /> },
-  { path: '/settings', element: <h1>バックアップ</h1> },
+  { path: '/settings', element: <MemorySettingsPage /> },
   { path: '*', element: <section className="empty-state"><h1>ページが見つかりません</h1><Link to="/">一覧に戻る</Link></section> },
 ] }]);
 
