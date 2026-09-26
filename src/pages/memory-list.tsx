@@ -17,6 +17,7 @@ import {
 import { describeStorageError, useMemoryStore } from '../storage/memory-store';
 import { MemoryFilterPanel } from '../components/memory-filter-panel';
 import { MemorySummary } from '../components/memory-summary';
+import { SkillCardIcon } from '../components/skill-card-icon';
 import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
@@ -58,9 +59,7 @@ function CardMemoryGroup({
           aria-controls={`copies-${card.id}`}
           onClick={() => setExpanded(!expanded)}
         >
-          <span className={`card-mark ${card.kind}`} aria-hidden="true">
-            {card.kind === 'active' ? '◆' : '◇'}
-          </span>
+          <SkillCardIcon card={card} className={`card-icon ${card.kind}`} />
           <span className="card-identity">
             <strong>{card.name}</strong>
             <span>

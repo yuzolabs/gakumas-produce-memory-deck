@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react';
 import { memoryMaster, type SkillCard } from '../domain/memory-master';
+import { SkillCardIcon } from './skill-card-icon';
 
 /** Search suggestions only change the selected card after explicit click or Enter. */
 export function SkillCardSearch({
@@ -124,11 +125,14 @@ export function SkillCardSearch({
                   onMouseDown={(event) => event.preventDefault()}
                   onClick={() => chooseCard(card)}
                 >
-                  <strong>{card.name}</strong>
-                  <span>
-                    {memoryMaster.plans.find((plan) => plan.id === card.plan)?.label} /{' '}
-                    {card.rarity} / {card.kind === 'active' ? 'アクティブ' : 'メンタル'}
-                    {card.retired ? '（廃止）' : ''}
+                  <SkillCardIcon card={card} className="skill-option-icon" />
+                  <span className="skill-option-text">
+                    <strong>{card.name}</strong>
+                    <span>
+                      {memoryMaster.plans.find((plan) => plan.id === card.plan)?.label} /{' '}
+                      {card.rarity} / {card.kind === 'active' ? 'アクティブ' : 'メンタル'}
+                      {card.retired ? '（廃止）' : ''}
+                    </span>
                   </span>
                 </li>
               ))}
@@ -139,7 +143,9 @@ export function SkillCardSearch({
       <p id={`${id}-selection`} className="skill-search-selection">
         {selectedCard ? (
           <>
-            選択中：<strong>{selectedCard.name}</strong>
+            選択中：
+            <SkillCardIcon card={selectedCard} className="skill-selection-icon" />
+            <strong>{selectedCard.name}</strong>
           </>
         ) : selectedId ? (
           `選択中の不明なカードID：${selectedId}`

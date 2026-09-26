@@ -1,4 +1,5 @@
 import { memoryMaster } from '../domain/memory-master';
+import { SkillCardIcon } from './skill-card-icon';
 import {
   describeMemoryCustomizations,
   describeMemoryHif,
@@ -10,7 +11,10 @@ export function MemorySummary({ memory }: { memory: ProduceMemory }) {
   const card = memoryMaster.cards.find((c) => c.id === memory.cardId);
   return (
     <div className="memory-summary">
-      <h3>{card?.name ?? (memory.cardId || 'カード未選択')}</h3>
+      <h3>
+        {card && <SkillCardIcon card={card} className="summary-card-icon" />}
+        <span>{card?.name ?? (memory.cardId || 'カード未選択')}</span>
+      </h3>
       <dl className="summary-details">
         <dt>取得タイミング</dt>
         <dd>

@@ -1,8 +1,29 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { memoryMaster, validateMemoryMaster } from './memory-master';
 import { createMemoryDraft, getMemoryIssues, produceMemorySchema } from './produce-memory';
 
 describe('memory master and rules', () => {
+  it('creates valid UUID drafts even without a secure context', () => {
+    vi.stubGlobal(
+      'crypto',
+      new Proxy(crypto, {
+        get(target, property) {
+          if (property === 'randomUUID') return undefined;
+          const value = Reflect.get(target, property);
+          return typeof value === 'function' ? value.bind(target) : value;
+        },
+      }),
+    );
+    try {
+      const ids = new Set(Array.from({ length: 16 }, () => createMemoryDraft().id));
+      expect(ids.size).toBe(16);
+      expect(createMemoryDraft('card-295').id).toMatch(
+        /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/,
+      );
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
   it('compares timestamps by time rather than fractional-second formatting', () => {
     const memory = createMemoryDraft('card-295');
     memory.createdAt = '2026-01-01T00:00:00Z';
