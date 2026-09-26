@@ -17,6 +17,7 @@ const masterValueSchema = z.object({
 const skillCardSchema = z.object({
   id: skillCardIdSchema,
   name: z.string().min(1),
+  nameReading: z.string().trim().min(1),
   plan: z.string().min(1),
   kind: z.enum(['active', 'mental']),
   rarity: z.enum(['R', 'SR', 'SSR']),

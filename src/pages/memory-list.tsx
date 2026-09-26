@@ -200,6 +200,9 @@ export function MemoryListPage() {
       </div>
       <MemoryFilterPanel
         filters={filters}
+        searchCards={filterOwnedMemoryCards(memories, { ...filters, query: '' }).map(
+          (group) => group.card,
+        )}
         onChange={(next) => {
           setFilters(next);
           setPage(1);

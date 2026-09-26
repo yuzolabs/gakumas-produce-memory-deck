@@ -1,4 +1,5 @@
-import { memoryMaster } from '../domain/memory-master';
+import { memoryMaster, type SkillCard } from '../domain/memory-master';
+import { SkillCardSearchInput } from './skill-card-search-input';
 import { emptyMemoryFilters, type MemoryFilters } from '../domain/memory-filters';
 import { SelectionField } from './selection-field';
 import { Button } from './ui/button';
@@ -6,9 +7,11 @@ import { Button } from './ui/button';
 /** Bonus filters are minimum values; customization levels are exact matches. */
 export function MemoryFilterPanel({
   filters,
+  searchCards,
   onChange,
 }: {
   filters: MemoryFilters;
+  searchCards: SkillCard[];
   onChange: (filters: MemoryFilters) => void;
 }) {
   const custom = memoryMaster.customizations.find((c) => c.id === filters.customId);
@@ -18,16 +21,13 @@ export function MemoryFilterPanel({
   return (
     <section className="filter-panel" aria-label="カードとメモリーの絞り込み">
       <div className="filter-basics">
-        <div className="field search-field">
-          <label htmlFor="memory-search">カード名で検索</label>
-          <input
-            id="memory-search"
-            type="search"
-            placeholder="スキルカード名を入力"
-            value={filters.query}
-            onChange={(event) => update('query', event.target.value)}
-          />
-        </div>
+        <SkillCardSearchInput
+          className="search-field"
+          cards={searchCards}
+          query={filters.query}
+          onQueryChange={(query) => update('query', query)}
+          onSelect={() => true}
+        />
         <SelectionField
           label="プラン"
           value={filters.plan}

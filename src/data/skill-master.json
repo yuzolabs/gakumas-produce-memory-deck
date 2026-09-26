@@ -4,6 +4,7 @@
     {
       "id": "card-24",
       "name": "軽い足取り",
+      "nameReading": "かるいあしどり",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -15,6 +16,7 @@
     {
       "id": "card-25",
       "name": "軽い足取り+",
+      "nameReading": "かるいあしどり+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -26,6 +28,7 @@
     {
       "id": "card-26",
       "name": "愛嬌",
+      "nameReading": "あいきょう",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -37,6 +40,7 @@
     {
       "id": "card-27",
       "name": "愛嬌+",
+      "nameReading": "あいきょう+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -48,6 +52,7 @@
     {
       "id": "card-28",
       "name": "準備運動",
+      "nameReading": "じゅんびうんどう",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -59,6 +64,7 @@
     {
       "id": "card-29",
       "name": "準備運動+",
+      "nameReading": "じゅんびうんどう+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -70,6 +76,7 @@
     {
       "id": "card-30",
       "name": "ファンサ",
+      "nameReading": "ふぁんさ",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -81,6 +88,7 @@
     {
       "id": "card-31",
       "name": "ファンサ+",
+      "nameReading": "ふぁんさ+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -92,6 +100,7 @@
     {
       "id": "card-32",
       "name": "勢い任せ",
+      "nameReading": "いきおいまかせ",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -103,6 +112,7 @@
     {
       "id": "card-33",
       "name": "勢い任せ+",
+      "nameReading": "いきおいまかせ+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -114,6 +124,7 @@
     {
       "id": "card-34",
       "name": "ハイタッチ",
+      "nameReading": "はいたっち",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -125,6 +136,7 @@
     {
       "id": "card-35",
       "name": "ハイタッチ+",
+      "nameReading": "はいたっち+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -136,6 +148,7 @@
     {
       "id": "card-36",
       "name": "トークタイム",
+      "nameReading": "とーくたいむ",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -147,6 +160,7 @@
     {
       "id": "card-37",
       "name": "トークタイム+",
+      "nameReading": "とーくたいむ+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -158,6 +172,7 @@
     {
       "id": "card-38",
       "name": "今日もおはよう",
+      "nameReading": "きょうもおはよう",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -169,6 +184,7 @@
     {
       "id": "card-39",
       "name": "今日もおはよう+",
+      "nameReading": "きょうもおはよう+",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -180,6 +196,7 @@
     {
       "id": "card-40",
       "name": "ゆるふわおしゃべり",
+      "nameReading": "ゆるふわおしゃべり",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -191,6 +208,7 @@
     {
       "id": "card-41",
       "name": "ゆるふわおしゃべり+",
+      "nameReading": "ゆるふわおしゃべり+",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -202,6 +220,7 @@
     {
       "id": "card-42",
       "name": "もう少しだけ",
+      "nameReading": "もうすこしだけ",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -213,6 +232,7 @@
     {
       "id": "card-43",
       "name": "もう少しだけ+",
+      "nameReading": "もうすこしだけ+",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -224,6 +244,7 @@
     {
       "id": "card-44",
       "name": "手拍子",
+      "nameReading": "てびょうし",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -235,6 +256,7 @@
     {
       "id": "card-45",
       "name": "手拍子+",
+      "nameReading": "てびょうし+",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -246,6 +268,7 @@
     {
       "id": "card-46",
       "name": "元気な挨拶",
+      "nameReading": "げんきなあいさつ",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -257,6 +280,7 @@
     {
       "id": "card-47",
       "name": "元気な挨拶+",
+      "nameReading": "げんきなあいさつ+",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -268,6 +292,7 @@
     {
       "id": "card-48",
       "name": "気合十分！",
+      "nameReading": "きあいじゅうぶん！",
       "plan": "free",
       "kind": "mental",
       "rarity": "R",
@@ -279,6 +304,7 @@
     {
       "id": "card-49",
       "name": "気合十分！+",
+      "nameReading": "きあいじゅうぶん！+",
       "plan": "free",
       "kind": "mental",
       "rarity": "R",
@@ -290,6 +316,7 @@
     {
       "id": "card-50",
       "name": "ファーストステップ",
+      "nameReading": "ふぁーすとすてっぷ",
       "plan": "free",
       "kind": "mental",
       "rarity": "R",
@@ -301,6 +328,7 @@
     {
       "id": "card-51",
       "name": "ファーストステップ+",
+      "nameReading": "ふぁーすとすてっぷ+",
       "plan": "free",
       "kind": "mental",
       "rarity": "R",
@@ -312,6 +340,7 @@
     {
       "id": "card-52",
       "name": "バランス感覚",
+      "nameReading": "ばらんすかんかく",
       "plan": "sense",
       "kind": "mental",
       "rarity": "R",
@@ -323,6 +352,7 @@
     {
       "id": "card-53",
       "name": "バランス感覚+",
+      "nameReading": "ばらんすかんかく+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "R",
@@ -334,6 +364,7 @@
     {
       "id": "card-54",
       "name": "楽観的",
+      "nameReading": "らっかんてき",
       "plan": "sense",
       "kind": "mental",
       "rarity": "R",
@@ -345,6 +376,7 @@
     {
       "id": "card-55",
       "name": "楽観的+",
+      "nameReading": "らっかんてき+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "R",
@@ -356,6 +388,7 @@
     {
       "id": "card-56",
       "name": "深呼吸",
+      "nameReading": "しんこきゅう",
       "plan": "sense",
       "kind": "mental",
       "rarity": "R",
@@ -367,6 +400,7 @@
     {
       "id": "card-57",
       "name": "深呼吸+",
+      "nameReading": "しんこきゅう+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "R",
@@ -378,6 +412,7 @@
     {
       "id": "card-58",
       "name": "リスタート",
+      "nameReading": "りすたーと",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -389,6 +424,7 @@
     {
       "id": "card-59",
       "name": "リスタート+",
+      "nameReading": "りすたーと+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -400,6 +436,7 @@
     {
       "id": "card-60",
       "name": "えいえいおー",
+      "nameReading": "えいえいおー",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -411,6 +448,7 @@
     {
       "id": "card-61",
       "name": "えいえいおー+",
+      "nameReading": "えいえいおー+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -422,6 +460,7 @@
     {
       "id": "card-62",
       "name": "リズミカル",
+      "nameReading": "りずみかる",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -433,6 +472,7 @@
     {
       "id": "card-63",
       "name": "リズミカル+",
+      "nameReading": "りずみかる+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -444,6 +484,7 @@
     {
       "id": "card-64",
       "name": "思い出し笑い",
+      "nameReading": "おもいだしわらい",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -455,6 +496,7 @@
     {
       "id": "card-65",
       "name": "思い出し笑い+",
+      "nameReading": "おもいだしわらい+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -466,6 +508,7 @@
     {
       "id": "card-66",
       "name": "パステル気分",
+      "nameReading": "ぱすてるきぶん",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -477,6 +520,7 @@
     {
       "id": "card-67",
       "name": "パステル気分+",
+      "nameReading": "ぱすてるきぶん+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -488,6 +532,7 @@
     {
       "id": "card-68",
       "name": "励まし",
+      "nameReading": "はげまし",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -499,6 +544,7 @@
     {
       "id": "card-69",
       "name": "励まし+",
+      "nameReading": "はげまし+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -510,6 +556,7 @@
     {
       "id": "card-70",
       "name": "前途洋々",
+      "nameReading": "ぜんとようよう",
       "plan": "free",
       "kind": "active",
       "rarity": "SR",
@@ -521,6 +568,7 @@
     {
       "id": "card-71",
       "name": "前途洋々+",
+      "nameReading": "ぜんとようよう+",
       "plan": "free",
       "kind": "active",
       "rarity": "SR",
@@ -532,6 +580,7 @@
     {
       "id": "card-72",
       "name": "決めポーズ",
+      "nameReading": "きめぽーず",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -543,6 +592,7 @@
     {
       "id": "card-73",
       "name": "決めポーズ+",
+      "nameReading": "きめぽーず+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -554,6 +604,7 @@
     {
       "id": "card-74",
       "name": "アドリブ",
+      "nameReading": "あどりぶ",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -565,6 +616,7 @@
     {
       "id": "card-75",
       "name": "アドリブ+",
+      "nameReading": "あどりぶ+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -576,6 +628,7 @@
     {
       "id": "card-76",
       "name": "情熱ターン",
+      "nameReading": "じょうねつたーん",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -587,6 +640,7 @@
     {
       "id": "card-77",
       "name": "情熱ターン+",
+      "nameReading": "じょうねつたーん+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -598,6 +652,7 @@
     {
       "id": "card-78",
       "name": "飛躍",
+      "nameReading": "ひやく",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -609,6 +664,7 @@
     {
       "id": "card-79",
       "name": "飛躍+",
+      "nameReading": "ひやく+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -620,6 +676,7 @@
     {
       "id": "card-80",
       "name": "祝福",
+      "nameReading": "しゅくふく",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -631,6 +688,7 @@
     {
       "id": "card-81",
       "name": "祝福+",
+      "nameReading": "しゅくふく+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -642,6 +700,7 @@
     {
       "id": "card-82",
       "name": "スタートダッシュ",
+      "nameReading": "すたーとだっしゅ",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -653,6 +712,7 @@
     {
       "id": "card-83",
       "name": "スタートダッシュ+",
+      "nameReading": "すたーとだっしゅ+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -664,6 +724,7 @@
     {
       "id": "card-84",
       "name": "スタンドプレー",
+      "nameReading": "すたんどぷれー",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -675,6 +736,7 @@
     {
       "id": "card-85",
       "name": "スタンドプレー+",
+      "nameReading": "すたんどぷれー+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -686,6 +748,7 @@
     {
       "id": "card-86",
       "name": "シュプレヒコール",
+      "nameReading": "しゅぷれひこーる",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -697,6 +760,7 @@
     {
       "id": "card-87",
       "name": "シュプレヒコール+",
+      "nameReading": "しゅぷれひこーる+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -708,6 +772,7 @@
     {
       "id": "card-88",
       "name": "ラブリーウインク",
+      "nameReading": "らぶりーういんく",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -719,6 +784,7 @@
     {
       "id": "card-89",
       "name": "ラブリーウインク+",
+      "nameReading": "らぶりーういんく+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -730,6 +796,7 @@
     {
       "id": "card-90",
       "name": "ありがとうの言葉",
+      "nameReading": "ありがとうのことば",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -741,6 +808,7 @@
     {
       "id": "card-91",
       "name": "ありがとうの言葉+",
+      "nameReading": "ありがとうのことば+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -752,6 +820,7 @@
     {
       "id": "card-92",
       "name": "ハートの合図",
+      "nameReading": "はーとのあいず",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -763,6 +832,7 @@
     {
       "id": "card-93",
       "name": "ハートの合図+",
+      "nameReading": "はーとのあいず+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -774,6 +844,7 @@
     {
       "id": "card-94",
       "name": "キラメキ",
+      "nameReading": "きらめき",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -785,6 +856,7 @@
     {
       "id": "card-95",
       "name": "キラメキ+",
+      "nameReading": "きらめき+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -796,6 +868,7 @@
     {
       "id": "card-96",
       "name": "みんな大好き",
+      "nameReading": "みんなだいすき",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -807,6 +880,7 @@
     {
       "id": "card-97",
       "name": "みんな大好き+",
+      "nameReading": "みんなだいすき+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -818,6 +892,7 @@
     {
       "id": "card-98",
       "name": "アイドル宣言",
+      "nameReading": "あいどるせんげん",
       "plan": "free",
       "kind": "mental",
       "rarity": "SR",
@@ -829,6 +904,7 @@
     {
       "id": "card-99",
       "name": "アイドル宣言+",
+      "nameReading": "あいどるせんげん+",
       "plan": "free",
       "kind": "mental",
       "rarity": "SR",
@@ -840,6 +916,7 @@
     {
       "id": "card-100",
       "name": "ハイテンション",
+      "nameReading": "はいてんしょん",
       "plan": "free",
       "kind": "mental",
       "rarity": "SR",
@@ -851,6 +928,7 @@
     {
       "id": "card-101",
       "name": "ハイテンション+",
+      "nameReading": "はいてんしょん+",
       "plan": "free",
       "kind": "mental",
       "rarity": "SR",
@@ -862,6 +940,7 @@
     {
       "id": "card-102",
       "name": "眼力",
+      "nameReading": "がんりき",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -873,6 +952,7 @@
     {
       "id": "card-103",
       "name": "眼力+",
+      "nameReading": "がんりき+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -884,6 +964,7 @@
     {
       "id": "card-104",
       "name": "大声援",
+      "nameReading": "だいせいえん",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -895,6 +976,7 @@
     {
       "id": "card-105",
       "name": "大声援+",
+      "nameReading": "だいせいえん+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -906,6 +988,7 @@
     {
       "id": "card-106",
       "name": "演出計画",
+      "nameReading": "えんしゅつけいかく",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -917,6 +1000,7 @@
     {
       "id": "card-107",
       "name": "演出計画+",
+      "nameReading": "えんしゅつけいかく+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -928,6 +1012,7 @@
     {
       "id": "card-108",
       "name": "願いの力",
+      "nameReading": "ねがいのちから",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -939,6 +1024,7 @@
     {
       "id": "card-109",
       "name": "願いの力+",
+      "nameReading": "ねがいのちから+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -950,6 +1036,7 @@
     {
       "id": "card-110",
       "name": "静かな意志",
+      "nameReading": "しずかないし",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -961,6 +1048,7 @@
     {
       "id": "card-111",
       "name": "静かな意志+",
+      "nameReading": "しずかないし+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -972,6 +1060,7 @@
     {
       "id": "card-112",
       "name": "始まりの合図",
+      "nameReading": "はじまりのあいず",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -983,6 +1072,7 @@
     {
       "id": "card-113",
       "name": "始まりの合図+",
+      "nameReading": "はじまりのあいず+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -994,6 +1084,7 @@
     {
       "id": "card-114",
       "name": "意地",
+      "nameReading": "いじ",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -1005,6 +1096,7 @@
     {
       "id": "card-115",
       "name": "意地+",
+      "nameReading": "いじ+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -1016,6 +1108,7 @@
     {
       "id": "card-116",
       "name": "存在感",
+      "nameReading": "そんざいかん",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -1027,6 +1120,7 @@
     {
       "id": "card-117",
       "name": "存在感+",
+      "nameReading": "そんざいかん+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -1038,6 +1132,7 @@
     {
       "id": "card-118",
       "name": "成功への道筋",
+      "nameReading": "せいこうへのみちすじ",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -1049,6 +1144,7 @@
     {
       "id": "card-119",
       "name": "成功への道筋+",
+      "nameReading": "せいこうへのみちすじ+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -1060,6 +1156,7 @@
     {
       "id": "card-120",
       "name": "あふれる思い出",
+      "nameReading": "あふれるおもいで",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1071,6 +1168,7 @@
     {
       "id": "card-121",
       "name": "あふれる思い出+",
+      "nameReading": "あふれるおもいで+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1082,6 +1180,7 @@
     {
       "id": "card-122",
       "name": "ふれあい",
+      "nameReading": "ふれあい",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1093,6 +1192,7 @@
     {
       "id": "card-123",
       "name": "ふれあい+",
+      "nameReading": "ふれあい+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1104,6 +1204,7 @@
     {
       "id": "card-124",
       "name": "幸せな時間",
+      "nameReading": "しあわせなじかん",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1115,6 +1216,7 @@
     {
       "id": "card-125",
       "name": "幸せな時間+",
+      "nameReading": "しあわせなじかん+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1126,6 +1228,7 @@
     {
       "id": "card-126",
       "name": "ファンシーチャーム",
+      "nameReading": "ふぁんしーちゃーむ",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1137,6 +1240,7 @@
     {
       "id": "card-127",
       "name": "ファンシーチャーム+",
+      "nameReading": "ふぁんしーちゃーむ+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1148,6 +1252,7 @@
     {
       "id": "card-128",
       "name": "ワクワクが止まらない",
+      "nameReading": "わくわくがとまらない",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1159,6 +1264,7 @@
     {
       "id": "card-129",
       "name": "ワクワクが止まらない+",
+      "nameReading": "わくわくがとまらない+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1170,6 +1276,7 @@
     {
       "id": "card-130",
       "name": "本番前夜",
+      "nameReading": "ほんばんぜんや",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1181,6 +1288,7 @@
     {
       "id": "card-131",
       "name": "本番前夜+",
+      "nameReading": "ほんばんぜんや+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1192,6 +1300,7 @@
     {
       "id": "card-132",
       "name": "ひなたぼっこ",
+      "nameReading": "ひなたぼっこ",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1203,6 +1312,7 @@
     {
       "id": "card-133",
       "name": "ひなたぼっこ+",
+      "nameReading": "ひなたぼっこ+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1214,6 +1324,7 @@
     {
       "id": "card-134",
       "name": "イメトレ",
+      "nameReading": "いめとれ",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1225,6 +1336,7 @@
     {
       "id": "card-135",
       "name": "イメトレ+",
+      "nameReading": "いめとれ+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1236,6 +1348,7 @@
     {
       "id": "card-136",
       "name": "やる気は満点",
+      "nameReading": "やるきはまんてん",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1247,6 +1360,7 @@
     {
       "id": "card-137",
       "name": "やる気は満点+",
+      "nameReading": "やるきはまんてん+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1258,6 +1372,7 @@
     {
       "id": "card-138",
       "name": "ゆめみごこち",
+      "nameReading": "ゆめみごこち",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1269,6 +1384,7 @@
     {
       "id": "card-139",
       "name": "ゆめみごこち+",
+      "nameReading": "ゆめみごこち+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1280,6 +1396,7 @@
     {
       "id": "card-140",
       "name": "コール&レスポンス",
+      "nameReading": "こーるあんどれすぽんす",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1291,6 +1408,7 @@
     {
       "id": "card-141",
       "name": "コール&レスポンス+",
+      "nameReading": "こーるあんどれすぽんす+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1302,6 +1420,7 @@
     {
       "id": "card-142",
       "name": "バズワード",
+      "nameReading": "ばずわーど",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1313,6 +1432,7 @@
     {
       "id": "card-143",
       "name": "バズワード+",
+      "nameReading": "ばずわーど+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1324,6 +1444,7 @@
     {
       "id": "card-144",
       "name": "成就",
+      "nameReading": "じょうじゅ",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1335,6 +1456,7 @@
     {
       "id": "card-145",
       "name": "成就+",
+      "nameReading": "じょうじゅ+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1346,6 +1468,7 @@
     {
       "id": "card-146",
       "name": "魅惑のパフォーマンス",
+      "nameReading": "みわくのぱふぉーまんす",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1357,6 +1480,7 @@
     {
       "id": "card-147",
       "name": "魅惑のパフォーマンス+",
+      "nameReading": "みわくのぱふぉーまんす+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1368,6 +1492,7 @@
     {
       "id": "card-148",
       "name": "200%スマイル",
+      "nameReading": "200ぱーせんとすまいる",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1379,6 +1504,7 @@
     {
       "id": "card-149",
       "name": "200%スマイル+",
+      "nameReading": "200ぱーせんとすまいる+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1390,6 +1516,7 @@
     {
       "id": "card-150",
       "name": "開花",
+      "nameReading": "かいか",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1401,6 +1528,7 @@
     {
       "id": "card-151",
       "name": "開花+",
+      "nameReading": "かいか+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1412,6 +1540,7 @@
     {
       "id": "card-152",
       "name": "届いて！",
+      "nameReading": "とどいて！",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1423,6 +1552,7 @@
     {
       "id": "card-153",
       "name": "届いて！+",
+      "nameReading": "とどいて！+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1434,6 +1564,7 @@
     {
       "id": "card-154",
       "name": "テレビ出演",
+      "nameReading": "てれびしゅつえん",
       "plan": "free",
       "kind": "mental",
       "rarity": "SSR",
@@ -1445,6 +1576,7 @@
     {
       "id": "card-155",
       "name": "テレビ出演+",
+      "nameReading": "てれびしゅつえん+",
       "plan": "free",
       "kind": "mental",
       "rarity": "SSR",
@@ -1456,6 +1588,7 @@
     {
       "id": "card-156",
       "name": "叶えたい夢",
+      "nameReading": "かなえたいゆめ",
       "plan": "free",
       "kind": "mental",
       "rarity": "SSR",
@@ -1467,6 +1600,7 @@
     {
       "id": "card-157",
       "name": "叶えたい夢+",
+      "nameReading": "かなえたいゆめ+",
       "plan": "free",
       "kind": "mental",
       "rarity": "SSR",
@@ -1478,6 +1612,7 @@
     {
       "id": "card-158",
       "name": "アイドル魂",
+      "nameReading": "あいどるだましい",
       "plan": "free",
       "kind": "mental",
       "rarity": "SSR",
@@ -1489,6 +1624,7 @@
     {
       "id": "card-159",
       "name": "アイドル魂+",
+      "nameReading": "あいどるだましい+",
       "plan": "free",
       "kind": "mental",
       "rarity": "SSR",
@@ -1500,6 +1636,7 @@
     {
       "id": "card-160",
       "name": "仕切り直し",
+      "nameReading": "しきりなおし",
       "plan": "free",
       "kind": "mental",
       "rarity": "SSR",
@@ -1511,6 +1648,7 @@
     {
       "id": "card-161",
       "name": "仕切り直し+",
+      "nameReading": "しきりなおし+",
       "plan": "free",
       "kind": "mental",
       "rarity": "SSR",
@@ -1522,6 +1660,7 @@
     {
       "id": "card-162",
       "name": "国民的アイドル",
+      "nameReading": "こくみんてきあいどる",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -1533,6 +1672,7 @@
     {
       "id": "card-163",
       "name": "国民的アイドル+",
+      "nameReading": "こくみんてきあいどる+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -1544,6 +1684,7 @@
     {
       "id": "card-164",
       "name": "魅惑の視線",
+      "nameReading": "みわくのしせん",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -1555,6 +1696,7 @@
     {
       "id": "card-165",
       "name": "魅惑の視線+",
+      "nameReading": "みわくのしせん+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -1566,6 +1708,7 @@
     {
       "id": "card-166",
       "name": "鳴り止まない拍手",
+      "nameReading": "なりやまないはくしゅ",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -1577,6 +1720,7 @@
     {
       "id": "card-167",
       "name": "鳴り止まない拍手+",
+      "nameReading": "なりやまないはくしゅ+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -1588,6 +1732,7 @@
     {
       "id": "card-168",
       "name": "天真爛漫",
+      "nameReading": "てんしんらんまん",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -1599,6 +1744,7 @@
     {
       "id": "card-169",
       "name": "天真爛漫+",
+      "nameReading": "てんしんらんまん+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -1610,6 +1756,7 @@
     {
       "id": "card-170",
       "name": "私がスター",
+      "nameReading": "わたしがすたー",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1621,6 +1768,7 @@
     {
       "id": "card-171",
       "name": "私がスター+",
+      "nameReading": "わたしがすたー+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1632,6 +1780,7 @@
     {
       "id": "card-172",
       "name": "星屑センセーション",
+      "nameReading": "ほしくずせんせーしょん",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1643,6 +1792,7 @@
     {
       "id": "card-173",
       "name": "星屑センセーション+",
+      "nameReading": "ほしくずせんせーしょん+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1654,6 +1804,7 @@
     {
       "id": "card-174",
       "name": "ノートの端の決意",
+      "nameReading": "のーとのはしのけつい",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1665,6 +1816,7 @@
     {
       "id": "card-175",
       "name": "ノートの端の決意+",
+      "nameReading": "のーとのはしのけつい+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1676,6 +1828,7 @@
     {
       "id": "card-176",
       "name": "手書きのメッセージ",
+      "nameReading": "てがきのめっせーじ",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1687,6 +1840,7 @@
     {
       "id": "card-177",
       "name": "手書きのメッセージ+",
+      "nameReading": "てがきのめっせーじ+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1698,6 +1852,7 @@
     {
       "id": "card-178",
       "name": "トキメキ",
+      "nameReading": "ときめき",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1709,6 +1864,7 @@
     {
       "id": "card-179",
       "name": "トキメキ+",
+      "nameReading": "ときめき+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1720,6 +1876,7 @@
     {
       "id": "card-180",
       "name": "虹色ドリーマー",
+      "nameReading": "にじいろどりーまー",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1731,6 +1888,7 @@
     {
       "id": "card-181",
       "name": "虹色ドリーマー+",
+      "nameReading": "にじいろどりーまー+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -1742,6 +1900,7 @@
     {
       "id": "card-288",
       "name": "ひと呼吸",
+      "nameReading": "ひとこきゅう",
       "plan": "sense",
       "kind": "mental",
       "rarity": "R",
@@ -1753,6 +1912,7 @@
     {
       "id": "card-289",
       "name": "ひと呼吸+",
+      "nameReading": "ひとこきゅう+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "R",
@@ -1764,6 +1924,7 @@
     {
       "id": "card-290",
       "name": "幸せのおまじない",
+      "nameReading": "しあわせのおまじない",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -1775,6 +1936,7 @@
     {
       "id": "card-291",
       "name": "幸せのおまじない+",
+      "nameReading": "しあわせのおまじない+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -1786,6 +1948,7 @@
     {
       "id": "card-292",
       "name": "立ち位置チェック",
+      "nameReading": "たちいちちぇっく",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -1797,6 +1960,7 @@
     {
       "id": "card-293",
       "name": "立ち位置チェック+",
+      "nameReading": "たちいちちぇっく+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -1808,6 +1972,7 @@
     {
       "id": "card-294",
       "name": "スポットライト",
+      "nameReading": "すぽっとらいと",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -1819,6 +1984,7 @@
     {
       "id": "card-295",
       "name": "スポットライト+",
+      "nameReading": "すぽっとらいと+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -1830,6 +1996,7 @@
     {
       "id": "card-296",
       "name": "止められない想い",
+      "nameReading": "とめられないおもい",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1841,6 +2008,7 @@
     {
       "id": "card-297",
       "name": "止められない想い+",
+      "nameReading": "とめられないおもい+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1852,6 +2020,7 @@
     {
       "id": "card-298",
       "name": "オトメゴコロ",
+      "nameReading": "おとめごころ",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1863,6 +2032,7 @@
     {
       "id": "card-299",
       "name": "オトメゴコロ+",
+      "nameReading": "おとめごころ+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -1874,6 +2044,7 @@
     {
       "id": "card-300",
       "name": "至高のエンタメ",
+      "nameReading": "しこうのえんため",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1885,6 +2056,7 @@
     {
       "id": "card-301",
       "name": "至高のエンタメ+",
+      "nameReading": "しこうのえんため+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1896,6 +2068,7 @@
     {
       "id": "card-302",
       "name": "覚醒",
+      "nameReading": "かくせい",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1907,6 +2080,7 @@
     {
       "id": "card-303",
       "name": "覚醒+",
+      "nameReading": "かくせい+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -1918,6 +2092,7 @@
     {
       "id": "card-304",
       "name": "輝くキミへ",
+      "nameReading": "かがやくきみへ",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1929,6 +2104,7 @@
     {
       "id": "card-305",
       "name": "輝くキミへ+",
+      "nameReading": "かがやくきみへ+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1940,6 +2116,7 @@
     {
       "id": "card-306",
       "name": "あのときの約束",
+      "nameReading": "あのときのやくそく",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1951,6 +2128,7 @@
     {
       "id": "card-307",
       "name": "あのときの約束+",
+      "nameReading": "あのときのやくそく+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -1962,6 +2140,7 @@
     {
       "id": "card-378",
       "name": "エキサイト",
+      "nameReading": "えきさいと",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -1973,6 +2152,7 @@
     {
       "id": "card-379",
       "name": "エキサイト+",
+      "nameReading": "えきさいと+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -1984,6 +2164,7 @@
     {
       "id": "card-380",
       "name": "ジャストアピール",
+      "nameReading": "じゃすとあぴーる",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -1995,6 +2176,7 @@
     {
       "id": "card-381",
       "name": "ジャストアピール+",
+      "nameReading": "じゃすとあぴーる+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2006,6 +2188,7 @@
     {
       "id": "card-382",
       "name": "スターライト",
+      "nameReading": "すたーらいと",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2017,6 +2200,7 @@
     {
       "id": "card-383",
       "name": "スターライト+",
+      "nameReading": "すたーらいと+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2028,6 +2212,7 @@
     {
       "id": "card-384",
       "name": "一歩",
+      "nameReading": "いっぽ",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2039,6 +2224,7 @@
     {
       "id": "card-385",
       "name": "一歩+",
+      "nameReading": "いっぽ+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2050,6 +2236,7 @@
     {
       "id": "card-386",
       "name": "ラッキー♪",
+      "nameReading": "らっきー♪",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2061,6 +2248,7 @@
     {
       "id": "card-387",
       "name": "ラッキー♪+",
+      "nameReading": "らっきー♪+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2072,6 +2260,7 @@
     {
       "id": "card-388",
       "name": "積み重ね",
+      "nameReading": "つみかさね",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2083,6 +2272,7 @@
     {
       "id": "card-389",
       "name": "積み重ね+",
+      "nameReading": "つみかさね+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2094,6 +2284,7 @@
     {
       "id": "card-390",
       "name": "精一杯",
+      "nameReading": "せいいっぱい",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2105,6 +2296,7 @@
     {
       "id": "card-391",
       "name": "精一杯+",
+      "nameReading": "せいいっぱい+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -2116,6 +2308,7 @@
     {
       "id": "card-392",
       "name": "ハッピー♪",
+      "nameReading": "はっぴー♪",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2127,6 +2320,7 @@
     {
       "id": "card-393",
       "name": "ハッピー♪+",
+      "nameReading": "はっぴー♪+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2138,6 +2332,7 @@
     {
       "id": "card-394",
       "name": "嬉しい誤算",
+      "nameReading": "うれしいごさん",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2149,6 +2344,7 @@
     {
       "id": "card-395",
       "name": "嬉しい誤算+",
+      "nameReading": "うれしいごさん+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2160,6 +2356,7 @@
     {
       "id": "card-396",
       "name": "涙の思い出",
+      "nameReading": "なみだのおもいで",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2171,6 +2368,7 @@
     {
       "id": "card-397",
       "name": "涙の思い出+",
+      "nameReading": "なみだのおもいで+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2182,6 +2380,7 @@
     {
       "id": "card-398",
       "name": "きらきら紙吹雪",
+      "nameReading": "きらきらかみふぶき",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -2193,6 +2392,7 @@
     {
       "id": "card-399",
       "name": "きらきら紙吹雪+",
+      "nameReading": "きらきらかみふぶき+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SR",
@@ -2204,6 +2404,7 @@
     {
       "id": "card-400",
       "name": "せーのっ！",
+      "nameReading": "せーのっ！",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2215,6 +2416,7 @@
     {
       "id": "card-401",
       "name": "せーのっ！+",
+      "nameReading": "せーのっ！+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2226,6 +2428,7 @@
     {
       "id": "card-402",
       "name": "アッチェレランド",
+      "nameReading": "あっちぇれらんど",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2237,6 +2440,7 @@
     {
       "id": "card-403",
       "name": "アッチェレランド+",
+      "nameReading": "あっちぇれらんど+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2248,6 +2452,7 @@
     {
       "id": "card-404",
       "name": "はじけるパッション",
+      "nameReading": "はじけるぱっしょん",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2259,6 +2464,7 @@
     {
       "id": "card-405",
       "name": "はじけるパッション+",
+      "nameReading": "はじけるぱっしょん+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2270,6 +2476,7 @@
     {
       "id": "card-406",
       "name": "汗と成長",
+      "nameReading": "あせとせいちょう",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2281,6 +2488,7 @@
     {
       "id": "card-407",
       "name": "汗と成長+",
+      "nameReading": "あせとせいちょう+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2292,6 +2500,7 @@
     {
       "id": "card-408",
       "name": "オープニングアクト",
+      "nameReading": "おーぷにんぐあくと",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2303,6 +2512,7 @@
     {
       "id": "card-409",
       "name": "オープニングアクト+",
+      "nameReading": "おーぷにんぐあくと+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2314,6 +2524,7 @@
     {
       "id": "card-410",
       "name": "始まりの笑顔",
+      "nameReading": "はじまりのえがお",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2325,6 +2536,7 @@
     {
       "id": "card-411",
       "name": "始まりの笑顔+",
+      "nameReading": "はじまりのえがお+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2336,6 +2548,7 @@
     {
       "id": "card-412",
       "name": "理想のテンポ",
+      "nameReading": "りそうのてんぽ",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2347,6 +2560,7 @@
     {
       "id": "card-413",
       "name": "理想のテンポ+",
+      "nameReading": "りそうのてんぽ+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2358,6 +2572,7 @@
     {
       "id": "card-414",
       "name": "トレーニングの成果",
+      "nameReading": "とれーにんぐのせいか",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2369,6 +2584,7 @@
     {
       "id": "card-415",
       "name": "トレーニングの成果+",
+      "nameReading": "とれーにんぐのせいか+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2380,6 +2596,7 @@
     {
       "id": "card-416",
       "name": "潜在能力",
+      "nameReading": "せんざいのうりょく",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2391,6 +2608,7 @@
     {
       "id": "card-417",
       "name": "潜在能力+",
+      "nameReading": "せんざいのうりょく+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2402,6 +2620,7 @@
     {
       "id": "card-418",
       "name": "カウントダウン",
+      "nameReading": "かうんとだうん",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2413,6 +2632,7 @@
     {
       "id": "card-419",
       "name": "カウントダウン+",
+      "nameReading": "かうんとだうん+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2424,6 +2644,7 @@
     {
       "id": "card-420",
       "name": "プライド",
+      "nameReading": "ぷらいど",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2435,6 +2656,7 @@
     {
       "id": "card-421",
       "name": "プライド+",
+      "nameReading": "ぷらいど+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2446,6 +2668,7 @@
     {
       "id": "card-422",
       "name": "忍耐力",
+      "nameReading": "にんたいりょく",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2457,6 +2680,7 @@
     {
       "id": "card-423",
       "name": "忍耐力+",
+      "nameReading": "にんたいりょく+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2468,6 +2692,7 @@
     {
       "id": "card-424",
       "name": "切磋琢磨",
+      "nameReading": "せっさたくま",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2479,6 +2704,7 @@
     {
       "id": "card-425",
       "name": "切磋琢磨+",
+      "nameReading": "せっさたくま+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2490,6 +2716,7 @@
     {
       "id": "card-426",
       "name": "キセキの魔法",
+      "nameReading": "きせきのまほう",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -2501,6 +2728,7 @@
     {
       "id": "card-427",
       "name": "キセキの魔法+",
+      "nameReading": "きせきのまほう+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -2512,6 +2740,7 @@
     {
       "id": "card-428",
       "name": "翔び立て！",
+      "nameReading": "とびたて！",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2523,6 +2752,7 @@
     {
       "id": "card-429",
       "name": "翔び立て！+",
+      "nameReading": "とびたて！+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2534,6 +2764,7 @@
     {
       "id": "card-430",
       "name": "総合芸術",
+      "nameReading": "そうごうげいじゅつ",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2545,6 +2776,7 @@
     {
       "id": "card-431",
       "name": "総合芸術+",
+      "nameReading": "そうごうげいじゅつ+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2556,6 +2788,7 @@
     {
       "id": "card-432",
       "name": "心・技・体",
+      "nameReading": "しんぎたい",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2567,6 +2800,7 @@
     {
       "id": "card-433",
       "name": "心・技・体+",
+      "nameReading": "しんぎたい+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2578,6 +2812,7 @@
     {
       "id": "card-434",
       "name": "輝け！",
+      "nameReading": "かがやけ！",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2589,6 +2824,7 @@
     {
       "id": "card-435",
       "name": "輝け！+",
+      "nameReading": "かがやけ！+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2600,6 +2836,7 @@
     {
       "id": "card-436",
       "name": "クライマックス",
+      "nameReading": "くらいまっくす",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2611,6 +2848,7 @@
     {
       "id": "card-437",
       "name": "クライマックス+",
+      "nameReading": "くらいまっくす+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2622,6 +2860,7 @@
     {
       "id": "card-438",
       "name": "全身全霊",
+      "nameReading": "ぜんしんぜんれい",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2633,6 +2872,7 @@
     {
       "id": "card-439",
       "name": "全身全霊+",
+      "nameReading": "ぜんしんぜんれい+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -2644,6 +2884,7 @@
     {
       "id": "card-440",
       "name": "アイドルになります",
+      "nameReading": "あいどるになります",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -2655,6 +2896,7 @@
     {
       "id": "card-441",
       "name": "アイドルになります+",
+      "nameReading": "あいどるになります+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -2666,6 +2908,7 @@
     {
       "id": "card-442",
       "name": "頂点へ",
+      "nameReading": "ちょうてんへ",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -2677,6 +2920,7 @@
     {
       "id": "card-443",
       "name": "頂点へ+",
+      "nameReading": "ちょうてんへ+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -2688,6 +2932,7 @@
     {
       "id": "card-444",
       "name": "覚悟",
+      "nameReading": "かくご",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -2699,6 +2944,7 @@
     {
       "id": "card-445",
       "name": "覚悟+",
+      "nameReading": "かくご+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -2710,6 +2956,7 @@
     {
       "id": "card-516",
       "name": "デイドリーミング",
+      "nameReading": "でいどりーみんぐ",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -2721,6 +2968,7 @@
     {
       "id": "card-517",
       "name": "デイドリーミング+",
+      "nameReading": "でいどりーみんぐ+",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -2732,6 +2980,7 @@
     {
       "id": "card-518",
       "name": "タフネス",
+      "nameReading": "たふねす",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2743,6 +2992,7 @@
     {
       "id": "card-519",
       "name": "タフネス+",
+      "nameReading": "たふねす+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2754,6 +3004,7 @@
     {
       "id": "card-520",
       "name": "夢色リップ",
+      "nameReading": "ゆめいろりっぷ",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -2765,6 +3016,7 @@
     {
       "id": "card-521",
       "name": "夢色リップ+",
+      "nameReading": "ゆめいろりっぷ+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SSR",
@@ -2776,6 +3028,7 @@
     {
       "id": "card-546",
       "name": "セッティング",
+      "nameReading": "せってぃんぐ",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2787,6 +3040,7 @@
     {
       "id": "card-547",
       "name": "セッティング+",
+      "nameReading": "せってぃんぐ+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2798,6 +3052,7 @@
     {
       "id": "card-548",
       "name": "第一印象",
+      "nameReading": "だいいちいんしょう",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2809,6 +3064,7 @@
     {
       "id": "card-549",
       "name": "第一印象+",
+      "nameReading": "だいいちいんしょう+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2820,6 +3076,7 @@
     {
       "id": "card-550",
       "name": "トレンドリーダー",
+      "nameReading": "とれんどりーだー",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2831,6 +3088,7 @@
     {
       "id": "card-551",
       "name": "トレンドリーダー+",
+      "nameReading": "とれんどりーだー+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -2842,6 +3100,7 @@
     {
       "id": "card-552",
       "name": "モチベ",
+      "nameReading": "もちべ",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2853,6 +3112,7 @@
     {
       "id": "card-553",
       "name": "モチベ+",
+      "nameReading": "もちべ+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2864,6 +3124,7 @@
     {
       "id": "card-554",
       "name": "盛り上げ上手",
+      "nameReading": "もりあげじょうず",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2875,6 +3136,7 @@
     {
       "id": "card-555",
       "name": "盛り上げ上手+",
+      "nameReading": "もりあげじょうず+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2886,6 +3148,7 @@
     {
       "id": "card-556",
       "name": "インフルエンサー",
+      "nameReading": "いんふるえんさー",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2897,6 +3160,7 @@
     {
       "id": "card-557",
       "name": "インフルエンサー+",
+      "nameReading": "いんふるえんさー+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2908,6 +3172,7 @@
     {
       "id": "card-558",
       "name": "一心不乱",
+      "nameReading": "いっしんふらん",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -2919,6 +3184,7 @@
     {
       "id": "card-559",
       "name": "一心不乱+",
+      "nameReading": "いっしんふらん+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -2930,6 +3196,7 @@
     {
       "id": "card-590",
       "name": "巻き返し",
+      "nameReading": "まきかえし",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2941,6 +3208,7 @@
     {
       "id": "card-591",
       "name": "巻き返し+",
+      "nameReading": "まきかえし+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "R",
@@ -2952,6 +3220,7 @@
     {
       "id": "card-592",
       "name": "ペース配分",
+      "nameReading": "ぺーすはいぶん",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -2963,6 +3232,7 @@
     {
       "id": "card-593",
       "name": "ペース配分+",
+      "nameReading": "ぺーすはいぶん+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -2974,6 +3244,7 @@
     {
       "id": "card-594",
       "name": "達成感",
+      "nameReading": "たっせいかん",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2985,6 +3256,7 @@
     {
       "id": "card-595",
       "name": "達成感+",
+      "nameReading": "たっせいかん+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -2996,6 +3268,7 @@
     {
       "id": "card-596",
       "name": "破竹の勢い",
+      "nameReading": "はちくのいきおい",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -3007,6 +3280,7 @@
     {
       "id": "card-597",
       "name": "破竹の勢い+",
+      "nameReading": "はちくのいきおい+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SR",
@@ -3018,6 +3292,7 @@
     {
       "id": "card-598",
       "name": "天賦の才",
+      "nameReading": "てんぷのさい",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -3029,6 +3304,7 @@
     {
       "id": "card-599",
       "name": "天賦の才+",
+      "nameReading": "てんぷのさい+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SSR",
@@ -3040,6 +3316,7 @@
     {
       "id": "card-690",
       "name": "軌道修正",
+      "nameReading": "きどうしゅうせい",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -3051,6 +3328,7 @@
     {
       "id": "card-691",
       "name": "軌道修正+",
+      "nameReading": "きどうしゅうせい+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -3062,6 +3340,7 @@
     {
       "id": "card-692",
       "name": "パンプアップ",
+      "nameReading": "ぱんぷあっぷ",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -3073,6 +3352,7 @@
     {
       "id": "card-693",
       "name": "パンプアップ+",
+      "nameReading": "ぱんぷあっぷ+",
       "plan": "sense",
       "kind": "active",
       "rarity": "R",
@@ -3084,6 +3364,7 @@
     {
       "id": "card-694",
       "name": "おまもりミラクル",
+      "nameReading": "おまもりみらくる",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -3095,6 +3376,7 @@
     {
       "id": "card-695",
       "name": "おまもりミラクル+",
+      "nameReading": "おまもりみらくる+",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -3106,6 +3388,7 @@
     {
       "id": "card-696",
       "name": "がむしゃら",
+      "nameReading": "がむしゃら",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -3117,6 +3400,7 @@
     {
       "id": "card-697",
       "name": "がむしゃら+",
+      "nameReading": "がむしゃら+",
       "plan": "logic",
       "kind": "active",
       "rarity": "R",
@@ -3128,6 +3412,7 @@
     {
       "id": "card-698",
       "name": "形勢逆転",
+      "nameReading": "けいせいぎゃくてん",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -3139,6 +3424,7 @@
     {
       "id": "card-699",
       "name": "形勢逆転+",
+      "nameReading": "けいせいぎゃくてん+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -3150,6 +3436,7 @@
     {
       "id": "card-700",
       "name": "ノンストップ",
+      "nameReading": "のんすとっぷ",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -3161,6 +3448,7 @@
     {
       "id": "card-701",
       "name": "ノンストップ+",
+      "nameReading": "のんすとっぷ+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -3172,6 +3460,7 @@
     {
       "id": "card-702",
       "name": "オーバードライブ",
+      "nameReading": "おーばーどらいぶ",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -3183,6 +3472,7 @@
     {
       "id": "card-703",
       "name": "オーバードライブ+",
+      "nameReading": "おーばーどらいぶ+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -3194,6 +3484,7 @@
     {
       "id": "card-704",
       "name": "一発勝負",
+      "nameReading": "いっぱつしょうぶ",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -3205,6 +3496,7 @@
     {
       "id": "card-705",
       "name": "一発勝負+",
+      "nameReading": "いっぱつしょうぶ+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -3216,6 +3508,7 @@
     {
       "id": "card-706",
       "name": "スリリング",
+      "nameReading": "すりりんぐ",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -3227,6 +3520,7 @@
     {
       "id": "card-707",
       "name": "スリリング+",
+      "nameReading": "すりりんぐ+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -3238,6 +3532,7 @@
     {
       "id": "card-708",
       "name": "大胆不敵",
+      "nameReading": "だいたんふてき",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -3249,6 +3544,7 @@
     {
       "id": "card-709",
       "name": "大胆不敵+",
+      "nameReading": "だいたんふてき+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -3260,6 +3556,7 @@
     {
       "id": "card-710",
       "name": "冒険心",
+      "nameReading": "ぼうけんしん",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -3271,6 +3568,7 @@
     {
       "id": "card-711",
       "name": "冒険心+",
+      "nameReading": "ぼうけんしん+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -3282,6 +3580,7 @@
     {
       "id": "card-712",
       "name": "気まぐれハート",
+      "nameReading": "きまぐれはーと",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -3293,6 +3592,7 @@
     {
       "id": "card-713",
       "name": "気まぐれハート+",
+      "nameReading": "きまぐれはーと+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -3304,6 +3604,7 @@
     {
       "id": "card-714",
       "name": "成長痛",
+      "nameReading": "せいちょうつう",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -3315,6 +3616,7 @@
     {
       "id": "card-715",
       "name": "成長痛+",
+      "nameReading": "せいちょうつう+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "SR",
@@ -3326,6 +3628,7 @@
     {
       "id": "card-716",
       "name": "フルスロットル",
+      "nameReading": "ふるすろっとる",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -3337,6 +3640,7 @@
     {
       "id": "card-717",
       "name": "フルスロットル+",
+      "nameReading": "ふるすろっとる+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -3348,6 +3652,7 @@
     {
       "id": "card-718",
       "name": "リスキーチャンス",
+      "nameReading": "りすきーちゃんす",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -3359,6 +3664,7 @@
     {
       "id": "card-719",
       "name": "リスキーチャンス+",
+      "nameReading": "りすきーちゃんす+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SR",
@@ -3370,6 +3676,7 @@
     {
       "id": "card-745",
       "name": "ハッスル",
+      "nameReading": "はっする",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -3381,6 +3688,7 @@
     {
       "id": "card-746",
       "name": "ハッスル+",
+      "nameReading": "はっする+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "R",
@@ -3392,6 +3700,7 @@
     {
       "id": "card-747",
       "name": "イメチェン",
+      "nameReading": "いめちぇん",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -3403,6 +3712,7 @@
     {
       "id": "card-748",
       "name": "イメチェン+",
+      "nameReading": "いめちぇん+",
       "plan": "logic",
       "kind": "mental",
       "rarity": "R",
@@ -3414,6 +3724,7 @@
     {
       "id": "card-749",
       "name": "アンダンテ",
+      "nameReading": "あんだんて",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -3425,6 +3736,7 @@
     {
       "id": "card-750",
       "name": "アンダンテ+",
+      "nameReading": "あんだんて+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SR",
@@ -3436,6 +3748,7 @@
     {
       "id": "card-751",
       "name": "精神統一",
+      "nameReading": "せいしんとういつ",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -3447,6 +3760,7 @@
     {
       "id": "card-752",
       "name": "精神統一+",
+      "nameReading": "せいしんとういつ+",
       "plan": "sense",
       "kind": "mental",
       "rarity": "SR",
@@ -3458,6 +3772,7 @@
     {
       "id": "card-753",
       "name": "本領発揮",
+      "nameReading": "ほんりょうはっき",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -3469,6 +3784,7 @@
     {
       "id": "card-754",
       "name": "本領発揮+",
+      "nameReading": "ほんりょうはっき+",
       "plan": "anomaly",
       "kind": "mental",
       "rarity": "SSR",
@@ -3480,6 +3796,7 @@
     {
       "id": "card-761",
       "name": "脚光",
+      "nameReading": "きゃっこう",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -3491,6 +3808,7 @@
     {
       "id": "card-762",
       "name": "脚光+",
+      "nameReading": "きゃっこう+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -3502,6 +3820,7 @@
     {
       "id": "card-771",
       "name": "せのびの魔法",
+      "nameReading": "せのびのまほう",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -3513,6 +3832,7 @@
     {
       "id": "card-772",
       "name": "せのびの魔法+",
+      "nameReading": "せのびのまほう+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -3524,6 +3844,7 @@
     {
       "id": "card-773",
       "name": "エンターテイナー",
+      "nameReading": "えんたーていなー",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -3535,6 +3856,7 @@
     {
       "id": "card-774",
       "name": "エンターテイナー+",
+      "nameReading": "えんたーていなー+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -3546,6 +3868,7 @@
     {
       "id": "card-775",
       "name": "話題沸騰",
+      "nameReading": "わだいふっとう",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -3557,6 +3880,7 @@
     {
       "id": "card-776",
       "name": "話題沸騰+",
+      "nameReading": "わだいふっとう+",
       "plan": "sense",
       "kind": "active",
       "rarity": "SSR",
@@ -3568,6 +3892,7 @@
     {
       "id": "card-777",
       "name": "びしっとキメ顔",
+      "nameReading": "びしっときめがお",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -3579,6 +3904,7 @@
     {
       "id": "card-778",
       "name": "びしっとキメ顔+",
+      "nameReading": "びしっときめがお+",
       "plan": "logic",
       "kind": "active",
       "rarity": "SSR",
@@ -3590,6 +3916,7 @@
     {
       "id": "card-779",
       "name": "羽ばたけ！",
+      "nameReading": "はばたけ！",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
@@ -3601,6 +3928,7 @@
     {
       "id": "card-780",
       "name": "羽ばたけ！+",
+      "nameReading": "はばたけ！+",
       "plan": "anomaly",
       "kind": "active",
       "rarity": "SSR",
