@@ -1,13 +1,42 @@
 import { useId } from 'react';
 
 /** Native select preserves keyboard and mobile picker behavior with an explicit label. */
-export function SelectionField({ label, value, onChange, options, disabled = false, hint }: {
-  label: string; value: string; onChange: (value: string) => void;
-  options: { value: string; label: string; disabled?: boolean }[]; disabled?: boolean; hint?: string;
+export function SelectionField({
+  label,
+  value,
+  onChange,
+  options,
+  disabled = false,
+  hint,
+}: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  options: { value: string; label: string; disabled?: boolean }[];
+  disabled?: boolean;
+  hint?: string;
 }) {
   const id = useId();
-  return <div className="field"><label htmlFor={id}>{label}</label><select id={id} value={value} onChange={event => onChange(event.target.value)} disabled={disabled} aria-describedby={hint ? `${id}-hint` : undefined}>
-    {!options.some(option => option.value === value) && <option value={value}>不明／選択対象外: {value}</option>}
-    {options.map(option => <option key={option.value} value={option.value} disabled={option.disabled}>{option.label}</option>)}
-  </select>{hint && <small id={`${id}-hint`}>{hint}</small>}</div>;
+  return (
+    <div className="field">
+      <label htmlFor={id}>{label}</label>
+      <select
+        id={id}
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        disabled={disabled}
+        aria-describedby={hint ? `${id}-hint` : undefined}
+      >
+        {!options.some((option) => option.value === value) && (
+          <option value={value}>不明／選択対象外: {value}</option>
+        )}
+        {options.map((option) => (
+          <option key={option.value} value={option.value} disabled={option.disabled}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+      {hint && <small id={`${id}-hint`}>{hint}</small>}
+    </div>
+  );
 }

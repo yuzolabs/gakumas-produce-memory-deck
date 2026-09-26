@@ -6,7 +6,12 @@ import { memoryMaster } from './memory-master';
 describe('same-memory filtering', () => {
   it('does not synthesize a nonexistent combination from separate owned copies', () => {
     const customMemory = createMemoryDraft('card-295');
-    customMemory.customizations = [{ definitionId: memoryMaster.customizations.find(c => c.id === 'custom-52')!.id, valueId: '2' }];
+    customMemory.customizations = [
+      {
+        definitionId: memoryMaster.customizations.find((c) => c.id === 'custom-52')!.id,
+        valueId: '2',
+      },
+    ];
     const bonusMemory = createMemoryDraft('card-295');
     bonusMemory.bonuses.vo.lesson = 3.5;
     const filters = { ...emptyMemoryFilters, customId: 'custom-52', voLesson: 3.5 };
@@ -29,6 +34,8 @@ describe('same-memory filtering', () => {
     expect(filterMemoryCards([memory], { ...emptyMemoryFilters, timing: 'start' })).toEqual([]);
     expect(filterMemoryCards([memory], { ...emptyMemoryFilters, voLesson: 1.4 })).toEqual([]);
     expect(filterMemoryCards([memory], { ...emptyMemoryFilters, voInitial: 20 })).toHaveLength(1);
-    expect(filterMemoryCards([memory], { ...emptyMemoryFilters, timing: 'after-first-exam' })).toHaveLength(1);
+    expect(
+      filterMemoryCards([memory], { ...emptyMemoryFilters, timing: 'after-first-exam' }),
+    ).toHaveLength(1);
   });
 });

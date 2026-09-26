@@ -20,11 +20,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-65",
-        "custom-68",
-        "custom-18"
-      ],
+      "customizationIds": ["custom-65", "custom-68", "custom-18"],
       "maxCustomizations": 3
     },
     {
@@ -46,11 +42,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-14",
-        "custom-18",
-        "custom-65"
-      ],
+      "customizationIds": ["custom-14", "custom-18", "custom-65"],
       "maxCustomizations": 3
     },
     {
@@ -72,11 +64,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-70",
-        "custom-4",
-        "custom-64"
-      ],
+      "customizationIds": ["custom-70", "custom-4", "custom-64"],
       "maxCustomizations": 3
     },
     {
@@ -98,11 +86,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-14",
-        "custom-16",
-        "custom-65"
-      ],
+      "customizationIds": ["custom-14", "custom-16", "custom-65"],
       "maxCustomizations": 3
     },
     {
@@ -124,11 +108,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-70",
-        "custom-4",
-        "custom-64"
-      ],
+      "customizationIds": ["custom-70", "custom-4", "custom-64"],
       "maxCustomizations": 3
     },
     {
@@ -150,11 +130,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-65",
-        "custom-29",
-        "custom-27"
-      ],
+      "customizationIds": ["custom-65", "custom-29", "custom-27"],
       "maxCustomizations": 3
     },
     {
@@ -176,11 +152,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-65",
-        "custom-29",
-        "custom-18"
-      ],
+      "customizationIds": ["custom-65", "custom-29", "custom-18"],
       "maxCustomizations": 3
     },
     {
@@ -202,11 +174,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-71",
-        "custom-7",
-        "custom-65"
-      ],
+      "customizationIds": ["custom-71", "custom-7", "custom-65"],
       "maxCustomizations": 3
     },
     {
@@ -228,11 +196,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-27",
-        "custom-72",
-        "custom-67"
-      ],
+      "customizationIds": ["custom-27", "custom-72", "custom-67"],
       "maxCustomizations": 3
     },
     {
@@ -254,11 +218,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-72",
-        "custom-65",
-        "custom-27"
-      ],
+      "customizationIds": ["custom-72", "custom-65", "custom-27"],
       "maxCustomizations": 3
     },
     {
@@ -280,11 +240,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-66",
-        "custom-29",
-        "custom-20"
-      ],
+      "customizationIds": ["custom-66", "custom-29", "custom-20"],
       "maxCustomizations": 3
     },
     {
@@ -306,11 +262,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-67",
-        "custom-9",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-67", "custom-9", "custom-29"],
       "maxCustomizations": 3
     },
     {
@@ -332,11 +284,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-75",
-        "custom-74",
-        "custom-36"
-      ],
+      "customizationIds": ["custom-75", "custom-74", "custom-36"],
       "maxCustomizations": 3
     },
     {
@@ -358,11 +306,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-75",
-        "custom-36",
-        "custom-3"
-      ],
+      "customizationIds": ["custom-75", "custom-36", "custom-3"],
       "maxCustomizations": 3
     },
     {
@@ -384,11 +328,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-70",
-        "custom-75",
-        "custom-14"
-      ],
+      "customizationIds": ["custom-70", "custom-75", "custom-14"],
       "maxCustomizations": 3
     },
     {
@@ -410,11 +350,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-70",
-        "custom-68",
-        "custom-3"
-      ],
+      "customizationIds": ["custom-70", "custom-68", "custom-3"],
       "maxCustomizations": 3
     },
     {
@@ -436,11 +372,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-70",
-        "custom-68"
-      ],
+      "customizationIds": ["custom-3", "custom-70", "custom-68"],
       "maxCustomizations": 3
     },
     {
@@ -462,11 +394,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-75",
-        "custom-71",
-        "custom-7"
-      ],
+      "customizationIds": ["custom-75", "custom-71", "custom-7"],
       "maxCustomizations": 3
     },
     {
@@ -488,11 +416,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-75",
-        "custom-72",
-        "custom-9"
-      ],
+      "customizationIds": ["custom-75", "custom-72", "custom-9"],
       "maxCustomizations": 3
     },
     {
@@ -514,11 +438,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-22",
-        "custom-20",
-        "custom-75"
-      ],
+      "customizationIds": ["custom-22", "custom-20", "custom-75"],
       "maxCustomizations": 3
     },
     {
@@ -540,11 +460,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-71",
-        "custom-72",
-        "custom-7"
-      ],
+      "customizationIds": ["custom-71", "custom-72", "custom-7"],
       "maxCustomizations": 3
     },
     {
@@ -566,11 +482,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-75",
-        "custom-71",
-        "custom-12"
-      ],
+      "customizationIds": ["custom-75", "custom-71", "custom-12"],
       "maxCustomizations": 3
     },
     {
@@ -592,11 +504,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-72",
-        "custom-27",
-        "custom-71"
-      ],
+      "customizationIds": ["custom-72", "custom-27", "custom-71"],
       "maxCustomizations": 3
     },
     {
@@ -618,11 +526,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-4",
-        "custom-47"
-      ],
+      "customizationIds": ["custom-59", "custom-4", "custom-47"],
       "maxCustomizations": 2
     },
     {
@@ -644,11 +548,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-48",
-        "custom-14",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-48", "custom-14", "custom-29"],
       "maxCustomizations": 2
     },
     {
@@ -670,11 +570,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-48",
-        "custom-52",
-        "custom-18"
-      ],
+      "customizationIds": ["custom-48", "custom-52", "custom-18"],
       "maxCustomizations": 2
     },
     {
@@ -696,11 +592,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-4",
-        "custom-54",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-4", "custom-54", "custom-29"],
       "maxCustomizations": 2
     },
     {
@@ -722,11 +614,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-47",
-        "custom-14",
-        "custom-37"
-      ],
+      "customizationIds": ["custom-47", "custom-14", "custom-37"],
       "maxCustomizations": 2
     },
     {
@@ -748,11 +636,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-48",
-        "custom-52",
-        "custom-16"
-      ],
+      "customizationIds": ["custom-48", "custom-52", "custom-16"],
       "maxCustomizations": 2
     },
     {
@@ -774,11 +658,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-48",
-        "custom-29",
-        "custom-14"
-      ],
+      "customizationIds": ["custom-48", "custom-29", "custom-14"],
       "maxCustomizations": 2
     },
     {
@@ -800,11 +680,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-29",
-        "custom-54"
-      ],
+      "customizationIds": ["custom-59", "custom-29", "custom-54"],
       "maxCustomizations": 2
     },
     {
@@ -826,10 +702,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-32",
-        "custom-39"
-      ],
+      "customizationIds": ["custom-32", "custom-39"],
       "maxCustomizations": 2
     },
     {
@@ -851,11 +724,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-55",
-        "custom-49",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-55", "custom-49", "custom-29"],
       "maxCustomizations": 2
     },
     {
@@ -877,11 +746,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-50",
-        "custom-9"
-      ],
+      "customizationIds": ["custom-59", "custom-50", "custom-9"],
       "maxCustomizations": 2
     },
     {
@@ -903,11 +768,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-51",
-        "custom-30",
-        "custom-9"
-      ],
+      "customizationIds": ["custom-51", "custom-30", "custom-9"],
       "maxCustomizations": 2
     },
     {
@@ -929,11 +790,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-20",
-        "custom-49"
-      ],
+      "customizationIds": ["custom-59", "custom-20", "custom-49"],
       "maxCustomizations": 2
     },
     {
@@ -955,10 +812,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-5",
-        "custom-34"
-      ],
+      "customizationIds": ["custom-5", "custom-34"],
       "maxCustomizations": 2
     },
     {
@@ -980,10 +834,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-24",
-        "custom-27"
-      ],
+      "customizationIds": ["custom-24", "custom-27"],
       "maxCustomizations": 2
     },
     {
@@ -1005,11 +856,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-59",
-        "custom-58"
-      ],
+      "customizationIds": ["custom-3", "custom-59", "custom-58"],
       "maxCustomizations": 2
     },
     {
@@ -1031,11 +878,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-59",
-        "custom-54"
-      ],
+      "customizationIds": ["custom-3", "custom-59", "custom-54"],
       "maxCustomizations": 2
     },
     {
@@ -1057,11 +900,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-52",
-        "custom-59"
-      ],
+      "customizationIds": ["custom-3", "custom-52", "custom-59"],
       "maxCustomizations": 2
     },
     {
@@ -1083,11 +922,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-53",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-3", "custom-53", "custom-28"],
       "maxCustomizations": 2
     },
     {
@@ -1109,11 +944,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-54",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-3", "custom-54", "custom-29"],
       "maxCustomizations": 2
     },
     {
@@ -1135,11 +966,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-28",
-        "custom-52",
-        "custom-54"
-      ],
+      "customizationIds": ["custom-28", "custom-52", "custom-54"],
       "maxCustomizations": 2
     },
     {
@@ -1161,11 +988,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-52",
-        "custom-3",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-52", "custom-3", "custom-29"],
       "maxCustomizations": 2
     },
     {
@@ -1187,11 +1010,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-54",
-        "custom-59"
-      ],
+      "customizationIds": ["custom-3", "custom-54", "custom-59"],
       "maxCustomizations": 2
     },
     {
@@ -1213,10 +1032,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-31",
-        "custom-39"
-      ],
+      "customizationIds": ["custom-31", "custom-39"],
       "maxCustomizations": 2
     },
     {
@@ -1238,11 +1054,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-54",
-        "custom-79",
-        "custom-31"
-      ],
+      "customizationIds": ["custom-54", "custom-79", "custom-31"],
       "maxCustomizations": 2
     },
     {
@@ -1264,11 +1076,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-56",
-        "custom-9"
-      ],
+      "customizationIds": ["custom-59", "custom-56", "custom-9"],
       "maxCustomizations": 2
     },
     {
@@ -1290,11 +1098,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-55",
-        "custom-7",
-        "custom-59"
-      ],
+      "customizationIds": ["custom-55", "custom-7", "custom-59"],
       "maxCustomizations": 2
     },
     {
@@ -1316,11 +1120,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-55",
-        "custom-7",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-55", "custom-7", "custom-29"],
       "maxCustomizations": 2
     },
     {
@@ -1342,11 +1142,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-36",
-        "custom-29",
-        "custom-55"
-      ],
+      "customizationIds": ["custom-36", "custom-29", "custom-55"],
       "maxCustomizations": 2
     },
     {
@@ -1368,11 +1164,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-36",
-        "custom-29",
-        "custom-56"
-      ],
+      "customizationIds": ["custom-36", "custom-29", "custom-56"],
       "maxCustomizations": 2
     },
     {
@@ -1394,11 +1186,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-56",
-        "custom-55"
-      ],
+      "customizationIds": ["custom-29", "custom-56", "custom-55"],
       "maxCustomizations": 2
     },
     {
@@ -1420,11 +1208,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-56",
-        "custom-12"
-      ],
+      "customizationIds": ["custom-59", "custom-56", "custom-12"],
       "maxCustomizations": 2
     },
     {
@@ -1446,11 +1230,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-56",
-        "custom-12"
-      ],
+      "customizationIds": ["custom-59", "custom-56", "custom-12"],
       "maxCustomizations": 2
     },
     {
@@ -1472,11 +1252,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-55",
-        "custom-22"
-      ],
+      "customizationIds": ["custom-59", "custom-55", "custom-22"],
       "maxCustomizations": 2
     },
     {
@@ -1498,10 +1274,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-33",
-        "custom-12"
-      ],
+      "customizationIds": ["custom-33", "custom-12"],
       "maxCustomizations": 2
     },
     {
@@ -1523,10 +1296,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-1",
-        "custom-14"
-      ],
+      "customizationIds": ["custom-1", "custom-14"],
       "maxCustomizations": 1
     },
     {
@@ -1548,10 +1318,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-2",
-        "custom-18"
-      ],
+      "customizationIds": ["custom-2", "custom-18"],
       "maxCustomizations": 1
     },
     {
@@ -1573,10 +1340,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-13",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-13", "custom-29"],
       "maxCustomizations": 1
     },
     {
@@ -1598,10 +1362,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-15",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-15", "custom-29"],
       "maxCustomizations": 1
     },
     {
@@ -1623,10 +1384,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-19",
-        "custom-6"
-      ],
+      "customizationIds": ["custom-19", "custom-6"],
       "maxCustomizations": 1
     },
     {
@@ -1648,10 +1406,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-27",
-        "custom-8"
-      ],
+      "customizationIds": ["custom-27", "custom-8"],
       "maxCustomizations": 1
     },
     {
@@ -1673,10 +1428,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-11",
-        "custom-30"
-      ],
+      "customizationIds": ["custom-11", "custom-30"],
       "maxCustomizations": 1
     },
     {
@@ -1698,10 +1450,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-38",
-        "custom-3"
-      ],
+      "customizationIds": ["custom-38", "custom-3"],
       "maxCustomizations": 1
     },
     {
@@ -1723,10 +1472,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-27",
-        "custom-25"
-      ],
+      "customizationIds": ["custom-27", "custom-25"],
       "maxCustomizations": 1
     },
     {
@@ -1748,10 +1494,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-26",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-26", "custom-29"],
       "maxCustomizations": 1
     },
     {
@@ -1773,10 +1516,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-24"
-      ],
+      "customizationIds": ["custom-29", "custom-24"],
       "maxCustomizations": 1
     },
     {
@@ -1798,10 +1538,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-26",
-        "custom-3"
-      ],
+      "customizationIds": ["custom-26", "custom-3"],
       "maxCustomizations": 1
     },
     {
@@ -1823,10 +1560,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-32",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-32", "custom-28"],
       "maxCustomizations": 1
     },
     {
@@ -1848,10 +1582,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-17",
-        "custom-13"
-      ],
+      "customizationIds": ["custom-17", "custom-13"],
       "maxCustomizations": 1
     },
     {
@@ -1873,10 +1604,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-17"
-      ],
+      "customizationIds": ["custom-29", "custom-17"],
       "maxCustomizations": 1
     },
     {
@@ -1898,10 +1626,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-33",
-        "custom-39"
-      ],
+      "customizationIds": ["custom-33", "custom-39"],
       "maxCustomizations": 1
     },
     {
@@ -1923,10 +1648,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-7",
-        "custom-19"
-      ],
+      "customizationIds": ["custom-7", "custom-19"],
       "maxCustomizations": 1
     },
     {
@@ -1948,10 +1670,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-27",
-        "custom-7"
-      ],
+      "customizationIds": ["custom-27", "custom-7"],
       "maxCustomizations": 1
     },
     {
@@ -1973,10 +1692,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-25",
-        "custom-33"
-      ],
+      "customizationIds": ["custom-25", "custom-33"],
       "maxCustomizations": 1
     },
     {
@@ -1998,10 +1714,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-21",
-        "custom-19"
-      ],
+      "customizationIds": ["custom-21", "custom-19"],
       "maxCustomizations": 1
     },
     {
@@ -2023,10 +1736,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-19"
-      ],
+      "customizationIds": ["custom-29", "custom-19"],
       "maxCustomizations": 1
     },
     {
@@ -2048,11 +1758,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-28",
-        "custom-70"
-      ],
+      "customizationIds": ["custom-29", "custom-28", "custom-70"],
       "maxCustomizations": 3
     },
     {
@@ -2074,11 +1780,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-71",
-        "custom-7",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-71", "custom-7", "custom-29"],
       "maxCustomizations": 3
     },
     {
@@ -2100,11 +1802,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-47",
-        "custom-4",
-        "custom-59"
-      ],
+      "customizationIds": ["custom-47", "custom-4", "custom-59"],
       "maxCustomizations": 2
     },
     {
@@ -2126,11 +1824,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-52",
-        "custom-59"
-      ],
+      "customizationIds": ["custom-3", "custom-52", "custom-59"],
       "maxCustomizations": 2
     },
     {
@@ -2152,10 +1846,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-19",
-        "custom-21"
-      ],
+      "customizationIds": ["custom-19", "custom-21"],
       "maxCustomizations": 2
     },
     {
@@ -2177,10 +1868,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-34",
-        "custom-80"
-      ],
+      "customizationIds": ["custom-34", "custom-80"],
       "maxCustomizations": 2
     },
     {
@@ -2202,10 +1890,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-32",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-32", "custom-28"],
       "maxCustomizations": 1
     },
     {
@@ -2227,10 +1912,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-1",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-1", "custom-28"],
       "maxCustomizations": 1
     },
     {
@@ -2252,10 +1934,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-46",
-        "custom-34"
-      ],
+      "customizationIds": ["custom-46", "custom-34"],
       "maxCustomizations": 1
     },
     {
@@ -2277,10 +1956,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-8",
-        "custom-33"
-      ],
+      "customizationIds": ["custom-8", "custom-33"],
       "maxCustomizations": 1
     },
     {
@@ -2302,11 +1978,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-69",
-        "custom-65",
-        "custom-14"
-      ],
+      "customizationIds": ["custom-69", "custom-65", "custom-14"],
       "maxCustomizations": 3
     },
     {
@@ -2328,11 +2000,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-65",
-        "custom-73",
-        "custom-77"
-      ],
+      "customizationIds": ["custom-65", "custom-73", "custom-77"],
       "maxCustomizations": 3
     },
     {
@@ -2354,11 +2022,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-65",
-        "custom-78"
-      ],
+      "customizationIds": ["custom-29", "custom-65", "custom-78"],
       "maxCustomizations": 3
     },
     {
@@ -2380,11 +2044,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-23",
-        "custom-78",
-        "custom-65"
-      ],
+      "customizationIds": ["custom-23", "custom-78", "custom-65"],
       "maxCustomizations": 3
     },
     {
@@ -2406,11 +2066,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-65",
-        "custom-77",
-        "custom-73"
-      ],
+      "customizationIds": ["custom-65", "custom-77", "custom-73"],
       "maxCustomizations": 3
     },
     {
@@ -2432,11 +2088,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-4",
-        "custom-76",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-4", "custom-76", "custom-29"],
       "maxCustomizations": 3
     },
     {
@@ -2458,11 +2110,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-64",
-        "custom-23",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-64", "custom-23", "custom-29"],
       "maxCustomizations": 3
     },
     {
@@ -2484,11 +2132,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-75",
-        "custom-77"
-      ],
+      "customizationIds": ["custom-29", "custom-75", "custom-77"],
       "maxCustomizations": 3
     },
     {
@@ -2510,11 +2154,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-75",
-        "custom-73",
-        "custom-43"
-      ],
+      "customizationIds": ["custom-75", "custom-73", "custom-43"],
       "maxCustomizations": 3
     },
     {
@@ -2536,11 +2176,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-73",
-        "custom-77",
-        "custom-75"
-      ],
+      "customizationIds": ["custom-73", "custom-77", "custom-75"],
       "maxCustomizations": 3
     },
     {
@@ -2562,11 +2198,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-34",
-        "custom-50",
-        "custom-20"
-      ],
+      "customizationIds": ["custom-34", "custom-50", "custom-20"],
       "maxCustomizations": 2
     },
     {
@@ -2588,11 +2220,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-40",
-        "custom-48",
-        "custom-62"
-      ],
+      "customizationIds": ["custom-40", "custom-48", "custom-62"],
       "maxCustomizations": 2
     },
     {
@@ -2614,11 +2242,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-61",
-        "custom-29",
-        "custom-48"
-      ],
+      "customizationIds": ["custom-61", "custom-29", "custom-48"],
       "maxCustomizations": 2
     },
     {
@@ -2640,11 +2264,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-42",
-        "custom-47",
-        "custom-62"
-      ],
+      "customizationIds": ["custom-42", "custom-47", "custom-62"],
       "maxCustomizations": 2
     },
     {
@@ -2666,11 +2286,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-42",
-        "custom-48",
-        "custom-60"
-      ],
+      "customizationIds": ["custom-42", "custom-48", "custom-60"],
       "maxCustomizations": 2
     },
     {
@@ -2692,11 +2308,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-40",
-        "custom-48",
-        "custom-63"
-      ],
+      "customizationIds": ["custom-40", "custom-48", "custom-63"],
       "maxCustomizations": 2
     },
     {
@@ -2718,11 +2330,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-48",
-        "custom-58",
-        "custom-40"
-      ],
+      "customizationIds": ["custom-48", "custom-58", "custom-40"],
       "maxCustomizations": 2
     },
     {
@@ -2744,11 +2352,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-47",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-29", "custom-47", "custom-28"],
       "maxCustomizations": 2
     },
     {
@@ -2770,11 +2374,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-48",
-        "custom-60",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-48", "custom-60", "custom-29"],
       "maxCustomizations": 2
     },
     {
@@ -2796,11 +2396,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-37",
-        "custom-61"
-      ],
+      "customizationIds": ["custom-59", "custom-37", "custom-61"],
       "maxCustomizations": 2
     },
     {
@@ -2822,11 +2418,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-59",
-        "custom-61",
-        "custom-41"
-      ],
+      "customizationIds": ["custom-59", "custom-61", "custom-41"],
       "maxCustomizations": 2
     },
     {
@@ -2848,11 +2440,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-62",
-        "custom-57"
-      ],
+      "customizationIds": ["custom-29", "custom-62", "custom-57"],
       "maxCustomizations": 2
     },
     {
@@ -2874,11 +2462,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-61",
-        "custom-59",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-61", "custom-59", "custom-29"],
       "maxCustomizations": 2
     },
     {
@@ -2900,10 +2484,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-44",
-        "custom-45"
-      ],
+      "customizationIds": ["custom-44", "custom-45"],
       "maxCustomizations": 2
     },
     {
@@ -2925,10 +2506,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-6",
-        "custom-30"
-      ],
+      "customizationIds": ["custom-6", "custom-30"],
       "maxCustomizations": 1
     },
     {
@@ -2950,10 +2528,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-42",
-        "custom-4"
-      ],
+      "customizationIds": ["custom-42", "custom-4"],
       "maxCustomizations": 1
     },
     {
@@ -2975,10 +2550,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-2"
-      ],
+      "customizationIds": ["custom-29", "custom-2"],
       "maxCustomizations": 1
     },
     {
@@ -3000,10 +2572,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-2",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-2", "custom-29"],
       "maxCustomizations": 1
     },
     {
@@ -3025,10 +2594,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-81",
-        "custom-37"
-      ],
+      "customizationIds": ["custom-81", "custom-37"],
       "maxCustomizations": 1
     },
     {
@@ -3050,10 +2616,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-1",
-        "custom-29"
-      ],
+      "customizationIds": ["custom-1", "custom-29"],
       "maxCustomizations": 1
     },
     {
@@ -3075,10 +2638,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-29", "custom-28"],
       "maxCustomizations": 1
     },
     {
@@ -3100,10 +2660,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-35",
-        "custom-26"
-      ],
+      "customizationIds": ["custom-35", "custom-26"],
       "maxCustomizations": 1
     },
     {
@@ -3125,10 +2682,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-3"
-      ],
+      "customizationIds": ["custom-29", "custom-3"],
       "maxCustomizations": 1
     },
     {
@@ -3150,10 +2704,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-44",
-        "custom-30"
-      ],
+      "customizationIds": ["custom-44", "custom-30"],
       "maxCustomizations": 1
     },
     {
@@ -3175,11 +2726,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-30",
-        "custom-85",
-        "custom-86"
-      ],
+      "customizationIds": ["custom-30", "custom-85", "custom-86"],
       "maxCustomizations": 3
     },
     {
@@ -3201,10 +2748,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-41",
-        "custom-87"
-      ],
+      "customizationIds": ["custom-41", "custom-87"],
       "maxCustomizations": 2
     },
     {
@@ -3226,10 +2770,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-88",
-        "custom-27"
-      ],
+      "customizationIds": ["custom-88", "custom-27"],
       "maxCustomizations": 1
     },
     {
@@ -3251,11 +2792,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-73",
-        "custom-43",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-73", "custom-43", "custom-28"],
       "maxCustomizations": 3
     },
     {
@@ -3277,11 +2814,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-40",
-        "custom-60",
-        "custom-36"
-      ],
+      "customizationIds": ["custom-40", "custom-60", "custom-36"],
       "maxCustomizations": 2
     },
     {
@@ -3303,10 +2836,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-35",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-35", "custom-28"],
       "maxCustomizations": 2
     },
     {
@@ -3328,11 +2858,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-57",
-        "custom-43",
-        "custom-36"
-      ],
+      "customizationIds": ["custom-57", "custom-43", "custom-36"],
       "maxCustomizations": 2
     },
     {
@@ -3354,11 +2880,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-93",
-        "custom-42",
-        "custom-43"
-      ],
+      "customizationIds": ["custom-93", "custom-42", "custom-43"],
       "maxCustomizations": 2
     },
     {
@@ -3380,10 +2902,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-93",
-        "custom-42"
-      ],
+      "customizationIds": ["custom-93", "custom-42"],
       "maxCustomizations": 2
     },
     {
@@ -3405,10 +2924,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-41",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-41", "custom-28"],
       "maxCustomizations": 1
     },
     {
@@ -3430,11 +2946,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-35",
-        "custom-37",
-        "custom-78"
-      ],
+      "customizationIds": ["custom-35", "custom-37", "custom-78"],
       "maxCustomizations": 3
     },
     {
@@ -3456,11 +2968,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-70",
-        "custom-68",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-70", "custom-68", "custom-28"],
       "maxCustomizations": 3
     },
     {
@@ -3482,10 +2990,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-41"
-      ],
+      "customizationIds": ["custom-29", "custom-41"],
       "maxCustomizations": 2
     },
     {
@@ -3507,11 +3012,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-97",
-        "custom-54",
-        "custom-14"
-      ],
+      "customizationIds": ["custom-97", "custom-54", "custom-14"],
       "maxCustomizations": 2
     },
     {
@@ -3533,10 +3034,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-17",
-        "custom-13"
-      ],
+      "customizationIds": ["custom-17", "custom-13"],
       "maxCustomizations": 1
     },
     {
@@ -3558,11 +3056,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-14",
-        "custom-70",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-14", "custom-70", "custom-28"],
       "maxCustomizations": 3
     },
     {
@@ -3584,11 +3078,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-18",
-        "custom-68",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-18", "custom-68", "custom-28"],
       "maxCustomizations": 3
     },
     {
@@ -3610,11 +3100,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-22",
-        "custom-71",
-        "custom-27"
-      ],
+      "customizationIds": ["custom-22", "custom-71", "custom-27"],
       "maxCustomizations": 3
     },
     {
@@ -3636,11 +3122,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-20",
-        "custom-72",
-        "custom-75"
-      ],
+      "customizationIds": ["custom-20", "custom-72", "custom-75"],
       "maxCustomizations": 3
     },
     {
@@ -3662,11 +3144,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-42",
-        "custom-65",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-42", "custom-65", "custom-28"],
       "maxCustomizations": 3
     },
     {
@@ -3688,11 +3166,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-42",
-        "custom-73",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-42", "custom-73", "custom-28"],
       "maxCustomizations": 3
     },
     {
@@ -3714,10 +3188,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-29", "custom-28"],
       "maxCustomizations": 2
     },
     {
@@ -3739,10 +3210,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-17",
-        "custom-3"
-      ],
+      "customizationIds": ["custom-17", "custom-3"],
       "maxCustomizations": 2
     },
     {
@@ -3764,10 +3232,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-13",
-        "custom-3"
-      ],
+      "customizationIds": ["custom-13", "custom-3"],
       "maxCustomizations": 2
     },
     {
@@ -3789,10 +3254,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-29", "custom-28"],
       "maxCustomizations": 2
     },
     {
@@ -3814,10 +3276,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-19",
-        "custom-20"
-      ],
+      "customizationIds": ["custom-19", "custom-20"],
       "maxCustomizations": 2
     },
     {
@@ -3839,10 +3298,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-21",
-        "custom-27"
-      ],
+      "customizationIds": ["custom-21", "custom-27"],
       "maxCustomizations": 2
     },
     {
@@ -3864,10 +3320,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-29",
-        "custom-26"
-      ],
+      "customizationIds": ["custom-29", "custom-26"],
       "maxCustomizations": 2
     },
     {
@@ -3889,10 +3342,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-42",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-42", "custom-28"],
       "maxCustomizations": 2
     },
     {
@@ -3914,10 +3364,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-43",
-        "custom-28"
-      ],
+      "customizationIds": ["custom-43", "custom-28"],
       "maxCustomizations": 2
     },
     {
@@ -3939,11 +3386,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-40",
-        "custom-73",
-        "custom-43"
-      ],
+      "customizationIds": ["custom-40", "custom-73", "custom-43"],
       "maxCustomizations": 3
     },
     {
@@ -3965,11 +3408,7 @@
       "rarity": "R",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-34",
-        "custom-71",
-        "custom-37"
-      ],
+      "customizationIds": ["custom-34", "custom-71", "custom-37"],
       "maxCustomizations": 3
     },
     {
@@ -3991,11 +3430,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-35",
-        "custom-40",
-        "custom-37"
-      ],
+      "customizationIds": ["custom-35", "custom-40", "custom-37"],
       "maxCustomizations": 2
     },
     {
@@ -4017,11 +3452,7 @@
       "rarity": "SR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-3",
-        "custom-54",
-        "custom-59"
-      ],
+      "customizationIds": ["custom-3", "custom-54", "custom-59"],
       "maxCustomizations": 2
     },
     {
@@ -4043,10 +3474,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-35",
-        "custom-44"
-      ],
+      "customizationIds": ["custom-35", "custom-44"],
       "maxCustomizations": 1
     },
     {
@@ -4068,10 +3496,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-31",
-        "custom-17"
-      ],
+      "customizationIds": ["custom-31", "custom-17"],
       "maxCustomizations": 1
     },
     {
@@ -4093,10 +3518,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-27",
-        "custom-22"
-      ],
+      "customizationIds": ["custom-27", "custom-22"],
       "maxCustomizations": 1
     },
     {
@@ -4118,10 +3540,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-27",
-        "custom-2"
-      ],
+      "customizationIds": ["custom-27", "custom-2"],
       "maxCustomizations": 1
     },
     {
@@ -4143,10 +3562,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-104",
-        "custom-37"
-      ],
+      "customizationIds": ["custom-104", "custom-37"],
       "maxCustomizations": 1
     },
     {
@@ -4168,10 +3584,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-105",
-        "custom-106"
-      ],
+      "customizationIds": ["custom-105", "custom-106"],
       "maxCustomizations": 1
     },
     {
@@ -4193,10 +3606,7 @@
       "rarity": "SSR",
       "upgraded": true,
       "retired": false,
-      "customizationIds": [
-        "custom-28",
-        "custom-35"
-      ],
+      "customizationIds": ["custom-28", "custom-35"],
       "maxCustomizations": 1
     }
   ],
