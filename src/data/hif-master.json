@@ -1,0 +1,1581 @@
+{
+  "version": 1,
+  "source": "https://wikiwiki.jp/gakumas/HIF/メモリーアビリティ",
+  "abilities": [
+    {
+      "id": "hif-card-288",
+      "targetCardId": "card-288",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "ひと呼吸使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-592",
+      "targetCardId": "card-592",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "ペース配分使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-82",
+      "targetCardId": "card-82",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "スタートダッシュ使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-84",
+      "targetCardId": "card-84",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "スタンドプレー使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-86",
+      "targetCardId": "card-86",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "シュプレヒコール使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-596",
+      "targetCardId": "card-596",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "破竹の勢い使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-106",
+      "targetCardId": "card-106",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "演出計画使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-108",
+      "targetCardId": "card-108",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "願いの力使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-110",
+      "targetCardId": "card-110",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "静かな意志使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-116",
+      "targetCardId": "card-116",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "存在感使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-294",
+      "targetCardId": "card-294",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "スポットライト使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-751",
+      "targetCardId": "card-751",
+      "plan": "sense",
+      "effectId": "remove-sleep",
+      "name": "精神統一使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-34",
+      "targetCardId": "card-34",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "ハイタッチ使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-36",
+      "targetCardId": "card-36",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "トークタイム使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-690",
+      "targetCardId": "card-690",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "軌道修正使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-692",
+      "targetCardId": "card-692",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "パンプアップ使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-378",
+      "targetCardId": "card-378",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "エキサイト使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-72",
+      "targetCardId": "card-72",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "決めポーズ使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-78",
+      "targetCardId": "card-78",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "飛躍使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-80",
+      "targetCardId": "card-80",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "祝福使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-292",
+      "targetCardId": "card-292",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "立ち位置チェック使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-102",
+      "targetCardId": "card-102",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "眼力使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-104",
+      "targetCardId": "card-104",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "大声援使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-112",
+      "targetCardId": "card-112",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "始まりの合図使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-114",
+      "targetCardId": "card-114",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "意地使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-118",
+      "targetCardId": "card-118",
+      "plan": "sense",
+      "effectId": "extra-draw",
+      "name": "成功への道筋使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-24",
+      "targetCardId": "card-24",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "軽い足取り使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-26",
+      "targetCardId": "card-26",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "愛嬌使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-28",
+      "targetCardId": "card-28",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "準備運動使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-30",
+      "targetCardId": "card-30",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "ファンサ使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-32",
+      "targetCardId": "card-32",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "勢い任せ使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-52",
+      "targetCardId": "card-52",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "バランス感覚使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-54",
+      "targetCardId": "card-54",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "楽観的使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-56",
+      "targetCardId": "card-56",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "深呼吸使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-74",
+      "targetCardId": "card-74",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "アドリブ使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-76",
+      "targetCardId": "card-76",
+      "plan": "sense",
+      "effectId": "extra-use",
+      "name": "情熱ターン使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-516",
+      "targetCardId": "card-516",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "デイドリーミング使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-94",
+      "targetCardId": "card-94",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "キラメキ使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-96",
+      "targetCardId": "card-96",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "みんな大好き使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-126",
+      "targetCardId": "card-126",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "ファンシーチャーム使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-128",
+      "targetCardId": "card-128",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "ワクワクが止まらない使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-130",
+      "targetCardId": "card-130",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "本番前夜使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-132",
+      "targetCardId": "card-132",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "ひなたぼっこ使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-138",
+      "targetCardId": "card-138",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "ゆめみごこち使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-296",
+      "targetCardId": "card-296",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "止められない想い使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-298",
+      "targetCardId": "card-298",
+      "plan": "logic",
+      "effectId": "remove-sleep",
+      "name": "オトメゴコロ使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-40",
+      "targetCardId": "card-40",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "ゆるふわおしゃべり使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-44",
+      "targetCardId": "card-44",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "手拍子使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-46",
+      "targetCardId": "card-46",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "元気な挨拶使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-694",
+      "targetCardId": "card-694",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "おまもりミラクル使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-696",
+      "targetCardId": "card-696",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "がむしゃら使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-62",
+      "targetCardId": "card-62",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "リズミカル使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-290",
+      "targetCardId": "card-290",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "幸せのおまじない使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-747",
+      "targetCardId": "card-747",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "イメチェン使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-90",
+      "targetCardId": "card-90",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "ありがとうの言葉使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-92",
+      "targetCardId": "card-92",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "ハートの合図使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-134",
+      "targetCardId": "card-134",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "イメトレ使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-136",
+      "targetCardId": "card-136",
+      "plan": "logic",
+      "effectId": "extra-draw",
+      "name": "やる気は満点使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-38",
+      "targetCardId": "card-38",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "今日もおはよう使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-42",
+      "targetCardId": "card-42",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "もう少しだけ使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-58",
+      "targetCardId": "card-58",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "リスタート使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-60",
+      "targetCardId": "card-60",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "えいえいおー使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-64",
+      "targetCardId": "card-64",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "思い出し笑い使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-66",
+      "targetCardId": "card-66",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "パステル気分使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-68",
+      "targetCardId": "card-68",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "励まし使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-88",
+      "targetCardId": "card-88",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "ラブリーウインク使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-398",
+      "targetCardId": "card-398",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "きらきら紙吹雪使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-120",
+      "targetCardId": "card-120",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "あふれる思い出使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-122",
+      "targetCardId": "card-122",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "ふれあい使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-124",
+      "targetCardId": "card-124",
+      "plan": "logic",
+      "effectId": "extra-use",
+      "name": "幸せな時間使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-698",
+      "targetCardId": "card-698",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "形勢逆転使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-546",
+      "targetCardId": "card-546",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "セッティング使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-548",
+      "targetCardId": "card-548",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "第一印象使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-410",
+      "targetCardId": "card-410",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "始まりの笑顔使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-550",
+      "targetCardId": "card-550",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "トレンドリーダー使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-552",
+      "targetCardId": "card-552",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "モチベ使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-420",
+      "targetCardId": "card-420",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "プライド使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-554",
+      "targetCardId": "card-554",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "盛り上げ上手使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-556",
+      "targetCardId": "card-556",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "インフルエンサー使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-424",
+      "targetCardId": "card-424",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "切磋琢磨使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-518",
+      "targetCardId": "card-518",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "タフネス使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-594",
+      "targetCardId": "card-594",
+      "plan": "anomaly",
+      "effectId": "remove-sleep",
+      "name": "達成感使用後：眠気を除外",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：山札か捨札の眠気をランダムに除外",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-380",
+      "targetCardId": "card-380",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "ジャストアピール使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-384",
+      "targetCardId": "card-384",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "一歩使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-386",
+      "targetCardId": "card-386",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "ラッキー♪使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-390",
+      "targetCardId": "card-390",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "精一杯使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-700",
+      "targetCardId": "card-700",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "ノンストップ使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-745",
+      "targetCardId": "card-745",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "ハッスル使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-392",
+      "targetCardId": "card-392",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "ハッピー♪使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-394",
+      "targetCardId": "card-394",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "嬉しい誤算使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-396",
+      "targetCardId": "card-396",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "涙の思い出使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-590",
+      "targetCardId": "card-590",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "巻き返し使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-404",
+      "targetCardId": "card-404",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "はじけるパッション使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-406",
+      "targetCardId": "card-406",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "汗と成長使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-408",
+      "targetCardId": "card-408",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "オープニングアクト使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-412",
+      "targetCardId": "card-412",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "理想のテンポ使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-414",
+      "targetCardId": "card-414",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "トレーニングの成果使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-749",
+      "targetCardId": "card-749",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "アンダンテ使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-416",
+      "targetCardId": "card-416",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "潜在能力使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-418",
+      "targetCardId": "card-418",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "カウントダウン使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-422",
+      "targetCardId": "card-422",
+      "plan": "anomaly",
+      "effectId": "extra-draw",
+      "name": "忍耐力使用後：使用数追加・ドロー",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと1回：使用数+1・1枚ドロー",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-382",
+      "targetCardId": "card-382",
+      "plan": "anomaly",
+      "effectId": "extra-use",
+      "name": "スターライト使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-388",
+      "targetCardId": "card-388",
+      "plan": "anomaly",
+      "effectId": "extra-use",
+      "name": "積み重ね使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-400",
+      "targetCardId": "card-400",
+      "plan": "anomaly",
+      "effectId": "extra-use",
+      "name": "せーのっ！使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "hif-card-402",
+      "targetCardId": "card-402",
+      "plan": "anomaly",
+      "effectId": "extra-use",
+      "name": "アッチェレランド使用後：使用数追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "standard",
+          "label": "試験ごと2回：使用数+1",
+          "retired": false
+        }
+      ]
+    }
+  ]
+}
