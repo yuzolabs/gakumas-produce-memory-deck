@@ -57,6 +57,16 @@ test('HIF target selection assigns its fixed effect without a separate effect se
   expect(cleared.memories[0].hif).toBeNull();
 });
 
+test('clicking outside the confirm dialog dismisses it like cancel', async ({ page }) => {
+  await page.goto('/memories/new?card=card-295');
+  await page.getByRole('button', { name: '内容を確認して保存', exact: true }).click();
+  const dialog = page.getByRole('alertdialog');
+  await expect(dialog).toBeVisible();
+  await page.mouse.click(10, 10);
+  await expect(dialog).toHaveCount(0);
+  await expect(page.getByLabel('カード名で検索')).toHaveValue('スポットライト+');
+});
+
 test('customization +/- controls enforce limits and persist zero as no customization', async ({
   page,
 }) => {

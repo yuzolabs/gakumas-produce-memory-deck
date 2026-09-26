@@ -44,6 +44,9 @@ export function MemoryConfirmDialog({
       }}
     >
       <AlertDialogContent
+        onOverlayClick={() => {
+          if (!busy) onOpenChange(false);
+        }}
         finalFocus={() => {
           if (openedUrl.current === window.location.href) return true;
           document.getElementById('main-content')?.focus({ preventScroll: true });
