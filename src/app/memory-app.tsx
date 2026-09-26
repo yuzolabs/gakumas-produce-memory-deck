@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import {
   createBrowserRouter,
   Link,
@@ -9,11 +9,16 @@ import {
 } from 'react-router-dom';
 import { BookOpen, Plus, Archive } from 'lucide-react';
 import { MemoryStoreProvider, describeStorageError, useMemoryStore } from '../storage/memory-store';
-import { MemoryEditorPage } from '../pages/memory-editor';
 import { downloadMemoryJson } from '../lib/download-memory-json';
 import { Button } from '../components/ui/button';
 import { MemoryListPage } from '../pages/memory-list';
-import { MemorySettingsPage } from '../pages/memory-settings';
+
+const MemoryEditorPage = lazy(() =>
+  import('../pages/memory-editor').then((module) => ({ default: module.MemoryEditorPage })),
+);
+const MemorySettingsPage = lazy(() =>
+  import('../pages/memory-settings').then((module) => ({ default: module.MemorySettingsPage })),
+);
 
 function MemoryLayout() {
   const store = useMemoryStore();
@@ -75,7 +80,9 @@ function MemoryLayout() {
             </Button>
           </section>
         ) : (
-          <Outlet />
+          <Suspense key={location.pathname} fallback={<p role="status">画面を読み込んでいます…</p>}>
+            <Outlet />
+          </Suspense>
         )}
       </main>
       <footer className="site-footer">
