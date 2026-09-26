@@ -51,25 +51,25 @@ Using the diff, commit log, and template, generate `pr.md` in the project root.
 **Template structure** (from `.github/copilot-pull-request-instructions.md`):
 
 ```markdown
-<!-- PR Title -->
-## Summary
-<!-- Background, purpose, and overview of the PR -->
+<!-- PRタイトル -->
+## 概要
+<!-- このPRの背景・目的・概要 -->
 
-## Changes
-<!-- What was done in this PR? -->
+## 変更内容
+<!-- このPRで実施した変更内容 -->
 
-## Notes
-<!-- Information for reviewers, notes to keep, and reference links -->
+## 補足
+<!-- レビュワーへの情報、残しておきたいメモ、参考リンク -->
 ```
 
-- The **first line** must be the PR title (concise, imperative, in English).
-- **Summary**: Explain the background and purpose — *why* this PR exists.
-- **Changes**: Concrete list of what was modified/added/removed — *what* was done.
-- **Notes**: Anything relevant for reviewers (e.g., design decisions, caveats, links to issues).
+- The **first line** must be the PR title (concise, in Japanese).
+- **概要**: Explain the background and purpose — *why* this PR exists.
+- **変更内容**: Concrete list of what was modified/added/removed — *what* was done.
+- **補足**: Anything relevant for reviewers (e.g., design decisions, caveats, links to issues).
 
-### Step 5: Validate pr.md (if it contains Japanese text)
+### Step 5: Validate pr.md
 
-If the pr.md output contains Japanese text, run markdown lint:
+The pr.md output is written in Japanese, so always run markdown lint:
 
 ```bash
 bunx markdownlint-cli2 --fix "pr.md"
@@ -77,7 +77,7 @@ bunx markdownlint-cli2 --fix "pr.md"
 
 ## Rules
 
-- Output language: **English** (as specified by the template instructions).
+- Output language: **Japanese** (write the title, headings, and body all in Japanese).
 - Do NOT include any diff output, raw git content, or code snippets in pr.md unless they aid understanding.
 - Keep the PR title on the first line, not inside a heading.
 - If the base branch cannot be determined automatically, assume `main`.
