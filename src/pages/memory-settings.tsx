@@ -4,6 +4,7 @@ import { createMemoryBackup, parseMemoryBackup, type MemoryBackup } from '../dom
 import { describeStorageError, useMemoryStore } from '../storage/memory-store';
 import { downloadMemoryJson } from '../lib/download-memory-json';
 import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
+import { MemoryStorageNotice } from '../components/memory-storage-notice';
 import { Button } from '../components/ui/button';
 import fontLicense from '../../licenses/zen-maru-gothic-LICENSE.txt?raw';
 import uiLicense from '../../licenses/shadcn-ui-LICENSE.txt?raw';
@@ -75,6 +76,10 @@ export function MemorySettingsPage() {
           <h1>バックアップ</h1>
         </div>
       </div>
+      <MemoryStorageNotice
+        showBackupLink={false}
+        backupReminder={snapshot.memories.length > 0 && snapshot.lastBackupAt === null}
+      />
       {notice && (
         <p className="notice" role="status">
           {notice}
