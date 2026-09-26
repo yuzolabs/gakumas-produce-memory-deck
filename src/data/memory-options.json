@@ -19,5 +19,6 @@
     { "id": "da", "label": "Da", "name": "ダンス" },
     { "id": "vi", "label": "Vi", "name": "ビジュアル" }
   ],
-  "hifBonusSlots": 3
+  "hifBonusSlots": 3,
+  "normalBonusSlots": 5
 }

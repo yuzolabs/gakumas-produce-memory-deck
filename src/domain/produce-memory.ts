@@ -67,9 +67,11 @@ export function getMemoryIssues(memory: ProduceMemory, master: MemoryMaster = me
   for (const attribute of master.attributes) for (const definition of master.bonusDefinitions) {
     const value = memory.bonuses[attribute.id][definition.id];
     if (!definition.values.includes(value)) issues.push(`${attribute.label}の${definition.label}に不明な値があります: ${value}`);
+    if (!allowRetired && definition.retiredValues.includes(value)) issues.push(`${attribute.label}の${definition.label}の値は廃止されています: ${value}`);
     if (value > 0) slots++;
   }
   if (memory.hif && slots > master.hifBonusSlots) issues.push(`HIF付きメモリーの通常アビリティは${master.hifBonusSlots}枠までです`);
+  if (!memory.hif && slots > master.normalBonusSlots) issues.push(`通常アビリティは${master.normalBonusSlots}枠までです`);
   if (memory.updatedAt < memory.createdAt) issues.push('更新日時が登録日時より前です');
   return issues;
 }

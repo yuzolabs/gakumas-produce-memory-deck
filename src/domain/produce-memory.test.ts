@@ -42,6 +42,16 @@ describe('memory master and rules', () => {
     expect(getMemoryIssues(memory, validateMemoryMaster(master))).toEqual([]);
     expect(getMemoryIssues(memory)).not.toEqual([]);
   });
+  it('retains retired bonus values in history and rejects six normal bonus slots', () => {
+    const master = structuredClone(memoryMaster);
+    master.bonusDefinitions.find(d => d.id === 'lesson')!.retiredValues.push(1.4);
+    const memory = createMemoryDraft('card-295');
+    memory.bonuses.vo.lesson = 1.4;
+    expect(getMemoryIssues(memory, master)).toEqual([]);
+    expect(getMemoryIssues(memory, master, false)).not.toEqual([]);
+    for (const attribute of master.attributes) memory.bonuses[attribute.id] = { lesson: 2.1, initial: 15 };
+    expect(getMemoryIssues(memory)).toContain('通常アビリティは5枠までです');
+  });
   it('rejects broken masters and excessive HIF bonus slots', () => {
     const master = structuredClone(memoryMaster);
     master.cards.push(master.cards[0]);

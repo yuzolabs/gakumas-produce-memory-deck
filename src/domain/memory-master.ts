@@ -24,8 +24,9 @@ const memoryMasterSchema = z.object({
   plans: z.array(z.object({ id: z.string(), label: z.string() })),
   acquisitionTimings: z.array(masterValueSchema).min(1),
   attributes: z.array(z.object({ id: z.enum(['vo', 'da', 'vi']), label: z.string(), name: z.string() })).length(3),
-  bonusDefinitions: z.array(z.object({ id: z.enum(['lesson', 'initial']), label: z.string(), unit: z.string(), values: z.array(z.number().finite().nonnegative()).min(1) })).length(2),
+  bonusDefinitions: z.array(z.object({ id: z.enum(['lesson', 'initial']), label: z.string(), unit: z.string(), values: z.array(z.number().finite().nonnegative()).min(1), retiredValues: z.array(z.number().finite().nonnegative()).default([]) })).length(2),
   hifBonusSlots: z.number().int().positive(),
+  normalBonusSlots: z.number().int().positive(),
 });
 /** Master data includes retired choices so historical records remain readable. */
 export type MemoryMaster = z.infer<typeof memoryMasterSchema>;
@@ -40,9 +41,13 @@ function assertUniqueIds(rows: { id: string }[], context: string) {
 export function validateMemoryMaster(input: unknown): MemoryMaster {
   const master = memoryMasterSchema.parse(input);
   for (const key of ['cards', 'customizations', 'abilities', 'plans', 'acquisitionTimings', 'attributes', 'bonusDefinitions'] as const) assertUniqueIds(master[key], key);
-  for (const definition of [...master.customizations, ...master.abilities]) assertUniqueIds(definition.values, definition.id);
+  for (const definition of [...master.customizations, ...master.abilities]) {
+    assertUniqueIds(definition.values, definition.id);
+    if (!definition.retired && !definition.values.some(v => !v.retired)) throw new Error(`Master validation: 有効な選択肢がありません: ${definition.id}`);
+  }
+  if (!master.acquisitionTimings.some(t => !t.retired)) throw new Error('Master validation: 有効な取得タイミングがありません');
   for (const definition of master.bonusDefinitions) {
-    if (!definition.values.includes(0) || new Set(definition.values).size !== definition.values.length) throw new Error('Master validation: ボーナスには重複のない値と0が必要です');
+    if (!definition.values.includes(0) || definition.retiredValues.includes(0) || definition.retiredValues.some(v => !definition.values.includes(v)) || new Set(definition.values).size !== definition.values.length) throw new Error('Master validation: ボーナスには重複のない値と0が必要です');
   }
   for (const card of master.cards) {
     if (!master.plans.some(p => p.id === card.plan) || new Set(card.customizationIds).size !== card.customizationIds.length || card.customizationIds.some(id => !master.customizations.some(c => c.id === id))) throw new Error(`Master validation: カードの参照が不正です: ${card.id}`);
