@@ -64,7 +64,6 @@ function MemoryEditorForm({
   const store = useMemoryStore();
   const card = memoryMaster.cards.find((c) => c.id === draft.cardId);
   const issues = getMemoryIssues(draft, memoryMaster, editing);
-  const ability = memoryMaster.abilities.find((a) => a.id === draft.hif?.abilityId);
   const selectedCost = draft.customizations.reduce(
     (total, selected) =>
       total +
@@ -235,18 +234,6 @@ function MemoryEditorForm({
                   .map((a) => ({ value: a.id, label: a.name })),
               ]}
             />
-            {ability && (
-              <SelectionField
-                label="HIFの効果・回数"
-                value={draft.hif!.valueId}
-                onChange={(valueId) =>
-                  updateDraft({ ...draft, hif: { abilityId: ability.id, valueId } })
-                }
-                options={ability.values
-                  .filter((v) => !v.retired || (editing && v.id === initial.hif?.valueId))
-                  .map((v) => ({ value: v.id, label: v.label }))}
-              />
-            )}
           </fieldset>
           <fieldset className="form-section" disabled={store.busy}>
             <legend>パラメーターボーナス</legend>

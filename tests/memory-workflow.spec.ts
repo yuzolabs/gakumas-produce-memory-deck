@@ -33,6 +33,30 @@ async function downloadBackup(page: Page) {
   return text;
 }
 
+test('HIF target selection assigns its fixed effect without a separate effect selector', async ({
+  page,
+}) => {
+  await page.goto('/memories/new?card=card-295');
+  const target = page.getByLabel('HIFの発動対象カード');
+  await target.selectOption('hif-card-288');
+  await expect(page.getByLabel('HIFの効果・回数')).toHaveCount(0);
+  await expect(page.getByLabel('入力内容のプレビュー')).toContainText('試験ごと1回');
+  await confirmSave(page);
+  const group = await ownedSpotlight(page);
+  await group.getByRole('link', { name: '編集', exact: true }).click();
+  await page.reload();
+  await expect(target).toHaveValue('hif-card-288');
+  await expect(page.getByLabel('HIFの効果・回数')).toHaveCount(0);
+  const backup = JSON.parse(await downloadBackup(page));
+  expect(backup.memories[0].hif).toEqual({ abilityId: 'hif-card-288', valueId: 'standard' });
+  await page.goto(`/memories/${backup.memories[0].id}/edit`);
+  await target.selectOption('');
+  await expect(page.getByLabel('HIFの効果・回数')).toHaveCount(0);
+  await confirmSave(page);
+  const cleared = JSON.parse(await downloadBackup(page));
+  expect(cleared.memories[0].hif).toBeNull();
+});
+
 test('customization +/- controls enforce limits and persist zero as no customization', async ({
   page,
 }) => {
