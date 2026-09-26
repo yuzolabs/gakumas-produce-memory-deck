@@ -158,11 +158,6 @@ function MemoryEditorForm({
           </fieldset>
           <fieldset className="form-section" disabled={store.busy || !card}>
             <legend>カスタム</legend>
-            <p className="section-hint">
-              {card
-                ? `合計 ${selectedCost} / ${card.maxCustomizations}段階。−／＋で調整し、0でカスタムなしに戻します。数値は効果の最終値ではなく、特別指導の回数です。`
-                : '先にカードを選択してください。'}
-            </p>
             {card?.customizationIds.length === 0 && (
               <p>このカードには選択可能なカスタムがありません。</p>
             )}
