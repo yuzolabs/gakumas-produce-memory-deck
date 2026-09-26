@@ -5,6 +5,7 @@ import { createMemoryDraft, getMemoryIssues, type ProduceMemory } from '../domai
 import { describeStorageError, useMemoryStore } from '../storage/memory-store';
 import { SelectionField } from '../components/selection-field';
 import { SkillCardSearch } from '../components/skill-card-search';
+import { CustomizationStepper } from '../components/customization-stepper';
 import { MemorySummary } from '../components/memory-summary';
 import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
 import { Button } from '../components/ui/button';
@@ -165,13 +166,13 @@ function MemoryEditorForm({
             <legend>カスタム</legend>
             <p className="section-hint">
               {card
-                ? `合計 ${selectedCost} / ${card.maxCustomizations}段階。段階は特別指導の回数です。効果の最終値ではありません。`
+                ? `合計 ${selectedCost} / ${card.maxCustomizations}段階。−／＋で調整し、0でカスタムなしに戻します。数値は効果の最終値ではなく、特別指導の回数です。`
                 : '先にカードを選択してください。'}
             </p>
             {card?.customizationIds.length === 0 && (
               <p>このカードには選択可能なカスタムがありません。</p>
             )}
-            <div className="field-grid">
+            <div className="customization-list">
               {card?.customizationIds.map((id) => {
                 const definition = memoryMaster.customizations.find((c) => c.id === id)!;
                 const selected = draft.customizations.find((c) => c.definitionId === id);
@@ -180,10 +181,12 @@ function MemoryEditorForm({
                 const ownCost =
                   definition.values.find((v) => v.id === selected?.valueId)?.cost ?? 0;
                 return (
-                  <SelectionField
+                  <CustomizationStepper
                     key={id}
                     label={definition.name}
-                    value={selected?.valueId ?? ''}
+                    selectedId={selected?.valueId ?? ''}
+                    maxCost={card.maxCustomizations - selectedCost + ownCost}
+                    disabled={store.busy}
                     onChange={(valueId) =>
                       updateDraft({
                         ...draft,
@@ -193,16 +196,9 @@ function MemoryEditorForm({
                         ],
                       })
                     }
-                    options={[
-                      { value: '', label: 'なし' },
-                      ...definition.values
-                        .filter((v) => !v.retired || (editing && v.id === oldSelected?.valueId))
-                        .map((v) => ({
-                          value: v.id,
-                          label: v.label,
-                          disabled: selectedCost - ownCost + v.cost > card.maxCustomizations,
-                        })),
-                    ]}
+                    values={definition.values.filter(
+                      (v) => !v.retired || (editing && v.id === oldSelected?.valueId),
+                    )}
                   />
                 );
               })}

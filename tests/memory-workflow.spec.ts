@@ -4,7 +4,8 @@ import { test, expect, type Page } from '@playwright/test';
 async function enterScreenshotMemory(page: Page) {
   await page.goto('/memories/new?card=card-295');
   await page.getByLabel('取得タイミング', { exact: true }).selectOption('after-first-exam');
-  await page.getByLabel('好調+', { exact: true }).selectOption('2');
+  await page.getByRole('button', { name: '好調+を増やす', exact: true }).click();
+  await page.getByRole('button', { name: '好調+を増やす', exact: true }).click();
   await page.getByLabel('HIFの発動対象カード').selectOption('hif-card-288');
   await page.getByLabel('Vo 初期ステータス加算', { exact: true }).selectOption('15');
   await page.getByLabel('Da 初期ステータス加算', { exact: true }).selectOption('20');
@@ -31,6 +32,56 @@ async function downloadBackup(page: Page) {
   await expect(page.getByRole('status')).toContainText('JSONを出力しました');
   return text;
 }
+
+test('customization +/- controls enforce limits and persist zero as no customization', async ({
+  page,
+}) => {
+  await page.goto('/memories/new?card=card-295');
+  const goodUp = page.getByRole('button', { name: '好調+を増やす', exact: true });
+  const goodDown = page.getByRole('button', { name: '好調+を減らす', exact: true });
+  const goodValue = page.getByLabel('好調+の段階', { exact: true });
+  const scoreUp = page.getByRole('button', { name: 'パラメータ追加を増やす', exact: true });
+  const scoreDown = page.getByRole('button', { name: 'パラメータ追加を減らす', exact: true });
+  await expect(page.getByRole('combobox', { name: '好調+', exact: true })).toHaveCount(0);
+  await expect(goodValue).toHaveText('0');
+  await expect(goodDown).toBeDisabled();
+  await scoreUp.click();
+  await expect(scoreUp).toBeDisabled();
+  await expect(goodUp).toBeEnabled();
+  await goodUp.click();
+  await expect(goodValue).toHaveText('1');
+  await expect(goodUp).toBeDisabled();
+  await expect(page.getByRole('button', { name: '元気+を増やす', exact: true })).toBeDisabled();
+  await scoreDown.click();
+  await expect(page.getByLabel('パラメータ追加の段階')).toHaveText('0');
+  await expect(goodUp).toBeEnabled();
+  await goodDown.click();
+  await expect(goodDown).toBeDisabled();
+  await goodUp.focus();
+  await page.keyboard.press('Enter');
+  await expect(goodValue).toHaveText('1');
+  await page.keyboard.press('Space');
+  await expect(goodValue).toHaveText('2');
+  await expect(goodUp).toBeDisabled();
+  await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  await expect(page.getByLabel('入力内容のプレビュー')).toContainText('好調+ 2段階');
+  await confirmSave(page);
+  const group = await ownedSpotlight(page);
+  await group.getByRole('link', { name: '編集', exact: true }).click();
+  await expect(goodValue).toHaveText('2');
+  await page.reload();
+  await expect(goodValue).toHaveText('2');
+  await goodDown.click();
+  await goodDown.click();
+  await expect(goodValue).toHaveText('0');
+  await expect(goodDown).toBeDisabled();
+  await confirmSave(page);
+  const backup = JSON.parse(await downloadBackup(page));
+  expect(backup.memories[0].customizations).toEqual([]);
+  await page.goto('/memories/new?card=card-294');
+  await expect(page.getByText('このカードには選択可能なカスタムがありません。')).toBeVisible();
+  await expect(page.locator('.customization-stepper')).toHaveCount(0);
+});
 
 test('card search lists matches inline and supports pointer and keyboard selection', async ({
   page,
@@ -89,13 +140,13 @@ test('cancelling a search selection preserves the card and its customizations', 
   page.once('dialog', (dialog) => dialog.dismiss());
   await page.getByRole('option', { name: /^ひと呼吸\+ / }).click();
   await expect(page.locator('.skill-search-selection')).toHaveText('選択中：スポットライト+');
-  await expect(page.getByLabel('好調+', { exact: true })).toHaveValue('2');
+  await expect(page.getByLabel('好調+の段階', { exact: true })).toHaveText('2');
   await expect(page.getByLabel('HIFの発動対象カード')).toHaveValue('hif-card-288');
   page.once('dialog', (dialog) => dialog.accept());
   await page.getByRole('option', { name: /^ひと呼吸\+ / }).click();
   await expect(page.locator('.skill-search-selection')).toHaveText('選択中：ひと呼吸+');
   await expect(page.getByLabel('HIFの発動対象カード')).toHaveValue('');
-  await expect(page.getByLabel('集中+', { exact: true })).toHaveValue('');
+  await expect(page.getByLabel('集中+の段階', { exact: true })).toHaveText('0');
 });
 
 test('owned-card list stays empty until registration and never shows unowned cards', async ({
@@ -148,9 +199,7 @@ test('register screenshot, reload, duplicate, edit, filter timing, delete and re
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await enterScreenshotMemory(page);
-  await expect(
-    page.getByLabel('元気+', { exact: true }).locator('option[value="1"]'),
-  ).toBeDisabled();
+  await expect(page.getByRole('button', { name: '元気+を増やす', exact: true })).toBeDisabled();
   await page.screenshot({ path: testInfo.outputPath('editor.png'), fullPage: true });
   await confirmSave(page);
   await page.reload();
@@ -255,7 +304,7 @@ test('failed save retains selections and supports retry', async ({ page }) => {
     .click();
   await expect(page.getByRole('alert')).toContainText('入力は保持しています');
   await page.getByRole('alertdialog').getByRole('button', { name: 'キャンセル' }).click();
-  await expect(page.getByLabel('好調+', { exact: true })).toHaveValue('2');
+  await expect(page.getByLabel('好調+の段階', { exact: true })).toHaveText('2');
   await expect(page.getByLabel('Da 初期ステータス加算', { exact: true })).toHaveValue('20');
   await confirmSave(page);
   const group = await ownedSpotlight(page);
@@ -269,8 +318,8 @@ test('continuous registration resets a draft and protects it from navigation', a
     .getByRole('alertdialog')
     .getByRole('button', { name: '保存して次を登録', exact: true })
     .click();
-  await expect(page.getByRole('status')).toContainText('保存しました');
-  await expect(page.getByLabel('好調+', { exact: true })).toHaveValue('');
+  await expect(page.getByRole('status').filter({ hasText: '保存しました' })).toBeVisible();
+  await expect(page.getByLabel('好調+の段階', { exact: true })).toHaveText('0');
   await expect(page.getByRole('combobox', { name: 'カード名で検索' })).toHaveValue(
     'スポットライト+',
   );
