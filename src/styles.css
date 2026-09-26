@@ -288,6 +288,17 @@ main:focus {
 .skill-search-selection strong {
   color: #21354a;
 }
+.skill-search-selection {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.skill-selection-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
 .skill-search-results {
   max-height: 280px;
   overflow-y: auto;
@@ -299,12 +310,24 @@ main:focus {
 }
 .skill-search-results [role='option'] {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  align-items: center;
+  gap: 10px;
   min-height: 56px;
   padding: 10px 14px;
   cursor: pointer;
   overflow-wrap: anywhere;
+}
+.skill-option-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.skill-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
 }
 .skill-search-results [role='option'] + [role='option'] {
   border-top: 1px solid #d3dfea;
@@ -422,8 +445,17 @@ main:focus {
   margin-top: 24px;
 }
 .memory-summary h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 19px;
   margin-bottom: 18px;
+}
+.summary-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  flex-shrink: 0;
 }
 .summary-details dt {
   font-size: 11px;
@@ -600,23 +632,18 @@ main:focus {
 .card-toggle .is-expanded {
   transform: rotate(180deg);
 }
-.card-mark {
-  display: grid;
-  place-items: center;
-  width: 40px;
+.card-icon {
+  width: 48px;
   height: 48px;
   border-radius: 5px;
-  border: 1px solid currentColor;
-  font-size: 24px;
+  border: 2px solid #d3dfea;
   flex-shrink: 0;
 }
-.card-mark.active {
-  color: #b72d62;
-  background: #fff1f6;
+.card-icon.active {
+  border-color: #b72d62;
 }
-.card-mark.mental {
-  color: #235ca8;
-  background: #edf5ff;
+.card-icon.mental {
+  border-color: #235ca8;
 }
 .card-identity {
   display: flex;
@@ -915,10 +942,9 @@ main:focus {
   .card-group-heading {
     padding-right: 6px;
   }
-  .card-mark {
-    width: 28px;
+  .card-icon {
+    width: 36px;
     height: 36px;
-    font-size: 18px;
   }
   .card-identity strong {
     font-size: 14px;
