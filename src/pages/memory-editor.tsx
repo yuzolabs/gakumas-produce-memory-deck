@@ -304,9 +304,6 @@ function MemoryEditorForm({
         <aside className="preview-panel" aria-label="入力内容のプレビュー">
           <h2>登録するメモリー</h2>
           <MemorySummary memory={draft} />
-          <p className="section-hint">
-            保存先はこのブラウザです。定期的なバックアップをおすすめします。
-          </p>
         </aside>
       </div>
       <MemoryConfirmDialog
