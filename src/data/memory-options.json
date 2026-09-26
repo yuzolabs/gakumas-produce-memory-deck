@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "plans": [
+    { "id": "sense", "label": "センス" },
+    { "id": "logic", "label": "ロジック" },
+    { "id": "anomaly", "label": "アノマリー" },
+    { "id": "free", "label": "共通" }
+  ],
+  "acquisitionTimings": [
+    { "id": "start", "label": "開始時に獲得", "retired": false },
+    { "id": "after-first-exam", "label": "中間試験／1次オーディション後に獲得", "retired": false }
+  ],
+  "bonusDefinitions": [
+    { "id": "lesson", "label": "レッスンボーナス", "unit": "%", "values": [0, 1.4, 2.1, 2.8, 3.5] },
+    { "id": "initial", "label": "初期ステータス加算", "unit": "", "values": [0, 10, 15, 20, 25] }
+  ],
+  "attributes": [
+    { "id": "vo", "label": "Vo", "name": "ボーカル" },
+    { "id": "da", "label": "Da", "name": "ダンス" },
+    { "id": "vi", "label": "Vi", "name": "ビジュアル" }
+  ],
+  "hifBonusSlots": 3
+}

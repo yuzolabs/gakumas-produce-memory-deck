@@ -1,0 +1,5656 @@
+{
+  "version": 1,
+  "cards": [
+    {
+      "id": "card-24",
+      "name": "軽い足取り",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-25",
+      "name": "軽い足取り+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-65",
+        "custom-68",
+        "custom-18"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-26",
+      "name": "愛嬌",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-27",
+      "name": "愛嬌+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-14",
+        "custom-18",
+        "custom-65"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-28",
+      "name": "準備運動",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-29",
+      "name": "準備運動+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-70",
+        "custom-4",
+        "custom-64"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-30",
+      "name": "ファンサ",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-31",
+      "name": "ファンサ+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-14",
+        "custom-16",
+        "custom-65"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-32",
+      "name": "勢い任せ",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-33",
+      "name": "勢い任せ+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-70",
+        "custom-4",
+        "custom-64"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-34",
+      "name": "ハイタッチ",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-35",
+      "name": "ハイタッチ+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-65",
+        "custom-29",
+        "custom-27"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-36",
+      "name": "トークタイム",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-37",
+      "name": "トークタイム+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-65",
+        "custom-29",
+        "custom-18"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-38",
+      "name": "今日もおはよう",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-39",
+      "name": "今日もおはよう+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-71",
+        "custom-7",
+        "custom-65"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-40",
+      "name": "ゆるふわおしゃべり",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-41",
+      "name": "ゆるふわおしゃべり+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-27",
+        "custom-72",
+        "custom-67"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-42",
+      "name": "もう少しだけ",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-43",
+      "name": "もう少しだけ+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-72",
+        "custom-65",
+        "custom-27"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-44",
+      "name": "手拍子",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-45",
+      "name": "手拍子+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-66",
+        "custom-29",
+        "custom-20"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-46",
+      "name": "元気な挨拶",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-47",
+      "name": "元気な挨拶+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-67",
+        "custom-9",
+        "custom-29"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-48",
+      "name": "気合十分！",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-49",
+      "name": "気合十分！+",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-75",
+        "custom-74",
+        "custom-36"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-50",
+      "name": "ファーストステップ",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-51",
+      "name": "ファーストステップ+",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-75",
+        "custom-36",
+        "custom-3"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-52",
+      "name": "バランス感覚",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-53",
+      "name": "バランス感覚+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-70",
+        "custom-75",
+        "custom-14"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-54",
+      "name": "楽観的",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-55",
+      "name": "楽観的+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-70",
+        "custom-68",
+        "custom-3"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-56",
+      "name": "深呼吸",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-57",
+      "name": "深呼吸+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-70",
+        "custom-68"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-58",
+      "name": "リスタート",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-59",
+      "name": "リスタート+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-75",
+        "custom-71",
+        "custom-7"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-60",
+      "name": "えいえいおー",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-61",
+      "name": "えいえいおー+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-75",
+        "custom-72",
+        "custom-9"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-62",
+      "name": "リズミカル",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-63",
+      "name": "リズミカル+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-22",
+        "custom-20",
+        "custom-75"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-64",
+      "name": "思い出し笑い",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-65",
+      "name": "思い出し笑い+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-71",
+        "custom-72",
+        "custom-7"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-66",
+      "name": "パステル気分",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-67",
+      "name": "パステル気分+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-75",
+        "custom-71",
+        "custom-12"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-68",
+      "name": "励まし",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-69",
+      "name": "励まし+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-72",
+        "custom-27",
+        "custom-71"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-70",
+      "name": "前途洋々",
+      "plan": "free",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-71",
+      "name": "前途洋々+",
+      "plan": "free",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-4",
+        "custom-47"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-72",
+      "name": "決めポーズ",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-73",
+      "name": "決めポーズ+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-48",
+        "custom-14",
+        "custom-29"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-74",
+      "name": "アドリブ",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-75",
+      "name": "アドリブ+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-48",
+        "custom-52",
+        "custom-18"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-76",
+      "name": "情熱ターン",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-77",
+      "name": "情熱ターン+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-4",
+        "custom-54",
+        "custom-29"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-78",
+      "name": "飛躍",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-79",
+      "name": "飛躍+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-47",
+        "custom-14",
+        "custom-37"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-80",
+      "name": "祝福",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-81",
+      "name": "祝福+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-48",
+        "custom-52",
+        "custom-16"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-82",
+      "name": "スタートダッシュ",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-83",
+      "name": "スタートダッシュ+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-48",
+        "custom-29",
+        "custom-14"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-84",
+      "name": "スタンドプレー",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-85",
+      "name": "スタンドプレー+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-29",
+        "custom-54"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-86",
+      "name": "シュプレヒコール",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-87",
+      "name": "シュプレヒコール+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-32",
+        "custom-39"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-88",
+      "name": "ラブリーウインク",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-89",
+      "name": "ラブリーウインク+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-55",
+        "custom-49",
+        "custom-29"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-90",
+      "name": "ありがとうの言葉",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-91",
+      "name": "ありがとうの言葉+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-50",
+        "custom-9"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-92",
+      "name": "ハートの合図",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-93",
+      "name": "ハートの合図+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-51",
+        "custom-30",
+        "custom-9"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-94",
+      "name": "キラメキ",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-95",
+      "name": "キラメキ+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-20",
+        "custom-49"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-96",
+      "name": "みんな大好き",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-97",
+      "name": "みんな大好き+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-5",
+        "custom-34"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-98",
+      "name": "アイドル宣言",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-99",
+      "name": "アイドル宣言+",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-24",
+        "custom-27"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-100",
+      "name": "ハイテンション",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-101",
+      "name": "ハイテンション+",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-59",
+        "custom-58"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-102",
+      "name": "眼力",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-103",
+      "name": "眼力+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-59",
+        "custom-54"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-104",
+      "name": "大声援",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-105",
+      "name": "大声援+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-52",
+        "custom-59"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-106",
+      "name": "演出計画",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-107",
+      "name": "演出計画+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-53",
+        "custom-28"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-108",
+      "name": "願いの力",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-109",
+      "name": "願いの力+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-54",
+        "custom-29"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-110",
+      "name": "静かな意志",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-111",
+      "name": "静かな意志+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-28",
+        "custom-52",
+        "custom-54"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-112",
+      "name": "始まりの合図",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-113",
+      "name": "始まりの合図+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-52",
+        "custom-3",
+        "custom-29"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-114",
+      "name": "意地",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-115",
+      "name": "意地+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-54",
+        "custom-59"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-116",
+      "name": "存在感",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-117",
+      "name": "存在感+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-31",
+        "custom-39"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-118",
+      "name": "成功への道筋",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-119",
+      "name": "成功への道筋+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-54",
+        "custom-79",
+        "custom-31"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-120",
+      "name": "あふれる思い出",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-121",
+      "name": "あふれる思い出+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-56",
+        "custom-9"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-122",
+      "name": "ふれあい",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-123",
+      "name": "ふれあい+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-55",
+        "custom-7",
+        "custom-59"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-124",
+      "name": "幸せな時間",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-125",
+      "name": "幸せな時間+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-55",
+        "custom-7",
+        "custom-29"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-126",
+      "name": "ファンシーチャーム",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-127",
+      "name": "ファンシーチャーム+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-36",
+        "custom-29",
+        "custom-55"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-128",
+      "name": "ワクワクが止まらない",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-129",
+      "name": "ワクワクが止まらない+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-36",
+        "custom-29",
+        "custom-56"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-130",
+      "name": "本番前夜",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-131",
+      "name": "本番前夜+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-56",
+        "custom-55"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-132",
+      "name": "ひなたぼっこ",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-133",
+      "name": "ひなたぼっこ+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-56",
+        "custom-12"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-134",
+      "name": "イメトレ",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-135",
+      "name": "イメトレ+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-56",
+        "custom-12"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-136",
+      "name": "やる気は満点",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-137",
+      "name": "やる気は満点+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-55",
+        "custom-22"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-138",
+      "name": "ゆめみごこち",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-139",
+      "name": "ゆめみごこち+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-33",
+        "custom-12"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-140",
+      "name": "コール&レスポンス",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-141",
+      "name": "コール&レスポンス+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-1",
+        "custom-14"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-142",
+      "name": "バズワード",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-143",
+      "name": "バズワード+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-2",
+        "custom-18"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-144",
+      "name": "成就",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-145",
+      "name": "成就+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-13",
+        "custom-29"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-146",
+      "name": "魅惑のパフォーマンス",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-147",
+      "name": "魅惑のパフォーマンス+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-15",
+        "custom-29"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-148",
+      "name": "200%スマイル",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-149",
+      "name": "200%スマイル+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-19",
+        "custom-6"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-150",
+      "name": "開花",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-151",
+      "name": "開花+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-27",
+        "custom-8"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-152",
+      "name": "届いて！",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-153",
+      "name": "届いて！+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-11",
+        "custom-30"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-154",
+      "name": "テレビ出演",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-155",
+      "name": "テレビ出演+",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-38",
+        "custom-3"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-156",
+      "name": "叶えたい夢",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-157",
+      "name": "叶えたい夢+",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-27",
+        "custom-25"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-158",
+      "name": "アイドル魂",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-159",
+      "name": "アイドル魂+",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-26",
+        "custom-29"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-160",
+      "name": "仕切り直し",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-161",
+      "name": "仕切り直し+",
+      "plan": "free",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-24"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-162",
+      "name": "国民的アイドル",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-163",
+      "name": "国民的アイドル+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-26",
+        "custom-3"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-164",
+      "name": "魅惑の視線",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-165",
+      "name": "魅惑の視線+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-32",
+        "custom-28"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-166",
+      "name": "鳴り止まない拍手",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-167",
+      "name": "鳴り止まない拍手+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-17",
+        "custom-13"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-168",
+      "name": "天真爛漫",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-169",
+      "name": "天真爛漫+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-17"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-170",
+      "name": "私がスター",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-171",
+      "name": "私がスター+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-33",
+        "custom-39"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-172",
+      "name": "星屑センセーション",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-173",
+      "name": "星屑センセーション+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-7",
+        "custom-19"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-174",
+      "name": "ノートの端の決意",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-175",
+      "name": "ノートの端の決意+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-27",
+        "custom-7"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-176",
+      "name": "手書きのメッセージ",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-177",
+      "name": "手書きのメッセージ+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-25",
+        "custom-33"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-178",
+      "name": "トキメキ",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-179",
+      "name": "トキメキ+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-21",
+        "custom-19"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-180",
+      "name": "虹色ドリーマー",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-181",
+      "name": "虹色ドリーマー+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-19"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-288",
+      "name": "ひと呼吸",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-289",
+      "name": "ひと呼吸+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-28",
+        "custom-70"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-290",
+      "name": "幸せのおまじない",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-291",
+      "name": "幸せのおまじない+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-71",
+        "custom-7",
+        "custom-29"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-292",
+      "name": "立ち位置チェック",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-293",
+      "name": "立ち位置チェック+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-47",
+        "custom-4",
+        "custom-59"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-294",
+      "name": "スポットライト",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-295",
+      "name": "スポットライト+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-52",
+        "custom-59"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-296",
+      "name": "止められない想い",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-297",
+      "name": "止められない想い+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-19",
+        "custom-21"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-298",
+      "name": "オトメゴコロ",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-299",
+      "name": "オトメゴコロ+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-34",
+        "custom-80"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-300",
+      "name": "至高のエンタメ",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-301",
+      "name": "至高のエンタメ+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-32",
+        "custom-28"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-302",
+      "name": "覚醒",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-303",
+      "name": "覚醒+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-1",
+        "custom-28"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-304",
+      "name": "輝くキミへ",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-305",
+      "name": "輝くキミへ+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-46",
+        "custom-34"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-306",
+      "name": "あのときの約束",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-307",
+      "name": "あのときの約束+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-8",
+        "custom-33"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-378",
+      "name": "エキサイト",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-379",
+      "name": "エキサイト+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-69",
+        "custom-65",
+        "custom-14"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-380",
+      "name": "ジャストアピール",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-381",
+      "name": "ジャストアピール+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-65",
+        "custom-73",
+        "custom-77"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-382",
+      "name": "スターライト",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-383",
+      "name": "スターライト+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-65",
+        "custom-78"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-384",
+      "name": "一歩",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-385",
+      "name": "一歩+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-23",
+        "custom-78",
+        "custom-65"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-386",
+      "name": "ラッキー♪",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-387",
+      "name": "ラッキー♪+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-65",
+        "custom-77",
+        "custom-73"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-388",
+      "name": "積み重ね",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-389",
+      "name": "積み重ね+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-4",
+        "custom-76",
+        "custom-29"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-390",
+      "name": "精一杯",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-391",
+      "name": "精一杯+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-64",
+        "custom-23",
+        "custom-29"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-392",
+      "name": "ハッピー♪",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-393",
+      "name": "ハッピー♪+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-75",
+        "custom-77"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-394",
+      "name": "嬉しい誤算",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-395",
+      "name": "嬉しい誤算+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-75",
+        "custom-73",
+        "custom-43"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-396",
+      "name": "涙の思い出",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-397",
+      "name": "涙の思い出+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-73",
+        "custom-77",
+        "custom-75"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-398",
+      "name": "きらきら紙吹雪",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-399",
+      "name": "きらきら紙吹雪+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-34",
+        "custom-50",
+        "custom-20"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-400",
+      "name": "せーのっ！",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-401",
+      "name": "せーのっ！+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-40",
+        "custom-48",
+        "custom-62"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-402",
+      "name": "アッチェレランド",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-403",
+      "name": "アッチェレランド+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-61",
+        "custom-29",
+        "custom-48"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-404",
+      "name": "はじけるパッション",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-405",
+      "name": "はじけるパッション+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-42",
+        "custom-47",
+        "custom-62"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-406",
+      "name": "汗と成長",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-407",
+      "name": "汗と成長+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-42",
+        "custom-48",
+        "custom-60"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-408",
+      "name": "オープニングアクト",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-409",
+      "name": "オープニングアクト+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-40",
+        "custom-48",
+        "custom-63"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-410",
+      "name": "始まりの笑顔",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-411",
+      "name": "始まりの笑顔+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-48",
+        "custom-58",
+        "custom-40"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-412",
+      "name": "理想のテンポ",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-413",
+      "name": "理想のテンポ+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-47",
+        "custom-28"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-414",
+      "name": "トレーニングの成果",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-415",
+      "name": "トレーニングの成果+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-48",
+        "custom-60",
+        "custom-29"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-416",
+      "name": "潜在能力",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-417",
+      "name": "潜在能力+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-37",
+        "custom-61"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-418",
+      "name": "カウントダウン",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-419",
+      "name": "カウントダウン+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-59",
+        "custom-61",
+        "custom-41"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-420",
+      "name": "プライド",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-421",
+      "name": "プライド+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-62",
+        "custom-57"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-422",
+      "name": "忍耐力",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-423",
+      "name": "忍耐力+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-61",
+        "custom-59",
+        "custom-29"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-424",
+      "name": "切磋琢磨",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-425",
+      "name": "切磋琢磨+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-44",
+        "custom-45"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-426",
+      "name": "キセキの魔法",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-427",
+      "name": "キセキの魔法+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-6",
+        "custom-30"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-428",
+      "name": "翔び立て！",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-429",
+      "name": "翔び立て！+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-42",
+        "custom-4"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-430",
+      "name": "総合芸術",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-431",
+      "name": "総合芸術+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-2"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-432",
+      "name": "心・技・体",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-433",
+      "name": "心・技・体+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-2",
+        "custom-29"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-434",
+      "name": "輝け！",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-435",
+      "name": "輝け！+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-81",
+        "custom-37"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-436",
+      "name": "クライマックス",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-437",
+      "name": "クライマックス+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-1",
+        "custom-29"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-438",
+      "name": "全身全霊",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-439",
+      "name": "全身全霊+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-28"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-440",
+      "name": "アイドルになります",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-441",
+      "name": "アイドルになります+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-35",
+        "custom-26"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-442",
+      "name": "頂点へ",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-443",
+      "name": "頂点へ+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-3"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-444",
+      "name": "覚悟",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-445",
+      "name": "覚悟+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-44",
+        "custom-30"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-516",
+      "name": "デイドリーミング",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-517",
+      "name": "デイドリーミング+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-30",
+        "custom-85",
+        "custom-86"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-518",
+      "name": "タフネス",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-519",
+      "name": "タフネス+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-41",
+        "custom-87"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-520",
+      "name": "夢色リップ",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-521",
+      "name": "夢色リップ+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-88",
+        "custom-27"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-546",
+      "name": "セッティング",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-547",
+      "name": "セッティング+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-73",
+        "custom-43",
+        "custom-28"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-548",
+      "name": "第一印象",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-549",
+      "name": "第一印象+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-40",
+        "custom-60",
+        "custom-36"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-550",
+      "name": "トレンドリーダー",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-551",
+      "name": "トレンドリーダー+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-35",
+        "custom-28"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-552",
+      "name": "モチベ",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-553",
+      "name": "モチベ+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-57",
+        "custom-43",
+        "custom-36"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-554",
+      "name": "盛り上げ上手",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-555",
+      "name": "盛り上げ上手+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-93",
+        "custom-42",
+        "custom-43"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-556",
+      "name": "インフルエンサー",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-557",
+      "name": "インフルエンサー+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-93",
+        "custom-42"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-558",
+      "name": "一心不乱",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-559",
+      "name": "一心不乱+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-41",
+        "custom-28"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-590",
+      "name": "巻き返し",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-591",
+      "name": "巻き返し+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-35",
+        "custom-37",
+        "custom-78"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-592",
+      "name": "ペース配分",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-593",
+      "name": "ペース配分+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-70",
+        "custom-68",
+        "custom-28"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-594",
+      "name": "達成感",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-595",
+      "name": "達成感+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-41"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-596",
+      "name": "破竹の勢い",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-597",
+      "name": "破竹の勢い+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-97",
+        "custom-54",
+        "custom-14"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-598",
+      "name": "天賦の才",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-599",
+      "name": "天賦の才+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-17",
+        "custom-13"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-690",
+      "name": "軌道修正",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-691",
+      "name": "軌道修正+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-14",
+        "custom-70",
+        "custom-28"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-692",
+      "name": "パンプアップ",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-693",
+      "name": "パンプアップ+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-18",
+        "custom-68",
+        "custom-28"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-694",
+      "name": "おまもりミラクル",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-695",
+      "name": "おまもりミラクル+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-22",
+        "custom-71",
+        "custom-27"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-696",
+      "name": "がむしゃら",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-697",
+      "name": "がむしゃら+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-20",
+        "custom-72",
+        "custom-75"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-698",
+      "name": "形勢逆転",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-699",
+      "name": "形勢逆転+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-42",
+        "custom-65",
+        "custom-28"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-700",
+      "name": "ノンストップ",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-701",
+      "name": "ノンストップ+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-42",
+        "custom-73",
+        "custom-28"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-702",
+      "name": "オーバードライブ",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-703",
+      "name": "オーバードライブ+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-28"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-704",
+      "name": "一発勝負",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-705",
+      "name": "一発勝負+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-17",
+        "custom-3"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-706",
+      "name": "スリリング",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-707",
+      "name": "スリリング+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-13",
+        "custom-3"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-708",
+      "name": "大胆不敵",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-709",
+      "name": "大胆不敵+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-28"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-710",
+      "name": "冒険心",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-711",
+      "name": "冒険心+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-19",
+        "custom-20"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-712",
+      "name": "気まぐれハート",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-713",
+      "name": "気まぐれハート+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-21",
+        "custom-27"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-714",
+      "name": "成長痛",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-715",
+      "name": "成長痛+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-29",
+        "custom-26"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-716",
+      "name": "フルスロットル",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-717",
+      "name": "フルスロットル+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-42",
+        "custom-28"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-718",
+      "name": "リスキーチャンス",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-719",
+      "name": "リスキーチャンス+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-43",
+        "custom-28"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-745",
+      "name": "ハッスル",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-746",
+      "name": "ハッスル+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-40",
+        "custom-73",
+        "custom-43"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-747",
+      "name": "イメチェン",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-748",
+      "name": "イメチェン+",
+      "plan": "logic",
+      "kind": "mental",
+      "rarity": "R",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-34",
+        "custom-71",
+        "custom-37"
+      ],
+      "maxCustomizations": 3
+    },
+    {
+      "id": "card-749",
+      "name": "アンダンテ",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-750",
+      "name": "アンダンテ+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-35",
+        "custom-40",
+        "custom-37"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-751",
+      "name": "精神統一",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-752",
+      "name": "精神統一+",
+      "plan": "sense",
+      "kind": "mental",
+      "rarity": "SR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-3",
+        "custom-54",
+        "custom-59"
+      ],
+      "maxCustomizations": 2
+    },
+    {
+      "id": "card-753",
+      "name": "本領発揮",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-754",
+      "name": "本領発揮+",
+      "plan": "anomaly",
+      "kind": "mental",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-35",
+        "custom-44"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-761",
+      "name": "脚光",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-762",
+      "name": "脚光+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-31",
+        "custom-17"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-771",
+      "name": "せのびの魔法",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-772",
+      "name": "せのびの魔法+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-27",
+        "custom-22"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-773",
+      "name": "エンターテイナー",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-774",
+      "name": "エンターテイナー+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-27",
+        "custom-2"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-775",
+      "name": "話題沸騰",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-776",
+      "name": "話題沸騰+",
+      "plan": "sense",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-104",
+        "custom-37"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-777",
+      "name": "びしっとキメ顔",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-778",
+      "name": "びしっとキメ顔+",
+      "plan": "logic",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-105",
+        "custom-106"
+      ],
+      "maxCustomizations": 1
+    },
+    {
+      "id": "card-779",
+      "name": "羽ばたけ！",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": false,
+      "retired": false,
+      "customizationIds": [],
+      "maxCustomizations": 0
+    },
+    {
+      "id": "card-780",
+      "name": "羽ばたけ！+",
+      "plan": "anomaly",
+      "kind": "active",
+      "rarity": "SSR",
+      "upgraded": true,
+      "retired": false,
+      "customizationIds": [
+        "custom-28",
+        "custom-35"
+      ],
+      "maxCustomizations": 1
+    }
+  ],
+  "customizations": [
+    {
+      "id": "custom-21",
+      "name": "やる気+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-56",
+      "name": "やる気+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-72",
+      "name": "やる気+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-22",
+      "name": "やる気追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-57",
+      "name": "全力値+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-73",
+      "name": "全力値+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-23",
+      "name": "全力値追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-80",
+      "name": "好印象+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-19",
+      "name": "好印象+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-55",
+      "name": "好印象+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-71",
+      "name": "好印象+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-20",
+      "name": "好印象追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-13",
+      "name": "好調+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-52",
+      "name": "好調+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-68",
+      "name": "好調+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-14",
+      "name": "好調追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-24",
+      "name": "消費軽減+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-58",
+      "name": "消費軽減+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-74",
+      "name": "消費軽減+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-15",
+      "name": "絶好調+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-53",
+      "name": "絶好調+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-69",
+      "name": "絶好調+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-16",
+      "name": "絶好調追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-17",
+      "name": "集中+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-54",
+      "name": "集中+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-70",
+      "name": "集中+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-18",
+      "name": "集中追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-29",
+      "name": "コスト値-",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-34",
+      "name": "やる気コスト値-",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-30",
+      "name": "体力消費コスト値-",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-35",
+      "name": "全力値コスト値-",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-33",
+      "name": "好印象コスト値-",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-31",
+      "name": "好調コスト値-",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-104",
+      "name": "絶好調コスト値-",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-32",
+      "name": "集中コスト値-",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-38",
+      "name": "スキルカード使用数+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-39",
+      "name": "スキルカード強化追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-37",
+      "name": "レッスン中1回の制限削除",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-43",
+      "name": "保留追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-40",
+      "name": "強気+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-93",
+      "name": "強気追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-62",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-78",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-45",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-60",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-76",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-44",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-61",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-77",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-81",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-63",
+      "name": "成長追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-106",
+      "name": "持続効果+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-86",
+      "name": "持続効果+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-46",
+      "name": "持続効果+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-105",
+      "name": "条件変更",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-85",
+      "name": "条件変更",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-97",
+      "name": "条件変更",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-87",
+      "name": "条件変更",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-88",
+      "name": "条件変更",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-41",
+      "name": "温存+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-42",
+      "name": "温存追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-36",
+      "name": "開始時手札に入る",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-25",
+      "name": "元気+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-26",
+      "name": "元気+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-59",
+      "name": "元気+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-75",
+      "name": "元気+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-27",
+      "name": "元気追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-28",
+      "name": "元気追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-2",
+      "name": "パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-1",
+      "name": "パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-47",
+      "name": "パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-48",
+      "name": "パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-64",
+      "name": "パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-65",
+      "name": "パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-4",
+      "name": "パラメータ上昇回数+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-79",
+      "name": "パラメータ追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-3",
+      "name": "パラメータ追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-8",
+      "name": "やる気分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-9",
+      "name": "やる気分パラメータ追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-11",
+      "name": "元気分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-50",
+      "name": "元気分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-51",
+      "name": "元気分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-67",
+      "name": "元気分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-12",
+      "name": "元気分パラメータ追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-6",
+      "name": "好印象分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-5",
+      "name": "好印象分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-49",
+      "name": "好印象分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-66",
+      "name": "好印象分パラメータ+",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        },
+        {
+          "id": "2",
+          "label": "2段階",
+          "cost": 2,
+          "retired": false
+        },
+        {
+          "id": "3",
+          "label": "3段階",
+          "cost": 3,
+          "retired": false
+        }
+      ]
+    },
+    {
+      "id": "custom-7",
+      "name": "好印象分パラメータ追加",
+      "retired": false,
+      "values": [
+        {
+          "id": "1",
+          "label": "1段階",
+          "cost": 1,
+          "retired": false
+        }
+      ]
+    }
+  ]
+}
