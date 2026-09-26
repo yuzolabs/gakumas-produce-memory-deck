@@ -5,7 +5,7 @@ import { MemoryStoreProvider, describeStorageError, useMemoryStore } from '../st
 import { MemoryEditorPage } from '../pages/memory-editor';
 import { downloadMemoryJson } from '../lib/download-memory-json';
 import { Button } from '../components/ui/button';
-import { MemorySummary } from '../components/memory-summary';
+import { MemoryListPage } from '../pages/memory-list';
 
 function MemoryLayout() {
   const store = useMemoryStore();
@@ -31,12 +31,8 @@ function MemoryLayout() {
     <footer className="site-footer"><span>このブラウザだけに保存 · ログイン不要</span><Link to="/settings">データを守るためにバックアップを</Link><span>非公式ファンツール · 画像は使用していません</span></footer>
   </>;
 }
-function InitialMemoryList() {
-  const { state } = useMemoryStore();
-  return <><h1>スキルカードとメモリー</h1><Link to="/memories/new">メモリーを登録</Link>{state.status === 'ready' && state.snapshot.memories.map(memory => <section key={memory.id}><MemorySummary memory={memory} /><Link to={`/memories/${memory.id}/edit`}>編集</Link></section>)}</>;
-}
 const router = createBrowserRouter([{ element: <MemoryLayout />, errorElement: <main><h1>画面を表示できません</h1><p>保存データは削除せず、再読み込みしてください。</p><a href="/">一覧を再読み込み</a></main>, children: [
-  { path: '/', element: <InitialMemoryList /> },
+  { path: '/', element: <MemoryListPage /> },
   { path: '/memories/new', element: <MemoryEditorPage /> },
   { path: '/memories/:id/edit', element: <MemoryEditorPage /> },
   { path: '/settings', element: <h1>バックアップ</h1> },
