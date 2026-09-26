@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "bun run validate:master && tsc --noEmit && vite build",
+    "validate:master": "bun scripts/validate-memory-master.ts",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "format": "prettier --write src scripts tests *.ts *.json index.html",
+    "format": "prettier --write src scripts tests vite.config.ts vitest.config.ts playwright.config.ts package.json tsconfig.json components.json index.html",
+    "format:check": "prettier --check src scripts tests vite.config.ts vitest.config.ts playwright.config.ts package.json tsconfig.json components.json index.html",
     "check": "bun run typecheck && bun run test && bun run build"
   },
   "private": true,
