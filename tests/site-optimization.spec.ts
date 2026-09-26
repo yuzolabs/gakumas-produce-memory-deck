@@ -1,4 +1,3 @@
-import { readFile } from 'node:fs/promises';
 import { expect, test } from '@playwright/test';
 
 test('initial page loads one subset font and preserves the heading typeface', async ({ page }) => {
@@ -67,56 +66,6 @@ for (const [path, heading] of [
     await expect(page.getByRole('heading', { name: heading, exact: true })).toBeVisible();
   });
 }
-
-test('browser-only storage is explained and backup reminders track output and restore', async ({
-  page,
-}) => {
-  await page.goto('/');
-  await expect(page.getByText('バックアップをまだ出力していません。')).toHaveCount(0);
-  await page.goto('/memories/new?card=card-295');
-  const storageNotice = page.getByRole('complementary', { name: '保存先について' });
-  await expect(storageNotice).toContainText('保存先はこのブラウザです。');
-  await expect(storageNotice).toContainText('端末・ブラウザ間の自動同期はありません。');
-  await expect(storageNotice).toContainText('サイトデータを削除するとメモリーも消えます。');
-  await page.getByRole('button', { name: '内容を確認して保存', exact: true }).click();
-  await page
-    .getByRole('alertdialog')
-    .getByRole('button', { name: '保存する', exact: true })
-    .click();
-  await expect(page).toHaveURL('/');
-  await expect(storageNotice).toContainText('バックアップをまだ出力していません。');
-  await storageNotice.getByRole('link', { name: 'バックアップを開く' }).click();
-  await expect(page.getByRole('heading', { name: 'バックアップ', exact: true })).toBeVisible();
-  await expect(storageNotice).toContainText('バックアップをまだ出力していません。');
-  await expect(storageNotice.getByRole('link')).toHaveCount(0);
-
-  const downloadPromise = page.waitForEvent('download');
-  await page.getByRole('button', { name: 'JSONをダウンロード' }).click();
-  const download = await downloadPromise;
-  const backup = await readFile((await download.path())!);
-  await expect(page.getByRole('status')).toContainText(
-    'ダウンロードフォルダーにファイルがあることを確認してください。',
-  );
-  await expect(storageNotice).not.toContainText('バックアップをまだ出力していません。');
-  await expect(storageNotice).toContainText('サイトデータを削除するとメモリーも消えます。');
-  await page.reload();
-  await expect(storageNotice).toBeVisible();
-  await expect(storageNotice).not.toContainText('バックアップをまだ出力していません。');
-  await page.goto('/');
-  await expect(page.getByRole('heading', { name: '所持カード一覧', exact: true })).toBeVisible();
-  await expect(storageNotice).toHaveCount(0);
-
-  await page.goto('/settings');
-  await page.getByLabel('バックアップファイル（JSON・10MB以下）').setInputFiles({
-    name: 'backup.json',
-    mimeType: 'application/json',
-    buffer: backup,
-  });
-  await page.getByRole('button', { name: '全件置換の確認へ' }).click();
-  await page.getByRole('alertdialog').getByRole('button', { name: '全件を置き換える' }).click();
-  await expect(page.getByRole('alertdialog')).toHaveCount(0);
-  await expect(storageNotice).toContainText('バックアップをまだ出力していません。');
-});
 
 test('mobile controls and important labels stay readable without horizontal overflow', async ({
   page,

@@ -19,7 +19,6 @@ import { MemoryFilterPanel } from '../components/memory-filter-panel';
 import { MemorySummary } from '../components/memory-summary';
 import { SkillCardIcon } from '../components/skill-card-icon';
 import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
-import { MemoryStorageNotice } from '../components/memory-storage-notice';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 
@@ -193,9 +192,6 @@ export function MemoryListPage() {
         <p role="status" className="notice">
           {notice}
         </p>
-      )}
-      {memories.length > 0 && store.state.snapshot.lastBackupAt === null && (
-        <MemoryStorageNotice backupReminder />
       )}
       <div className="collection-summary">
         <span>

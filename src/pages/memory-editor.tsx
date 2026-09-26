@@ -9,7 +9,6 @@ import { SkillCardSearch } from '../components/skill-card-search';
 import { CustomizationStepper } from '../components/customization-stepper';
 import { MemorySummary } from '../components/memory-summary';
 import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
-import { MemoryStorageNotice } from '../components/memory-storage-notice';
 import { Button } from '../components/ui/button';
 
 /** Invalid edit/copy links never create an accidental blank record. */
@@ -128,7 +127,6 @@ function MemoryEditorForm({
           <h1>{editing ? 'メモリーを編集' : copying ? 'メモリーを複製' : 'メモリーを登録'}</h1>
         </div>
       </div>
-      <MemoryStorageNotice />
       {notice && (
         <p className="notice" role="status">
           {notice}
