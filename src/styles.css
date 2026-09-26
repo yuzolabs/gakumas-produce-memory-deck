@@ -279,6 +279,44 @@ main:focus {
   display: block;
   margin-top: 6px;
 }
+.skill-search-count,
+.skill-search-selection {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #52677a;
+}
+.skill-search-selection strong {
+  color: #21354a;
+}
+.skill-search-results {
+  max-height: 280px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #a8bed3;
+  border-radius: 6px;
+  margin-top: 8px;
+  background: #fff;
+}
+.skill-search-results [role='option'] {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-height: 56px;
+  padding: 10px 14px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.skill-search-results [role='option'] + [role='option'] {
+  border-top: 1px solid #d3dfea;
+}
+.skill-search-results [role='option']:hover,
+.skill-search-results [aria-selected='true'] {
+  background: #e7f0fa;
+}
+.skill-search-results [role='option'] span {
+  font-size: 11px;
+  color: #52677a;
+}
 .field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

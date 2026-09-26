@@ -4,6 +4,7 @@ import { memoryMaster } from '../domain/memory-master';
 import { createMemoryDraft, getMemoryIssues, type ProduceMemory } from '../domain/produce-memory';
 import { describeStorageError, useMemoryStore } from '../storage/memory-store';
 import { SelectionField } from '../components/selection-field';
+import { SkillCardSearch } from '../components/skill-card-search';
 import { MemorySummary } from '../components/memory-summary';
 import { MemoryConfirmDialog } from '../components/memory-confirm-dialog';
 import { Button } from '../components/ui/button';
@@ -53,7 +54,6 @@ function MemoryEditorForm({
   copying: boolean;
 }) {
   const [draft, setDraft] = useState(initial);
-  const [query, setQuery] = useState('');
   const [error, setError] = useState('');
   const [notice, setNotice] = useState('');
   const [confirmation, setConfirmation] = useState<'save' | 'next' | null>(null);
@@ -86,18 +86,19 @@ function MemoryEditorForm({
     setDraft(next);
   }
   function selectCard(cardId: string) {
-    if (draft.cardId === cardId) return;
+    if (draft.cardId === cardId) return true;
     if (
       (draft.customizations.length || draft.hif) &&
       !window.confirm('カードを変更するとカスタムとHIFアビリティの選択を解除します。変更しますか？')
     )
-      return;
+      return false;
     updateDraft({
       ...draft,
       cardId: cardId as ProduceMemory['cardId'],
       customizations: [],
       hif: null,
     });
+    return true;
   }
   async function saveMemory() {
     try {
@@ -115,10 +116,8 @@ function MemoryEditorForm({
       setError(describeStorageError(caught));
     }
   }
-  const cardOptions = memoryMaster.cards.filter(
-    (c) =>
-      (!c.retired || (c.id === initial.cardId && editing)) &&
-      (c.name.normalize('NFKC').includes(query.normalize('NFKC')) || c.id === draft.cardId),
+  const selectableCards = memoryMaster.cards.filter(
+    (c) => !c.retired || (c.id === initial.cardId && editing),
   );
   return (
     <>
@@ -146,27 +145,11 @@ function MemoryEditorForm({
         >
           <fieldset className="form-section" disabled={store.busy}>
             <legend>獲得するスキルカード</legend>
-            <div className="field">
-              <label htmlFor="card-query">カード名で検索</label>
-              <input
-                id="card-query"
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="例：スポットライト"
-              />
-            </div>
-            <SelectionField
-              label="スキルカード"
-              value={draft.cardId}
-              onChange={selectCard}
-              options={[
-                { value: '', label: 'カードを選択' },
-                ...cardOptions.map((c) => ({
-                  value: c.id,
-                  label: `${c.name} ｜ ${memoryMaster.plans.find((p) => p.id === c.plan)?.label} / ${c.rarity}${c.retired ? '（廃止）' : ''}`,
-                })),
-              ]}
+            <SkillCardSearch
+              cards={selectableCards}
+              selectedId={draft.cardId}
+              onSelect={selectCard}
+              disabled={store.busy}
             />
             <SelectionField
               label="取得タイミング"

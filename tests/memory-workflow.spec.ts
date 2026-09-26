@@ -32,6 +32,72 @@ async function downloadBackup(page: Page) {
   return text;
 }
 
+test('card search lists matches inline and supports pointer and keyboard selection', async ({
+  page,
+}, testInfo) => {
+  await page.goto('/memories/new');
+  const search = page.getByRole('combobox', { name: 'カード名で検索' });
+  const results = page.getByRole('listbox', { name: 'カード名の検索結果' });
+  await expect(page.getByLabel('スキルカード', { exact: true })).toHaveCount(0);
+  await expect(results).toHaveCount(0);
+  await search.fill('   ');
+  await expect(results).toHaveCount(0);
+  await search.fill('存在しないカード名');
+  await expect(
+    page.getByText('一致するカードがありません。カード名を変えて検索してください。'),
+  ).toBeVisible();
+  await expect(results).toHaveCount(0);
+  await search.fill(' ｽﾎﾟｯﾄﾗｲﾄ ');
+  await expect(results.getByRole('option')).toHaveCount(2);
+  await expect(results).not.toContainText('ひと呼吸');
+  const choice = results.getByRole('option', { name: /^スポットライト\+ / });
+  if (testInfo.project.name === 'mobile') await choice.tap();
+  else await choice.click();
+  await expect(search).toHaveValue('スポットライト+');
+  await expect(results).toHaveCount(0);
+  await expect(page.locator('.skill-search-selection')).toHaveText('選択中：スポットライト+');
+  await search.fill('ひと呼吸');
+  await expect(results.getByRole('option')).toHaveCount(2);
+  await expect(results).not.toContainText('スポットライト');
+  await search.press('Enter');
+  await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  await expect(page.locator('.skill-search-selection')).toHaveText('選択中：スポットライト+');
+  await search.press('ArrowDown');
+  await search.dispatchEvent('keydown', { key: 'Enter', code: 'Enter', isComposing: true });
+  await expect(page.locator('.skill-search-selection')).toHaveText('選択中：スポットライト+');
+  await search.press('Escape');
+  await expect(results).toHaveCount(0);
+  await search.press('ArrowDown');
+  await search.press('ArrowDown');
+  await search.press('Enter');
+  await expect(search).toHaveValue('ひと呼吸+');
+  await expect(page.locator('.skill-search-selection')).toHaveText('選択中：ひと呼吸+');
+  await expect(results).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
+    true,
+  );
+  await confirmSave(page);
+  await expect(page.getByRole('article', { name: 'ひと呼吸+', exact: true })).toBeVisible();
+});
+
+test('cancelling a search selection preserves the card and its customizations', async ({
+  page,
+}) => {
+  await enterScreenshotMemory(page);
+  const search = page.getByRole('combobox', { name: 'カード名で検索' });
+  await search.fill('ひと呼吸');
+  page.once('dialog', (dialog) => dialog.dismiss());
+  await page.getByRole('option', { name: /^ひと呼吸\+ / }).click();
+  await expect(page.locator('.skill-search-selection')).toHaveText('選択中：スポットライト+');
+  await expect(page.getByLabel('好調+', { exact: true })).toHaveValue('2');
+  await expect(page.getByLabel('HIFの発動対象カード')).toHaveValue('hif-card-288');
+  page.once('dialog', (dialog) => dialog.accept());
+  await page.getByRole('option', { name: /^ひと呼吸\+ / }).click();
+  await expect(page.locator('.skill-search-selection')).toHaveText('選択中：ひと呼吸+');
+  await expect(page.getByLabel('HIFの発動対象カード')).toHaveValue('');
+  await expect(page.getByLabel('集中+', { exact: true })).toHaveValue('');
+});
+
 test('owned-card list stays empty until registration and never shows unowned cards', async ({
   page,
 }) => {
@@ -48,7 +114,11 @@ test('owned-card list stays empty until registration and never shows unowned car
   );
   await expect(page.getByText(/収録カード/)).toHaveCount(0);
   await page.getByRole('link', { name: 'メモリーを登録', exact: true }).first().click();
-  await expect(page.getByLabel('スキルカード', { exact: true }).locator('option')).toHaveCount(329);
+  await expect(page.getByLabel('スキルカード', { exact: true })).toHaveCount(0);
+  await page.getByRole('combobox', { name: 'カード名で検索' }).fill('スポットライト');
+  await expect(
+    page.getByRole('listbox', { name: 'カード名の検索結果' }).getByRole('option'),
+  ).toHaveCount(2);
   await enterScreenshotMemory(page);
   await confirmSave(page);
   await expect(page.getByRole('article')).toHaveCount(1);
@@ -201,7 +271,9 @@ test('continuous registration resets a draft and protects it from navigation', a
     .click();
   await expect(page.getByRole('status')).toContainText('保存しました');
   await expect(page.getByLabel('好調+', { exact: true })).toHaveValue('');
-  await expect(page.getByLabel('スキルカード', { exact: true })).toHaveValue('card-295');
+  await expect(page.getByRole('combobox', { name: 'カード名で検索' })).toHaveValue(
+    'スポットライト+',
+  );
   await page.getByLabel('取得タイミング', { exact: true }).selectOption('after-first-exam');
   await page.getByRole('link', { name: '一覧に戻る' }).click();
   await page.getByRole('alertdialog').getByRole('button', { name: 'キャンセル' }).click();
@@ -216,7 +288,9 @@ test('stale browser tabs cannot overwrite newly saved memories', async ({ page, 
   await expect(page.getByRole('heading', { name: '所持カード一覧' })).toBeVisible();
   const other = await context.newPage();
   await other.goto('/memories/new?card=card-295');
-  await expect(other.getByLabel('スキルカード', { exact: true })).toHaveValue('card-295');
+  await expect(other.getByRole('combobox', { name: 'カード名で検索' })).toHaveValue(
+    'スポットライト+',
+  );
   await enterScreenshotMemory(page);
   await confirmSave(page);
   await other.getByRole('button', { name: '内容を確認して保存' }).click();
