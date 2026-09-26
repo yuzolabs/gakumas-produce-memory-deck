@@ -15,7 +15,7 @@ function MemoryLayout() {
   useEffect(() => {
     document.title = `${location.pathname === '/' ? '一覧' : location.pathname === '/settings' ? 'バックアップ' : '登録・編集'} | プロデュースメモリー帳`;
     window.scrollTo(0, 0);
-    document.getElementById('main-content')?.focus();
+    document.getElementById('main-content')?.focus({ preventScroll: true });
   }, [location.pathname, location.search]);
   async function recoverRaw() {
     try { downloadMemoryJson(await store.readRaw(), 'memory-recovery.json'); }

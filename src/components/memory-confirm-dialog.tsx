@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from './ui/alert-dialog';
 import { Button } from './ui/button';
 
@@ -7,8 +7,14 @@ export function MemoryConfirmDialog({ open, onOpenChange, title, description, ac
   open: boolean; onOpenChange: (open: boolean) => void; title: string; description: string;
   action: string; busy?: boolean; error?: string; children?: ReactNode; onConfirm: () => void;
 }) {
+  const openedUrl = useRef(window.location.href);
+  useEffect(() => { if (open) openedUrl.current = window.location.href; }, [open]);
   return <AlertDialog open={open} onOpenChange={value => { if (!busy) onOpenChange(value); }}>
-    <AlertDialogContent>
+    <AlertDialogContent finalFocus={() => {
+      if (openedUrl.current === window.location.href) return true;
+      document.getElementById('main-content')?.focus({ preventScroll: true });
+      return false;
+    }}>
       <AlertDialogHeader><AlertDialogTitle>{title}</AlertDialogTitle><AlertDialogDescription>{description}</AlertDialogDescription></AlertDialogHeader>
       {children}
       {error && <p role="alert" className="error-message">{error}</p>}
