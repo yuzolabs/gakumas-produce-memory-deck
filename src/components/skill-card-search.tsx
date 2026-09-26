@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react';
 import { memoryMaster, type SkillCard } from '../domain/memory-master';
 import { SkillCardIcon } from './skill-card-icon';
+import { normalizeSkillCardSearch, searchSkillCards } from '../domain/skill-card-search';
 
 /** Search suggestions only change the selected card after explicit click or Enter. */
 export function SkillCardSearch({
@@ -21,12 +22,8 @@ export function SkillCardSearch({
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
   const id = useId();
-  const normalized = query.normalize('NFKC').toLocaleLowerCase('ja').trim();
-  const matches = normalized
-    ? cards
-        .filter((card) => card.name.normalize('NFKC').toLocaleLowerCase('ja').includes(normalized))
-        .sort((a, b) => a.name.localeCompare(b.name, 'ja'))
-    : [];
+  const normalized = normalizeSkillCardSearch(query);
+  const matches = searchSkillCards(cards, query);
   const visible = !disabled && open && normalized.length > 0;
   const activeCard = visible ? matches[activeIndex] : undefined;
 

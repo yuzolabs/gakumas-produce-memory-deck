@@ -132,6 +132,9 @@ test('card search lists matches inline and supports pointer and keyboard selecti
     page.getByText('一致するカードがありません。カード名を変えて検索してください。'),
   ).toBeVisible();
   await expect(results).toHaveCount(0);
+  await search.fill('すぽっと');
+  await expect(results.getByRole('option')).toHaveCount(2);
+  await expect(search).toHaveValue('すぽっと');
   await search.fill(' ｽﾎﾟｯﾄﾗｲﾄ ');
   await expect(results.getByRole('option')).toHaveCount(2);
   await expect(results).not.toContainText('ひと呼吸');
@@ -141,7 +144,10 @@ test('card search lists matches inline and supports pointer and keyboard selecti
   await expect(search).toHaveValue('スポットライト+');
   await expect(results).toHaveCount(0);
   await expect(page.locator('.skill-search-selection')).toHaveText('選択中：スポットライト+');
-  await search.fill('ひと呼吸');
+  await search.dispatchEvent('compositionstart');
+  await search.fill('ひとこきゅう');
+  await search.dispatchEvent('compositionupdate', { data: 'ひとこきゅう' });
+  await expect(search).toHaveValue('ひとこきゅう');
   await expect(results.getByRole('option')).toHaveCount(2);
   await expect(results).not.toContainText('スポットライト');
   await search.press('Enter');
@@ -150,6 +156,8 @@ test('card search lists matches inline and supports pointer and keyboard selecti
   await search.press('ArrowDown');
   await search.dispatchEvent('keydown', { key: 'Enter', code: 'Enter', isComposing: true });
   await expect(page.locator('.skill-search-selection')).toHaveText('選択中：スポットライト+');
+  await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  await search.dispatchEvent('compositionend', { data: 'ひとこきゅう' });
   await search.press('Escape');
   await expect(results).toHaveCount(0);
   await search.press('ArrowDown');
