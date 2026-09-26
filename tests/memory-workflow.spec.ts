@@ -191,6 +191,79 @@ test('cancelling a search selection preserves the card and its customizations', 
   await expect(page.getByLabel('集中+の段階', { exact: true })).toHaveText('0');
 });
 
+test('owned-card search shares kana suggestions and supports selection, IME and reset', async ({
+  page,
+}, testInfo) => {
+  for (const cardId of ['card-294', 'card-295', 'card-288', 'card-288']) {
+    await page.goto(`/memories/new?card=${cardId}`);
+    await confirmSave(page);
+  }
+  const search = page.getByRole('combobox', { name: 'カード名で検索' });
+  const results = page.getByRole('listbox', { name: 'カード名の検索結果' });
+  await expect(page.getByRole('article')).toHaveCount(3);
+  await expect(results).toHaveCount(0);
+  for (const query of ['すぽっと', ' ｽﾎﾟｯﾄ ', 'スポット']) {
+    await search.fill(query);
+    await expect(results.getByRole('option')).toHaveCount(2);
+    await expect(page.getByRole('article')).toHaveCount(2);
+    await expect(search).toHaveValue(query);
+  }
+  const choice = results.getByRole('option', { name: /^スポットライト\+ / });
+  if (testInfo.project.name === 'mobile') await choice.tap();
+  else await choice.click();
+  await expect(search).toHaveValue('スポットライト+');
+  await expect(results).toHaveCount(0);
+  await expect(page.getByRole('article')).toHaveCount(1);
+
+  await search.dispatchEvent('compositionstart');
+  await search.fill('ひとこ');
+  await search.dispatchEvent('compositionupdate', { data: 'ひとこ' });
+  await expect(results.getByRole('option')).toHaveCount(1);
+  await expect(results).toContainText('ひと呼吸');
+  await expect(results).not.toContainText('ひと呼吸+');
+  await expect(page.getByRole('article', { name: 'ひと呼吸', exact: true })).toBeVisible();
+  await search.dispatchEvent('keydown', { key: 'ArrowDown', isComposing: true });
+  await expect(search).not.toHaveAttribute('aria-activedescendant');
+  await search.dispatchEvent('keydown', { key: 'Enter', isComposing: true });
+  await expect(search).toHaveValue('ひとこ');
+  await search.dispatchEvent('compositionend', { data: 'ひとこ' });
+  await search.press('ArrowDown');
+  await expect(search).toHaveAttribute('aria-activedescendant', /card-288$/);
+  await search.press('Enter');
+  await expect(search).toHaveValue('ひと呼吸');
+  await expect(results).toHaveCount(0);
+
+  await search.fill('すぽっと');
+  await search.press('ArrowUp');
+  await expect(search).toHaveAttribute('aria-activedescendant', /card-295$/);
+  await search.press('Escape');
+  await expect(results).toHaveCount(0);
+  await expect(search).toHaveValue('すぽっと');
+  await search.press('ArrowDown');
+  await expect(results).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
+    true,
+  );
+  await search.press('Tab');
+  await expect(results).toHaveCount(0);
+
+  await page.getByLabel('プラン', { exact: true }).selectOption('logic');
+  await search.fill('ひとこ');
+  await expect(results).toHaveCount(0);
+  await expect(page.getByRole('article')).toHaveCount(0);
+  await page.getByRole('button', { name: '条件をリセット', exact: true }).first().click();
+  await expect(search).toHaveValue('');
+  await expect(results).toHaveCount(0);
+  await expect(page.getByRole('article')).toHaveCount(3);
+
+  await search.fill('存在しないカード名');
+  await expect(results).toHaveCount(0);
+  await expect(page.getByRole('article')).toHaveCount(0);
+  await search.fill('　 ');
+  await expect(results).toHaveCount(0);
+  await expect(page.getByRole('article')).toHaveCount(3);
+});
+
 test('owned-card list stays empty until registration and never shows unowned cards', async ({
   page,
 }) => {

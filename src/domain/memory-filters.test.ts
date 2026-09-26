@@ -2,8 +2,32 @@ import { describe, expect, it } from 'vitest';
 import { emptyMemoryFilters, filterOwnedMemoryCards } from './memory-filters';
 import { createMemoryDraft } from './produce-memory';
 import { memoryMaster } from './memory-master';
+import { searchSkillCards } from './skill-card-search';
 
 describe('owned-card and same-memory filtering', () => {
+  it.each([
+    'すぽっと',
+    'スポット',
+    ' ｽﾎﾟｯﾄ ',
+    'ひとこきゅう',
+    'ヒトコキュウ',
+    'ひと呼吸',
+    '不一致',
+  ])('uses the registration search algorithm for %s', (query) => {
+    const memories = ['card-294', 'card-295', 'card-288'].map((id) => createMemoryDraft(id));
+    const ownedCards = memoryMaster.cards.filter((card) =>
+      memories.some((memory) => memory.cardId === card.id),
+    );
+    expect(
+      filterOwnedMemoryCards(memories, { ...emptyMemoryFilters, query }).map((group) => group.card),
+    ).toEqual(searchSkillCards(ownedCards, query));
+  });
+  it('keeps all owned cards for blank search queries', () => {
+    const memories = ['card-294', 'card-288'].map((id) => createMemoryDraft(id));
+    expect(filterOwnedMemoryCards(memories, { ...emptyMemoryFilters, query: '　 ' })).toHaveLength(
+      2,
+    );
+  });
   it('sorts timestamps with different fractional-second precision chronologically', () => {
     const earlier = createMemoryDraft('card-295');
     earlier.updatedAt = '2026-01-01T00:00:00Z';

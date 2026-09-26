@@ -1,5 +1,6 @@
 import { memoryMaster, type MemoryMaster, type SkillCard } from './memory-master';
 import type { ProduceMemory } from './produce-memory';
+import { normalizeSkillCardSearch, searchSkillCards } from './skill-card-search';
 
 /** All detail predicates must match the same physical memory. */
 export interface MemoryFilters {
@@ -71,7 +72,9 @@ export function filterOwnedMemoryCards(
   filters: MemoryFilters,
   master: MemoryMaster = memoryMaster,
 ): MemoryCardGroup[] {
-  const normalized = filters.query.normalize('NFKC').toLocaleLowerCase('ja').trim();
+  const matchingCardIds = normalizeSkillCardSearch(filters.query)
+    ? new Set(searchSkillCards(master.cards, filters.query).map((card) => card.id))
+    : null;
   const byCard = new Map<string, ProduceMemory[]>();
   for (const memory of memories)
     byCard.set(memory.cardId, [...(byCard.get(memory.cardId) ?? []), memory]);
@@ -81,7 +84,7 @@ export function filterOwnedMemoryCards(
     );
     if (!owned.length) return [];
     if (
-      !card.name.normalize('NFKC').toLocaleLowerCase('ja').includes(normalized) ||
+      (matchingCardIds && !matchingCardIds.has(card.id)) ||
       (filters.plan && card.plan !== filters.plan)
     )
       return [];
