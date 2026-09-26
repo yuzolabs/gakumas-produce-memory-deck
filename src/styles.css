@@ -107,7 +107,8 @@
     font-size: 0.8rem;
   }
 }
-[data-slot='button'] {
+[data-slot='button'],
+[data-slot='alert-dialog-cancel'] {
   min-height: 44px;
   padding-inline: 16px;
 }
