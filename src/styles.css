@@ -426,12 +426,6 @@ main:focus {
   margin-inline: 6px;
   font-variant-numeric: tabular-nums;
 }
-.first-memory-hint {
-  padding: 14px 18px;
-  border-left: 4px solid #235ca8;
-  background: #e7f0fa;
-  margin-bottom: 24px;
-}
 .filter-panel {
   background: #fff;
   border: 1px solid #d3dfea;
@@ -441,7 +435,7 @@ main:focus {
 }
 .filter-basics {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.6fr;
+  grid-template-columns: 2fr 1fr 1.6fr;
   gap: 16px;
 }
 .filter-basics .field {
@@ -823,6 +817,7 @@ main:focus {
     grid-column: 1 / -1;
   }
   .filter-basics {
+    grid-template-columns: 1fr;
     gap: 14px;
   }
   .filter-basics > .field:last-child {

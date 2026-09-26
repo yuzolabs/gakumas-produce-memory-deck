@@ -4,7 +4,6 @@ import type { ProduceMemory } from './produce-memory';
 /** All detail predicates must match the same physical memory. */
 export interface MemoryFilters {
   query: string;
-  ownership: string;
   plan: string;
   timing: string;
   customId: string;
@@ -19,10 +18,9 @@ export interface MemoryFilters {
   viInitial: number;
   sort: string;
 }
-/** Zero thresholds mean no bonus restriction, including unowned cards. */
+/** Zero thresholds mean no bonus restriction within owned memories. */
 export const emptyMemoryFilters: MemoryFilters = {
   query: '',
-  ownership: '',
   plan: '',
   timing: '',
   customId: '',
@@ -67,25 +65,13 @@ export interface MemoryCardGroup {
   matching: ProduceMemory[];
 }
 
-/** Search includes unowned cards unless a predicate requires an actual memory. */
-export function filterMemoryCards(
+/** Only registered cards appear, including retired cards with retained memories. */
+export function filterOwnedMemoryCards(
   memories: ProduceMemory[],
   filters: MemoryFilters,
   master: MemoryMaster = memoryMaster,
 ): MemoryCardGroup[] {
   const normalized = filters.query.normalize('NFKC').toLocaleLowerCase('ja').trim();
-  const hasDetails = Boolean(
-    filters.timing ||
-    filters.customId ||
-    filters.hif ||
-    filters.hifId ||
-    filters.voLesson ||
-    filters.daLesson ||
-    filters.viLesson ||
-    filters.voInitial ||
-    filters.daInitial ||
-    filters.viInitial,
-  );
   const byCard = new Map<string, ProduceMemory[]>();
   for (const memory of memories)
     byCard.set(memory.cardId, [...(byCard.get(memory.cardId) ?? []), memory]);
@@ -93,19 +79,14 @@ export function filterMemoryCards(
     const owned = (byCard.get(card.id) ?? []).sort(
       (a, b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt),
     );
-    if (card.retired && !owned.length) return [];
+    if (!owned.length) return [];
     if (
       !card.name.normalize('NFKC').toLocaleLowerCase('ja').includes(normalized) ||
       (filters.plan && card.plan !== filters.plan)
     )
       return [];
-    if (
-      (filters.ownership === 'owned' && !owned.length) ||
-      (filters.ownership === 'unowned' && owned.length)
-    )
-      return [];
     const matching = owned.filter((m) => matchesMemoryFilters(m, filters));
-    if (hasDetails && !matching.length) return [];
+    if (!matching.length) return [];
     return [{ card, owned, matching }];
   });
   return groups.sort((a, b) => {

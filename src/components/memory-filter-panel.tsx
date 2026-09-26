@@ -29,16 +29,6 @@ export function MemoryFilterPanel({
           />
         </div>
         <SelectionField
-          label="所持状況"
-          value={filters.ownership}
-          onChange={(value) => update('ownership', value)}
-          options={[
-            { value: '', label: 'すべて' },
-            { value: 'owned', label: '所持' },
-            { value: 'unowned', label: '未所持' },
-          ]}
-        />
-        <SelectionField
           label="プラン"
           value={filters.plan}
           onChange={(value) => update('plan', value)}

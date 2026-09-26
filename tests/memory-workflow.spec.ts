@@ -32,6 +32,46 @@ async function downloadBackup(page: Page) {
   return text;
 }
 
+test('owned-card list stays empty until registration and never shows unowned cards', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: '所持カード一覧', exact: true })).toBeVisible();
+  await expect(page.getByRole('article')).toHaveCount(0);
+  await expect(
+    page.getByRole('heading', { name: 'まだメモリーが登録されていません' }),
+  ).toBeVisible();
+  await expect(page.locator('.collection-summary')).toHaveText('登録メモリー 0 枚');
+  await expect(page.getByLabel('所持状況')).toHaveCount(0);
+  await expect(page.getByText('同じカードでも、違う一枚。条件を並べて比較できます。')).toHaveCount(
+    0,
+  );
+  await expect(page.getByText(/収録カード/)).toHaveCount(0);
+  await page.getByRole('link', { name: 'メモリーを登録', exact: true }).first().click();
+  await expect(page.getByLabel('スキルカード', { exact: true }).locator('option')).toHaveCount(329);
+  await enterScreenshotMemory(page);
+  await confirmSave(page);
+  await expect(page.getByRole('article')).toHaveCount(1);
+  await expect(page.getByRole('article', { name: 'スポットライト+', exact: true })).toBeVisible();
+  await expect(page.locator('.collection-summary')).toHaveText('登録メモリー 1 枚');
+  await page.getByLabel('カード名で検索').fill('ひと呼吸');
+  await expect(page.getByRole('article')).toHaveCount(0);
+  await expect(
+    page.getByRole('heading', { name: '条件に一致する所持カードがありません' }),
+  ).toBeVisible();
+  await page.getByRole('button', { name: '条件をリセット', exact: true }).first().click();
+  await expect(page.getByRole('article')).toHaveCount(1);
+  await page.reload();
+  await expect(page.getByRole('article')).toHaveCount(1);
+  await page.getByRole('article').getByRole('button', { name: '削除', exact: true }).click();
+  await page.getByRole('alertdialog').getByRole('button', { name: '削除する' }).click();
+  await expect(page.getByRole('article')).toHaveCount(0);
+  await expect(page.locator('.collection-summary')).toHaveText('登録メモリー 0 枚');
+  await expect(
+    page.getByRole('heading', { name: 'まだメモリーが登録されていません' }),
+  ).toBeVisible();
+});
+
 test('register screenshot, reload, duplicate, edit, filter timing, delete and restore', async ({
   page,
 }, testInfo) => {
@@ -173,7 +213,7 @@ test('continuous registration resets a draft and protects it from navigation', a
 
 test('stale browser tabs cannot overwrite newly saved memories', async ({ page, context }) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: 'スキルカードと所持メモリー' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '所持カード一覧' })).toBeVisible();
   const other = await context.newPage();
   await other.goto('/memories/new?card=card-295');
   await expect(other.getByLabel('スキルカード', { exact: true })).toHaveValue('card-295');
@@ -193,7 +233,7 @@ test('stale browser tabs cannot overwrite newly saved memories', async ({ page, 
 
 test('unsupported storage is recoverable without silent resets', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: 'スキルカードと所持メモリー' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '所持カード一覧' })).toBeVisible();
   await page.evaluate(async () => {
     await new Promise<void>((resolve, reject) => {
       const request = indexedDB.open('gakumas-produce-memory-deck', 1);

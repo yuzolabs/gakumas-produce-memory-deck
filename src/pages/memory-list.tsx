@@ -4,7 +4,7 @@ import { ChevronDown, Plus } from 'lucide-react';
 import { memoryMaster } from '../domain/memory-master';
 import {
   emptyMemoryFilters,
-  filterMemoryCards,
+  filterOwnedMemoryCards,
   type MemoryCardGroup,
   type MemoryFilters,
 } from '../domain/memory-filters';
@@ -50,13 +50,12 @@ function CardMemoryGroup({
   const matchingIds = new Set(matching.map((m) => m.id));
   const plan = memoryMaster.plans.find((p) => p.id === card.plan)?.label;
   return (
-    <article className={`card-group ${owned.length ? 'is-owned' : ''}`} aria-label={card.name}>
+    <article className="card-group is-owned" aria-label={card.name}>
       <div className="card-group-heading">
         <button
           className="card-toggle"
-          disabled={!owned.length}
-          aria-expanded={owned.length ? expanded : undefined}
-          aria-controls={owned.length ? `copies-${card.id}` : undefined}
+          aria-expanded={expanded}
+          aria-controls={`copies-${card.id}`}
           onClick={() => setExpanded(!expanded)}
         >
           <span className={`card-mark ${card.kind}`} aria-hidden="true">
@@ -70,18 +69,10 @@ function CardMemoryGroup({
             </span>
           </span>
           <span className="owned-count">
-            {owned.length ? (
-              <>
-                <b>{owned.length}</b>枚
-                {matching.length !== owned.length && <small>条件一致 {matching.length}枚</small>}
-              </>
-            ) : (
-              '未所持'
-            )}
+            <b>{owned.length}</b>枚
+            {matching.length !== owned.length && <small>条件一致 {matching.length}枚</small>}
           </span>
-          {owned.length > 0 && (
-            <ChevronDown aria-hidden="true" className={expanded ? 'is-expanded' : ''} />
-          )}
+          <ChevronDown aria-hidden="true" className={expanded ? 'is-expanded' : ''} />
         </button>
         {!card.retired && (
           <Link
@@ -94,7 +85,7 @@ function CardMemoryGroup({
           </Link>
         )}
       </div>
-      {owned.length > 0 && expanded && (
+      {expanded && (
         <div id={`copies-${card.id}`} className="comparison-area">
           <table className="comparison-table">
             <caption className="sr-only">
@@ -167,7 +158,7 @@ export function MemoryListPage() {
   const [notice, setNotice] = useState<string>(location.state?.notice ?? '');
   if (store.state.status !== 'ready') return null;
   const memories = store.state.snapshot.memories;
-  const groups = filterMemoryCards(memories, filters);
+  const groups = filterOwnedMemoryCards(memories, filters);
   const pageCount = Math.max(1, Math.ceil(groups.length / 24));
   const currentPage = Math.min(page, pageCount);
   const unknownMemories = memories.filter(
@@ -191,8 +182,7 @@ export function MemoryListPage() {
     <>
       <div className="page-heading">
         <div>
-          <h1>スキルカードと所持メモリー</h1>
-          <p>同じカードでも、違う一枚。条件を並べて比較できます。</p>
+          <h1>所持カード一覧</h1>
         </div>
         <Link className="primary-link" to="/memories/new">
           <Plus aria-hidden="true" />
@@ -208,16 +198,7 @@ export function MemoryListPage() {
         <span>
           登録メモリー <strong>{memories.length}</strong> 枚
         </span>
-        <span>
-          所持カード <strong>{new Set(memories.map((m) => m.cardId)).size}</strong> 種
-        </span>
-        <span>収録カード {memoryMaster.cards.length}種（強化前後を含む）</span>
       </div>
-      {!memories.length && (
-        <p className="first-memory-hint">
-          まだ登録がありません。カードを探して「登録」を押すと、選択済みで入力を始められます。
-        </p>
-      )}
       <MemoryFilterPanel
         filters={filters}
         onChange={(next) => {
@@ -238,20 +219,30 @@ export function MemoryListPage() {
         </section>
       )}
       <div className="list-caption">
-        <h2>カード一覧</h2>
+        <h2>所持カード</h2>
         <p role="status">
           {groups.length}種のカード{pageCount > 1 ? ` · ${currentPage} / ${pageCount}ページ` : ''}
         </p>
       </div>
       {groups.length === 0 ? (
         <section className="empty-state">
-          <h2>条件に一致するカードがありません</h2>
+          <h2>
+            {memories.length
+              ? '条件に一致する所持カードがありません'
+              : 'まだメモリーが登録されていません'}
+          </h2>
           <p>
-            条件を減らすか、所持状況を「すべて」に変更してください。メモリーの条件を指定した場合、未所持カードは表示されません。
+            {memories.length
+              ? 'カード名や絞り込み条件を変更してください。'
+              : '「メモリーを登録」から、所持しているカードのメモリーを追加してください。'}
           </p>
-          <Button variant="outline" onClick={() => setFilters({ ...emptyMemoryFilters })}>
-            条件をリセット
-          </Button>
+          {memories.length > 0 ? (
+            <Button variant="outline" onClick={() => setFilters({ ...emptyMemoryFilters })}>
+              条件をリセット
+            </Button>
+          ) : (
+            <Link to="/memories/new">メモリーを登録</Link>
+          )}
         </section>
       ) : (
         <div className="card-collection">
@@ -261,7 +252,7 @@ export function MemoryListPage() {
         </div>
       )}
       {pageCount > 1 && (
-        <nav className="pagination" aria-label="カード一覧のページ">
+        <nav className="pagination" aria-label="所持カード一覧のページ">
           <Button
             variant="outline"
             disabled={currentPage === 1}
