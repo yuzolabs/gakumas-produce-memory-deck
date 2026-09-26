@@ -4,6 +4,7 @@ import { memoryMaster } from '../domain/memory-master';
 import { createMemoryDraft, getMemoryIssues, type ProduceMemory } from '../domain/produce-memory';
 import { describeStorageError, useMemoryStore } from '../storage/memory-store';
 import { SelectionField } from '../components/selection-field';
+import { BlockChoiceField } from '../components/block-choice-field';
 import { SkillCardSearch } from '../components/skill-card-search';
 import { CustomizationStepper } from '../components/customization-stepper';
 import { MemorySummary } from '../components/memory-summary';
@@ -147,7 +148,11 @@ function MemoryEditorForm({
               onSelect={selectCard}
               disabled={store.busy}
             />
-            <SelectionField
+          </fieldset>
+          <fieldset className="form-section" disabled={store.busy}>
+            <legend>取得タイミング</legend>
+            <BlockChoiceField
+              hideLabel
               label="取得タイミング"
               value={draft.acquisitionTimingId}
               onChange={(value) => updateDraft({ ...draft, acquisitionTimingId: value })}
