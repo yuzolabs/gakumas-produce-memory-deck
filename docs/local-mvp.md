@@ -173,6 +173,26 @@ HIF は独立したマスターで管理しています。
 アイコンはカードの追加時に手動で配置します。
 単体テストがマスター全カードとアイコンの過不足を検証します。
 
+### スキルカードの追加手順
+
+1. `src/data/skill-master.json` の `cards` に新しいカードを追加します。
+   ID は `card-<数値>` 形式で既存と重複しない値を採番します。
+   `name`・`plan`（sense / logic / anomaly / free）・`kind`（active / mental）・
+   `rarity`（R / SR / SSR）・`upgraded`・`retired`・`customizationIds`・
+   `maxCustomizations` を記述します。
+   +付きのカードは別 ID の別カードとして登録します。
+2. アイコンを `public/skill-card-icons/<カード ID>.webp` に配置します。
+   例: `card-900` なら `card-900.webp`。
+   正方形の WebP（96px 角相当）を使用します。
+   画面上の表示サイズは 24〜48px なので、これ以上の解像度は不要です。
+3. カスタムを持つカードは、`customizations` 側の定義と
+   `customizationIds` による参照も追加します。
+4. 廃止するカードは定義を削除せず `retired: true` にします。
+   アイコンは既存データの表示に使うため、そのまま残します。
+5. `bun run format` と `bun run check` を実行します。
+   マスター検証と単体テストが ID の重複、参照整合、
+   アイコンの過不足を検証します。
+
 ### バージョンと移行方針
 
 初期保存形式は `schemaVersion: 1`、IndexedDB の DB バージョンは1です。
