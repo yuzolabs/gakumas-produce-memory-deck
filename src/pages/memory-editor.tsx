@@ -315,7 +315,6 @@ function MemoryEditorForm({
           if (!open) setConfirmation(null);
         }}
         title="この内容で保存しますか？"
-        description="スキルカード・取得タイミング・ボーナスをご確認ください。"
         action={confirmation === 'next' ? '保存して次を登録' : '保存する'}
         busy={store.busy}
         error={error}

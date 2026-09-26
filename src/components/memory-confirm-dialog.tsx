@@ -25,7 +25,7 @@ export function MemoryConfirmDialog({
   open: boolean;
   onOpenChange: (open: boolean) => void;
   title: string;
-  description: string;
+  description?: string;
   action: string;
   busy?: boolean;
   error?: string;
@@ -52,7 +52,7 @@ export function MemoryConfirmDialog({
       >
         <AlertDialogHeader>
           <AlertDialogTitle>{title}</AlertDialogTitle>
-          <AlertDialogDescription>{description}</AlertDialogDescription>
+          {description && <AlertDialogDescription>{description}</AlertDialogDescription>}
         </AlertDialogHeader>
         {children}
         {error && (
