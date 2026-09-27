@@ -35,6 +35,17 @@ def find_release(tag):
     return matches[0] if matches else None
 
 
+def wait_for_release(tag):
+    """Retry missing required releases after writes; API/authentication failures still propagate."""
+    for attempt in range(6):
+        release = find_release(tag)
+        if release is not None:
+            return release
+        if attempt < 5:
+            time.sleep(5)
+    raise ValueError(f"GitHub release: required release not found after retries: {tag}")
+
+
 def verify_tag_commit(tag, commit):
     """Resolve lightweight or annotated remote tags and reject a different commit."""
     reference = github_api(f"{repository_path()}/git/ref/tags/{tag}")["object"]
@@ -114,25 +125,35 @@ def ensure_draft(tag, commit, prerelease, notes):
                 "GitHub release: existing draft has a different target or release type"
             )
         return existing
-    arguments = [
-        "release",
-        "create",
-        tag,
-        "--target",
-        commit,
-        "--draft",
-        "--latest=false",
-        "--title",
-        tag,
-        "--notes",
-        notes,
-        "--repo",
-        os.environ["GH_REPO"],
-    ]
-    if prerelease:
-        arguments.append("--prerelease")
-    gh_command(*arguments)
-    return find_release(tag)
+    # Use the POST response directly: the releases list may not show a new draft yet.
+    release = github_api(
+        f"{repository_path()}/releases",
+        "--method",
+        "POST",
+        "--raw-field",
+        f"tag_name={tag}",
+        "--raw-field",
+        f"target_commitish={commit}",
+        "--raw-field",
+        f"name={tag}",
+        "--raw-field",
+        f"body={notes}",
+        "--field",
+        "draft=true",
+        "--field",
+        f"prerelease={str(prerelease).lower()}",
+        "--raw-field",
+        "make_latest=false",
+    )
+    if (
+        not isinstance(release, dict)
+        or release.get("draft") is not True
+        or release.get("tag_name") != tag
+        or release.get("target_commitish") != commit
+        or release.get("prerelease") is not prerelease
+    ):
+        raise ValueError("GitHub release: unexpected draft creation response")
+    return release
 
 
 def upload_missing_assets(release, directory):
@@ -162,7 +183,7 @@ def upload_missing_assets(release, directory):
 
 def publish_release(tag, commit, directory, prerelease):
     """Publish a complete draft, then require GitHub's immutable attestation to verify."""
-    release = find_release(tag)
+    release = wait_for_release(tag)
     check_tag_available(tag, commit)
     if release["draft"]:
         if release["target_commitish"] != commit or release["prerelease"] != prerelease:
@@ -190,6 +211,8 @@ def publish_release(tag, commit, directory, prerelease):
     for attempt in range(6):
         try:
             release = find_release(tag)
+            if release is None:
+                raise ValueError("GitHub release: published release is not visible yet")
             verify_tag_commit(tag, commit)
             verify_immutable_release(release, directory)
             print(f"Immutable release ready: {release['html_url']}")

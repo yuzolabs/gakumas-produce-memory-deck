@@ -54,7 +54,7 @@ class ProductionPromotionTests(unittest.TestCase):
             patch.object(promotion, "ensure_draft", return_value=self.release)
         )
         self.stack.enter_context(
-            patch.object(promotion, "find_release", return_value=self.release)
+            patch.object(promotion, "wait_for_release", return_value=self.release)
         )
         self.tag_check = self.stack.enter_context(
             patch.object(promotion, "verify_tag_commit")
@@ -127,6 +127,19 @@ class ProductionPromotionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "checksum"):
             promotion.prepare_production_release(BETA)
         self.assertFalse((self.root / "production/site").exists())
+
+    def test_missing_uploaded_release_stops_before_deployment_files_are_written(self):
+        with (
+            patch.object(
+                promotion,
+                "wait_for_release",
+                side_effect=ValueError("release not visible"),
+            ),
+            self.assertRaisesRegex(ValueError, "release not visible"),
+        ):
+            promotion.prepare_production_release(BETA)
+        self.assertFalse((self.root / "production/site").exists())
+        self.outputs.assert_not_called()
 
     def test_failed_postdeploy_check_does_not_publish(self):
         promotion.prepare_production_release(BETA)
