@@ -22,6 +22,7 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: write # Same-job Release Assets upload avoids temporary Actions artifact storage.
+      attestations: read # gh release verify and verify-asset require attestation access in private repositories.
     environment:
       name: staging
       url: ${{ vars.STAGING_URL }}
