@@ -1,8 +1,10 @@
 # staging デプロイ
 
 GitHub Actions を手動実行し、Cloudflare Pages の staging 専用プロジェクトに公開します。
-公開先の動作確認が成功すると、デプロイしたコミットの beta タグと GitHub Pre-release を作成します。
-本番環境へのデプロイ、D1、R2、Pages Functions は設定していません。画像はサイトに同梱します。
+公開先の動作確認が成功すると、検証済み成果物を添付した Immutable な beta Pre-release を作成します。
+本番への昇格は別の [本番デプロイ](production-deployment.md) ワークフローで行います。
+D1、R2、Pages Functions は設定していません。画像はサイトに同梱します。
+GitHub の `Enable release immutability` を有効にしてから、新しい beta 版を公開してください。
 
 ## 初回の手動設定
 
@@ -72,7 +74,13 @@ Pages のトークンに同等のプロジェクト単位の制限があると�
 5. `bun run verify:staging:local` で Pages ローカルランタイムのスモークテストを実行する。
 6. 検証済みの `dist/` を `wrangler pages deploy` で再ビルドせず公開する。Cloudflare 認証情報はこのステップにだけ渡す。
 7. 公開先でも同じスモークテストを実行し、コミット、画像、SPA の直接アクセス、登録・編集・バックアップ画面を検証する。
-8. 同じコミットのタグと Pre-release を作成する。Latest には指定しない。
+8. 検証済みの `dist/` を決定的なアーカイブにまとめ、コミット・workflow run・attempt を記録する。
+9. 同じコミットの beta Release を Draft で作成し、`site.tar.gz`・`manifest.json`・`SHA256SUMS` を添付する。
+10. 添付内容を確認して Pre-release として公開し、Immutable と release attestation を確認する。Latest には指定しない。
+
+成果物は Release Assets に保存し、Actions Artifacts は使いません。
+ジョブを分けずに検証済み成果物を添付するため、staging ジョブには `contents: write` 権限を付与します。
+Cloudflare 認証情報は従来どおり公開ステップに限定します。
 
 同時実行は直列化します。実行中のデプロイは、新しい実行が来てもキャンセルしません。
 GitHub の concurrency は全要求の FIFO キューではありません。保留中の実行は置き換わる場合があります。
@@ -81,8 +89,10 @@ GitHub の concurrency は全要求の FIFO キューではありません。保
 
 - デプロイ前の検査に失敗した場合、公開先を更新しません。
 - デプロイ後の動作確認に失敗した場合、Release を作りません。ただし公開先は更新済みで、自動ロールバックは行いません。
-- Release 作成だけ失敗した場合は、その実行の `Re-run failed jobs` で再試行できます。
-- 同じタグ・同じコミットの再実行は許可します。公開済みの Pre-release は変更しません。
+- Release 作成だけ失敗した場合も、その実行の `Re-run failed jobs` で staging のビルド・検証・公開から再試行します。
+- 同じタグ・コミット・成果物の再実行は許可します。Draft は不足した添付ファイルだけを追加し、既存ファイルは上書きしません。
+- 公開済みの Immutable な Pre-release は内容を照合し、変更せず完了します。元の workflow run を成功させてから本番へ昇格してください。
+- 旧方式の Assets なし Release や mutable Release は再利用せず、新しい beta バージョンを指定してください。
 - 別コミットを指すタグや、既存の正式 Release は上書きしません。
 - 修正コミットをデプロイするときは、新しい beta タグを指定してください。
 

@@ -4,6 +4,7 @@
 ログインやバックエンドは不要です。
 Cloudflare Pages の staging 専用プロジェクトへ手動デプロイする設定があります。認証情報の登録と初回デプロイは管理者が行います。
 手順は [staging デプロイ](docs/staging-deployment.md) を参照してください。
+検証済み beta の Release Assets を使った [本番デプロイ](docs/production-deployment.md) にも対応しています。
 
 ## ローカルで試す
 
