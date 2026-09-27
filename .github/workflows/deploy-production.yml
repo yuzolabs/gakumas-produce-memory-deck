@@ -23,6 +23,7 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: read
+      attestations: read # gh release verify and verify-asset require attestation access in private repositories.
       actions: read # Verify the staging workflow and its recorded smoke-test attempt.
     env:
       BETA_VERSION: ${{ inputs.beta_version }}
@@ -42,6 +43,7 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: write # Prepare a complete draft and publish the immutable stable release.
+      attestations: read # Verify beta and stable release attestations without granting write access.
       actions: read # Recheck beta provenance after the environment approval.
     environment:
       name: production
