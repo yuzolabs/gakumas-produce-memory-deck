@@ -292,6 +292,7 @@ class GitHubReleaseTests(unittest.TestCase):
                     github,
                     "find_release",
                     return_value={
+                        "id": 123,
                         "draft": True,
                         "assets": [],
                         "target_commitish": COMMIT,
@@ -299,6 +300,8 @@ class GitHubReleaseTests(unittest.TestCase):
                     },
                 ),
                 patch.object(github, "check_tag_available"),
+                patch.object(github, "github_api", return_value={"assets": []}),
+                patch.object(github.time, "sleep"),
                 self.assertRaises(ValueError),
             ):
                 github.publish_release(BETA, COMMIT, directory, True)
@@ -327,11 +330,17 @@ class GitHubReleaseTests(unittest.TestCase):
             for name in assets.ASSET_NAMES:
                 (directory / name).write_bytes(b"data")
             draft = {
+                "id": 123,
+                "tag_name": "v0.1.0",
                 "draft": True,
                 "target_commitish": COMMIT,
                 "prerelease": False,
                 "assets": [
-                    {"name": name, "digest": f"sha256:{assets.digest(b'data')}"}
+                    {
+                        "name": name,
+                        "digest": f"sha256:{assets.digest(b'data')}",
+                        "state": "uploaded",
+                    }
                     for name in assets.ASSET_NAMES
                 ],
             }
@@ -344,6 +353,7 @@ class GitHubReleaseTests(unittest.TestCase):
                 patch.object(github, "check_tag_available"),
                 patch.object(github, "verify_tag_commit"),
                 patch.object(github, "verify_immutable_release"),
+                patch.object(github, "github_api", return_value=draft),
                 patch.object(github, "gh_command") as command,
             ):
                 github.publish_release("v0.1.0", COMMIT, directory, False)

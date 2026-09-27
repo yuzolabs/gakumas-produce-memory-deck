@@ -54,7 +54,9 @@ class ProductionPromotionTests(unittest.TestCase):
             patch.object(promotion, "ensure_draft", return_value=self.release)
         )
         self.stack.enter_context(
-            patch.object(promotion, "wait_for_release", return_value=self.release)
+            patch.object(
+                promotion, "wait_for_release_assets", return_value=self.release
+            )
         )
         self.tag_check = self.stack.enter_context(
             patch.object(promotion, "verify_tag_commit")
@@ -132,7 +134,7 @@ class ProductionPromotionTests(unittest.TestCase):
         with (
             patch.object(
                 promotion,
-                "wait_for_release",
+                "wait_for_release_assets",
                 side_effect=ValueError("release not visible"),
             ),
             self.assertRaisesRegex(ValueError, "release not visible"),

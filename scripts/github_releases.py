@@ -46,6 +46,30 @@ def wait_for_release(tag):
     raise ValueError(f"GitHub release: required release not found after retries: {tag}")
 
 
+def wait_for_release_assets(release, directory):
+    """Read by release ID until all uploaded assets match the verified local files."""
+    expected = {
+        name: f"sha256:{digest((Path(directory) / name).read_bytes())}"
+        for name in ASSET_NAMES
+    }
+    release_id = release["id"]
+    for attempt in range(6):
+        current = github_api(f"{repository_path()}/releases/{release_id}")
+        assets = current["assets"]
+        actual = {asset["name"]: asset.get("digest") for asset in assets}
+        if (
+            actual == expected
+            and len(assets) == len(expected)
+            and all(asset.get("state") == "uploaded" for asset in assets)
+        ):
+            return current
+        if attempt < 5:
+            time.sleep(5)
+    raise ValueError(
+        "GitHub release: assets are incomplete or differ from verified files after retries"
+    )
+
+
 def verify_tag_commit(tag, commit):
     """Resolve lightweight or annotated remote tags and reject a different commit."""
     reference = github_api(f"{repository_path()}/git/ref/tags/{tag}")["object"]
@@ -190,15 +214,14 @@ def publish_release(tag, commit, directory, prerelease):
     if release["draft"]:
         if release["target_commitish"] != commit or release["prerelease"] != prerelease:
             raise ValueError("GitHub release: draft target changed before publication")
-        expected = {
-            name: f"sha256:{digest((Path(directory) / name).read_bytes())}"
-            for name in ASSET_NAMES
-        }
-        actual = {asset["name"]: asset.get("digest") for asset in release["assets"]}
-        if actual != expected:
-            raise ValueError(
-                "GitHub release: draft assets are incomplete or differ from verified files"
-            )
+        release = wait_for_release_assets(release, directory)
+        if (
+            not release["draft"]
+            or release["tag_name"] != tag
+            or release["target_commitish"] != commit
+            or release["prerelease"] != prerelease
+        ):
+            raise ValueError("GitHub release: draft target changed before publication")
         gh_command(
             "release",
             "edit",

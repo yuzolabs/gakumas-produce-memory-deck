@@ -228,11 +228,17 @@ class ReleaseVisibilityTests(unittest.TestCase):
             for name in ASSET_NAMES:
                 (directory / name).write_bytes(b"data")
             draft = {
+                "id": 123,
+                "tag_name": BETA,
                 "draft": True,
                 "target_commitish": COMMIT,
                 "prerelease": True,
                 "assets": [
-                    {"name": name, "digest": f"sha256:{digest(b'data')}"}
+                    {
+                        "name": name,
+                        "digest": f"sha256:{digest(b'data')}",
+                        "state": "uploaded",
+                    }
                     for name in ASSET_NAMES
                 ],
             }
@@ -245,6 +251,9 @@ class ReleaseVisibilityTests(unittest.TestCase):
                 patch.object(
                     github, "find_release", side_effect=[None, draft, None, published]
                 ),
+                patch.object(
+                    github, "github_api", side_effect=[{**draft, "assets": []}, draft]
+                ) as api,
                 patch.object(github, "check_tag_available"),
                 patch.object(github, "verify_tag_commit"),
                 patch.object(github, "verify_immutable_release") as verify,
@@ -255,7 +264,76 @@ class ReleaseVisibilityTests(unittest.TestCase):
                 command.assert_called_once()
                 self.assertIn("--draft=false", command.call_args.args)
                 verify.assert_called_once_with(published, directory)
-                self.assertEqual(sleep.call_count, 2)
+                self.assertEqual(sleep.call_count, 3)
+                self.assertTrue(
+                    all(
+                        call.args == (f"repos/{REPOSITORY}/releases/123",)
+                        for call in api.call_args_list
+                    )
+                )
+
+    def test_release_assets_never_matching_fail_without_publishing(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            for name in ASSET_NAMES:
+                (directory / name).write_bytes(b"data")
+            valid = [
+                {
+                    "name": name,
+                    "digest": f"sha256:{digest(b'data')}",
+                    "state": "uploaded",
+                }
+                for name in ASSET_NAMES
+            ]
+            for assets in [
+                [],
+                valid[:-1],
+                valid + [valid[0]],
+                [{**asset, "digest": "sha256:wrong"} for asset in valid],
+                [{**asset, "state": "starter"} for asset in valid],
+            ]:
+                with (
+                    self.subTest(assets=assets),
+                    patch.object(
+                        github,
+                        "wait_for_release",
+                        return_value={
+                            "id": 123,
+                            "draft": True,
+                            "target_commitish": COMMIT,
+                            "prerelease": True,
+                        },
+                    ),
+                    patch.object(github, "check_tag_available"),
+                    patch.object(
+                        github, "github_api", return_value={"assets": assets}
+                    ) as api,
+                    patch.object(github.time, "sleep"),
+                    self.assertRaisesRegex(
+                        ValueError, "assets are incomplete or differ"
+                    ),
+                ):
+                    github.publish_release(BETA, COMMIT, directory, True)
+                self.assertEqual(api.call_count, 6)
+                self.assertTrue(all(len(call.args) == 1 for call in api.call_args_list))
+
+    def test_release_assets_api_errors_are_not_retried(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            for name in ASSET_NAMES:
+                (directory / name).write_bytes(b"data")
+            with (
+                patch.object(
+                    github,
+                    "github_api",
+                    side_effect=subprocess.CalledProcessError(1, "gh"),
+                ) as api,
+                patch.object(github.time, "sleep") as sleep,
+                self.assertRaises(subprocess.CalledProcessError),
+            ):
+                github.wait_for_release_assets({"id": 123}, directory)
+            api.assert_called_once()
+            sleep.assert_not_called()
 
     def test_missing_release_after_publication_does_not_repeat_publication(self):
         with (
