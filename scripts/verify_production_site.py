@@ -55,7 +55,12 @@ def verify_production_site(files):
                 )
                 request = urllib.request.Request(
                     url,
-                    headers={"Cache-Control": "no-cache", "Accept": "text/html,*/*"},
+                    headers={
+                        # Cloudflare rejects the default Python-urllib User-Agent.
+                        "User-Agent": "gakumas-production-verifier/1.0",
+                        "Cache-Control": "no-cache",
+                        "Accept": "text/html,*/*",
+                    },
                 )
                 # Only the fixed production origin is used; redirects are blocked before following.
                 with opener.open(request, timeout=15) as response:

@@ -511,6 +511,14 @@ class ProductionHTTPTests(unittest.TestCase):
         ) as requests:
             verification.verify_production_site(files)
             self.assertEqual(requests.call_count, 6)
+            for call in requests.call_args_list:
+                request = call.args[0]
+                self.assertEqual(
+                    request.get_header("User-agent"),
+                    "gakumas-production-verifier/1.0",
+                )
+                self.assertEqual(request.get_header("Cache-control"), "no-cache")
+                self.assertEqual(request.get_header("Accept"), "text/html,*/*")
         Response.headers = {"X-Robots-Tag": "noindex"}
         with (
             patch.object(
