@@ -16,6 +16,7 @@ from github_releases import (
     upload_missing_assets,
     verify_immutable_release,
     verify_tag_commit,
+    wait_for_release_assets,
 )
 from release_assets import (
     ASSET_NAMES,
@@ -167,7 +168,9 @@ def prepare_production_release(beta, inspect_only=False):
             return
         upload_missing_assets(release, bundle)
         # Use the draft's downloaded bytes, not a second transformation, for actual deployment.
-        download_release(find_release(version), PRODUCTION_DIRECTORY / "verified")
+        download_release(
+            wait_for_release_assets(release, bundle), PRODUCTION_DIRECTORY / "verified"
+        )
         actual_manifest, actual_files = verify_bundle(PRODUCTION_DIRECTORY / "verified")
         if actual_manifest != verify_bundle(bundle)[0]:
             raise ValueError("Release promotion: uploaded production assets changed")

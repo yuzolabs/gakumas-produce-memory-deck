@@ -259,6 +259,7 @@ class GitHubReleaseTests(unittest.TestCase):
             for name in assets.ASSET_NAMES:
                 (directory / name).write_bytes(b"data")
             release = {
+                "id": 123,
                 "draft": True,
                 "tag_name": BETA,
                 "assets": [
@@ -291,6 +292,7 @@ class GitHubReleaseTests(unittest.TestCase):
                     github,
                     "find_release",
                     return_value={
+                        "id": 123,
                         "draft": True,
                         "assets": [],
                         "target_commitish": COMMIT,
@@ -298,6 +300,8 @@ class GitHubReleaseTests(unittest.TestCase):
                     },
                 ),
                 patch.object(github, "check_tag_available"),
+                patch.object(github, "github_api", return_value={"assets": []}),
+                patch.object(github.time, "sleep"),
                 self.assertRaises(ValueError),
             ):
                 github.publish_release(BETA, COMMIT, directory, True)
@@ -326,11 +330,17 @@ class GitHubReleaseTests(unittest.TestCase):
             for name in assets.ASSET_NAMES:
                 (directory / name).write_bytes(b"data")
             draft = {
+                "id": 123,
+                "tag_name": "v0.1.0",
                 "draft": True,
                 "target_commitish": COMMIT,
                 "prerelease": False,
                 "assets": [
-                    {"name": name, "digest": f"sha256:{assets.digest(b'data')}"}
+                    {
+                        "name": name,
+                        "digest": f"sha256:{assets.digest(b'data')}",
+                        "state": "uploaded",
+                    }
                     for name in assets.ASSET_NAMES
                 ],
             }
@@ -343,12 +353,22 @@ class GitHubReleaseTests(unittest.TestCase):
                 patch.object(github, "check_tag_available"),
                 patch.object(github, "verify_tag_commit"),
                 patch.object(github, "verify_immutable_release"),
+                patch.object(github, "github_api", return_value=draft) as api,
                 patch.object(github, "gh_command") as command,
             ):
                 github.publish_release("v0.1.0", COMMIT, directory, False)
-                self.assertIn("--draft=false", command.call_args.args)
-                self.assertIn("--prerelease=false", command.call_args.args)
-                self.assertIn("--latest=true", command.call_args.args)
+                command.assert_not_called()
+                api.assert_called_with(
+                    f"repos/{REPOSITORY}/releases/123",
+                    "--method",
+                    "PATCH",
+                    "--field",
+                    "draft=false",
+                    "--field",
+                    "prerelease=false",
+                    "--raw-field",
+                    "make_latest=true",
+                )
 
 
 @patch.dict(os.environ, {"GH_REPO": REPOSITORY})

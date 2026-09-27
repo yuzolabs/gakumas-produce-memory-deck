@@ -35,6 +35,41 @@ def find_release(tag):
     return matches[0] if matches else None
 
 
+def wait_for_release(tag):
+    """Retry missing required releases after writes; API/authentication failures still propagate."""
+    for attempt in range(6):
+        release = find_release(tag)
+        if release is not None:
+            return release
+        if attempt < 5:
+            time.sleep(5)
+    raise ValueError(f"GitHub release: required release not found after retries: {tag}")
+
+
+def wait_for_release_assets(release, directory):
+    """Read by release ID until all uploaded assets match the verified local files."""
+    expected = {
+        name: f"sha256:{digest((Path(directory) / name).read_bytes())}"
+        for name in ASSET_NAMES
+    }
+    release_id = release["id"]
+    for attempt in range(6):
+        current = github_api(f"{repository_path()}/releases/{release_id}")
+        assets = current["assets"]
+        actual = {asset["name"]: asset.get("digest") for asset in assets}
+        if (
+            actual == expected
+            and len(assets) == len(expected)
+            and all(asset.get("state") == "uploaded" for asset in assets)
+        ):
+            return current
+        if attempt < 5:
+            time.sleep(5)
+    raise ValueError(
+        "GitHub release: assets are incomplete or differ from verified files after retries"
+    )
+
+
 def verify_tag_commit(tag, commit):
     """Resolve lightweight or annotated remote tags and reject a different commit."""
     reference = github_api(f"{repository_path()}/git/ref/tags/{tag}")["object"]
@@ -114,25 +149,35 @@ def ensure_draft(tag, commit, prerelease, notes):
                 "GitHub release: existing draft has a different target or release type"
             )
         return existing
-    arguments = [
-        "release",
-        "create",
-        tag,
-        "--target",
-        commit,
-        "--draft",
-        "--latest=false",
-        "--title",
-        tag,
-        "--notes",
-        notes,
-        "--repo",
-        os.environ["GH_REPO"],
-    ]
-    if prerelease:
-        arguments.append("--prerelease")
-    gh_command(*arguments)
-    return find_release(tag)
+    # Use the POST response directly: the releases list may not show a new draft yet.
+    release = github_api(
+        f"{repository_path()}/releases",
+        "--method",
+        "POST",
+        "--raw-field",
+        f"tag_name={tag}",
+        "--raw-field",
+        f"target_commitish={commit}",
+        "--raw-field",
+        f"name={tag}",
+        "--raw-field",
+        f"body={notes}",
+        "--field",
+        "draft=true",
+        "--field",
+        f"prerelease={str(prerelease).lower()}",
+        "--raw-field",
+        "make_latest=false",
+    )
+    if (
+        not isinstance(release, dict)
+        or release.get("draft") is not True
+        or release.get("tag_name") != tag
+        or release.get("target_commitish") != commit
+        or release.get("prerelease") is not prerelease
+    ):
+        raise ValueError("GitHub release: unexpected draft creation response")
+    return release
 
 
 def upload_missing_assets(release, directory):
@@ -151,45 +196,49 @@ def upload_missing_assets(release, directory):
                 )
         else:
             gh_command(
-                "release",
-                "upload",
-                release["tag_name"],
+                "api",
+                f"https://uploads.github.com/{repository_path()}/releases/{release['id']}/assets?name={name}",
+                "--method",
+                "POST",
+                "--header",
+                "Content-Type: application/octet-stream",
+                "--input",
                 str(path),
-                "--repo",
-                os.environ["GH_REPO"],
             )
 
 
 def publish_release(tag, commit, directory, prerelease):
     """Publish a complete draft, then require GitHub's immutable attestation to verify."""
-    release = find_release(tag)
+    release = wait_for_release(tag)
     check_tag_available(tag, commit)
     if release["draft"]:
         if release["target_commitish"] != commit or release["prerelease"] != prerelease:
             raise ValueError("GitHub release: draft target changed before publication")
-        expected = {
-            name: f"sha256:{digest((Path(directory) / name).read_bytes())}"
-            for name in ASSET_NAMES
-        }
-        actual = {asset["name"]: asset.get("digest") for asset in release["assets"]}
-        if actual != expected:
-            raise ValueError(
-                "GitHub release: draft assets are incomplete or differ from verified files"
-            )
-        gh_command(
-            "release",
-            "edit",
-            tag,
-            "--draft=false",
-            f"--prerelease={str(prerelease).lower()}",
-            f"--latest={str(not prerelease).lower()}",
-            "--repo",
-            os.environ["GH_REPO"],
+        release = wait_for_release_assets(release, directory)
+        if (
+            not release["draft"]
+            or release["tag_name"] != tag
+            or release["target_commitish"] != commit
+            or release["prerelease"] != prerelease
+        ):
+            raise ValueError("GitHub release: draft target changed before publication")
+        github_api(
+            f"{repository_path()}/releases/{release['id']}",
+            "--method",
+            "PATCH",
+            "--field",
+            "draft=false",
+            "--field",
+            f"prerelease={str(prerelease).lower()}",
+            "--raw-field",
+            f"make_latest={str(not prerelease).lower()}",
         )
     # Attestations may take a short time to become available after publication.
     for attempt in range(6):
         try:
             release = find_release(tag)
+            if release is None:
+                raise ValueError("GitHub release: published release is not visible yet")
             verify_tag_commit(tag, commit)
             verify_immutable_release(release, directory)
             print(f"Immutable release ready: {release['html_url']}")
