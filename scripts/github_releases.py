@@ -172,12 +172,14 @@ def upload_missing_assets(release, directory):
                 )
         else:
             gh_command(
-                "release",
-                "upload",
-                release["tag_name"],
+                "api",
+                f"https://uploads.github.com/{repository_path()}/releases/{release['id']}/assets?name={name}",
+                "--method",
+                "POST",
+                "--header",
+                "Content-Type: application/octet-stream",
+                "--input",
                 str(path),
-                "--repo",
-                os.environ["GH_REPO"],
             )
 
 

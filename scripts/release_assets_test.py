@@ -259,6 +259,7 @@ class GitHubReleaseTests(unittest.TestCase):
             for name in assets.ASSET_NAMES:
                 (directory / name).write_bytes(b"data")
             release = {
+                "id": 123,
                 "draft": True,
                 "tag_name": BETA,
                 "assets": [

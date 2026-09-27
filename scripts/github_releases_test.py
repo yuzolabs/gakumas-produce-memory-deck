@@ -82,11 +82,31 @@ class ReleaseVisibilityTests(unittest.TestCase):
             "STAGING_URL": "https://example.invalid",
         }
 
-        def verify_upload(release, directory):
-            self.assertIs(release, draft)
-            manifest, files = verify_bundle(directory)
+        uploaded = []
+
+        def verify_upload(*arguments):
+            self.assertEqual(arguments[0], "api")
+            name = arguments[1].split("?name=")[1]
+            self.assertEqual(
+                arguments[1],
+                f"https://uploads.github.com/repos/{REPOSITORY}/releases/123/assets?name={name}",
+            )
+            self.assertEqual(
+                arguments[2:6],
+                (
+                    "--method",
+                    "POST",
+                    "--header",
+                    "Content-Type: application/octet-stream",
+                ),
+            )
+            self.assertEqual(arguments[6], "--input")
+            path = Path(arguments[7])
+            self.assertEqual(path.name, name)
+            manifest, files = verify_bundle(path.parent)
             self.assertEqual(manifest["version"], BETA)
             self.assertEqual(files, staging_files())
+            uploaded.append(name)
 
         with (
             patch.dict(os.environ, environment),
@@ -94,14 +114,13 @@ class ReleaseVisibilityTests(unittest.TestCase):
             patch.object(github, "check_tag_available"),
             patch.object(github, "find_release", return_value=None) as lookup,
             patch.object(github, "github_api", return_value=draft),
-            patch.object(
-                staging, "upload_missing_assets", side_effect=verify_upload
-            ) as upload,
+            patch.object(github, "gh_command", side_effect=verify_upload) as upload,
             patch.object(staging, "publish_release") as publish,
         ):
             staging.publish_staging_release()
             lookup.assert_called_once_with(BETA)
-            upload.assert_called_once()
+            self.assertEqual(upload.call_count, len(ASSET_NAMES))
+            self.assertEqual(set(uploaded), set(ASSET_NAMES))
             publish.assert_called_once()
 
     def test_existing_matching_draft_is_reused_without_creation(self):
