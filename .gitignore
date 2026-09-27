@@ -1,6 +1,17 @@
 node_modules
 .venv
 dist/
+.wrangler/
+
+# Local credentials; only explicit example templates may be committed.
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+!.env.example
+!.env.*.example
+!.dev.vars.example
+!.dev.vars.*.example
 test-results/
 playwright-report/
 
