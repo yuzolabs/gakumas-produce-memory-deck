@@ -373,16 +373,62 @@ class ReleaseVisibilityTests(unittest.TestCase):
     def test_missing_release_after_publication_does_not_repeat_publication(self):
         with (
             patch.object(
-                github, "find_release", side_effect=[{"draft": False}] + [None] * 6
+                github, "find_release", side_effect=[{"draft": False}] + [None] * 37
             ),
             patch.object(github, "check_tag_available"),
             patch.object(github.time, "sleep") as sleep,
             patch.object(github, "gh_command") as command,
+            patch.object(github.time, "monotonic", side_effect=[0, *range(0, 181, 5)]),
             self.assertRaisesRegex(ValueError, "published release is not visible yet"),
         ):
             github.publish_release(BETA, COMMIT, Path("unused"), True)
         command.assert_not_called()
-        self.assertEqual(sleep.call_count, 5)
+        self.assertEqual(sleep.call_count, 36)
+        self.assertTrue(all(call.args == (5,) for call in sleep.call_args_list))
+
+    def test_attestation_verification_stops_on_success_within_three_minutes(self):
+        published = {"draft": False, "html_url": "https://example.invalid/release"}
+        for failures in (0, 12, 36):
+            with (
+                self.subTest(failures=failures),
+                patch.object(github, "wait_for_release", return_value=published),
+                patch.object(github, "find_release", return_value=published),
+                patch.object(github, "check_tag_available"),
+                patch.object(github, "verify_tag_commit"),
+                patch.object(
+                    github,
+                    "verify_immutable_release",
+                    side_effect=[subprocess.CalledProcessError(1, "gh")] * failures
+                    + [None],
+                ) as verify,
+                patch.object(
+                    github.time, "monotonic", side_effect=[0, *range(0, 181, 5)]
+                ),
+                patch.object(github.time, "sleep") as sleep,
+            ):
+                github.publish_release(BETA, COMMIT, Path("unused"), True)
+            self.assertEqual(verify.call_count, failures + 1)
+            self.assertEqual(sleep.call_count, failures)
+            self.assertTrue(all(call.args == (5,) for call in sleep.call_args_list))
+
+    def test_attestation_verification_timeout_includes_command_duration(self):
+        failure = subprocess.CalledProcessError(1, "gh")
+        with (
+            patch.object(github, "wait_for_release", return_value={"draft": False}),
+            patch.object(github, "find_release", return_value={"draft": False}),
+            patch.object(github, "check_tag_available"),
+            patch.object(github, "verify_tag_commit"),
+            patch.object(
+                github, "verify_immutable_release", side_effect=failure
+            ) as verify,
+            patch.object(github.time, "monotonic", side_effect=[10, 187, 190]),
+            patch.object(github.time, "sleep") as sleep,
+            self.assertRaises(subprocess.CalledProcessError) as raised,
+        ):
+            github.publish_release(BETA, COMMIT, Path("unused"), True)
+        self.assertIs(raised.exception, failure)
+        self.assertEqual(verify.call_count, 2)
+        sleep.assert_called_once_with(3)
 
 
 if __name__ == "__main__":

@@ -233,8 +233,9 @@ def publish_release(tag, commit, directory, prerelease):
             "--raw-field",
             f"make_latest={str(not prerelease).lower()}",
         )
-    # Attestations may take a short time to become available after publication.
-    for attempt in range(6):
+    # Retry attestation verification every five seconds for up to three minutes.
+    verification_deadline = time.monotonic() + 180
+    while True:
         try:
             release = find_release(tag)
             if release is None:
@@ -244,6 +245,7 @@ def publish_release(tag, commit, directory, prerelease):
             print(f"Immutable release ready: {release['html_url']}")
             return
         except (ValueError, subprocess.CalledProcessError):
-            if attempt == 5:
+            remaining_seconds = verification_deadline - time.monotonic()
+            if remaining_seconds <= 0:
                 raise
-            time.sleep(5)
+            time.sleep(min(5, remaining_seconds))
