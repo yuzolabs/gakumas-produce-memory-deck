@@ -222,15 +222,16 @@ def publish_release(tag, commit, directory, prerelease):
             or release["prerelease"] != prerelease
         ):
             raise ValueError("GitHub release: draft target changed before publication")
-        gh_command(
-            "release",
-            "edit",
-            tag,
-            "--draft=false",
-            f"--prerelease={str(prerelease).lower()}",
-            f"--latest={str(not prerelease).lower()}",
-            "--repo",
-            os.environ["GH_REPO"],
+        github_api(
+            f"{repository_path()}/releases/{release['id']}",
+            "--method",
+            "PATCH",
+            "--field",
+            "draft=false",
+            "--field",
+            f"prerelease={str(prerelease).lower()}",
+            "--raw-field",
+            f"make_latest={str(not prerelease).lower()}",
         )
     # Attestations may take a short time to become available after publication.
     for attempt in range(6):

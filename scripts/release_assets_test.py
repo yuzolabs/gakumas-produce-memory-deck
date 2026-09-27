@@ -353,13 +353,22 @@ class GitHubReleaseTests(unittest.TestCase):
                 patch.object(github, "check_tag_available"),
                 patch.object(github, "verify_tag_commit"),
                 patch.object(github, "verify_immutable_release"),
-                patch.object(github, "github_api", return_value=draft),
+                patch.object(github, "github_api", return_value=draft) as api,
                 patch.object(github, "gh_command") as command,
             ):
                 github.publish_release("v0.1.0", COMMIT, directory, False)
-                self.assertIn("--draft=false", command.call_args.args)
-                self.assertIn("--prerelease=false", command.call_args.args)
-                self.assertIn("--latest=true", command.call_args.args)
+                command.assert_not_called()
+                api.assert_called_with(
+                    f"repos/{REPOSITORY}/releases/123",
+                    "--method",
+                    "PATCH",
+                    "--field",
+                    "draft=false",
+                    "--field",
+                    "prerelease=false",
+                    "--raw-field",
+                    "make_latest=true",
+                )
 
 
 @patch.dict(os.environ, {"GH_REPO": REPOSITORY})

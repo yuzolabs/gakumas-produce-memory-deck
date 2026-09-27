@@ -252,7 +252,9 @@ class ReleaseVisibilityTests(unittest.TestCase):
                     github, "find_release", side_effect=[None, draft, None, published]
                 ),
                 patch.object(
-                    github, "github_api", side_effect=[{**draft, "assets": []}, draft]
+                    github,
+                    "github_api",
+                    side_effect=[{**draft, "assets": []}, draft, published],
                 ) as api,
                 patch.object(github, "check_tag_available"),
                 patch.object(github, "verify_tag_commit"),
@@ -261,14 +263,24 @@ class ReleaseVisibilityTests(unittest.TestCase):
                 patch.object(github.time, "sleep") as sleep,
             ):
                 github.publish_release(BETA, COMMIT, directory, True)
-                command.assert_called_once()
-                self.assertIn("--draft=false", command.call_args.args)
+                command.assert_not_called()
+                api.assert_called_with(
+                    f"repos/{REPOSITORY}/releases/123",
+                    "--method",
+                    "PATCH",
+                    "--field",
+                    "draft=false",
+                    "--field",
+                    "prerelease=true",
+                    "--raw-field",
+                    "make_latest=false",
+                )
                 verify.assert_called_once_with(published, directory)
                 self.assertEqual(sleep.call_count, 3)
                 self.assertTrue(
                     all(
                         call.args == (f"repos/{REPOSITORY}/releases/123",)
-                        for call in api.call_args_list
+                        for call in api.call_args_list[:-1]
                     )
                 )
 
@@ -316,6 +328,29 @@ class ReleaseVisibilityTests(unittest.TestCase):
                     github.publish_release(BETA, COMMIT, directory, True)
                 self.assertEqual(api.call_count, 6)
                 self.assertTrue(all(len(call.args) == 1 for call in api.call_args_list))
+
+    def test_failed_publication_patch_is_not_retried(self):
+        draft = {
+            "id": 123,
+            "draft": True,
+            "tag_name": BETA,
+            "target_commitish": COMMIT,
+            "prerelease": True,
+        }
+        with (
+            patch.object(github, "wait_for_release", return_value=draft),
+            patch.object(github, "wait_for_release_assets", return_value=draft),
+            patch.object(github, "check_tag_available"),
+            patch.object(
+                github, "github_api", side_effect=subprocess.CalledProcessError(1, "gh")
+            ) as api,
+            patch.object(github, "verify_immutable_release") as verify,
+            self.assertRaises(subprocess.CalledProcessError),
+        ):
+            github.publish_release(BETA, COMMIT, Path("unused"), True)
+        api.assert_called_once()
+        self.assertIn("PATCH", api.call_args.args)
+        verify.assert_not_called()
 
     def test_release_assets_api_errors_are_not_retried(self):
         with tempfile.TemporaryDirectory() as temporary:
