@@ -20,8 +20,7 @@ export default defineConfig({
   retries: localStaging ? 0 : 2,
   webServer: localStaging
     ? {
-        command:
-          'bunx wrangler dev --config wrangler.staging.jsonc --local --ip 127.0.0.1 --port 4180 --inspector-port 0',
+        command: 'bunx wrangler pages dev dist --ip 127.0.0.1 --port 4180 --inspector-port 0',
         url: `${localStagingUrl}/deployment.json`,
         reuseExistingServer: false,
         timeout: 60_000,

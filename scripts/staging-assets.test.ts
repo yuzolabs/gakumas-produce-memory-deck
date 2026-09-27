@@ -69,6 +69,13 @@ describe('staging deployment metadata', () => {
       'v0.1.0-beta.2',
     );
   });
+  it('rejects a root 404.html that would disable Pages SPA fallback', () => {
+    writeFileSync(join(directory, 'index.html'), '<!doctype html>');
+    writeFileSync(join(directory, '404.html'), 'Not found');
+    expect(() =>
+      writeStagingAssets(directory, createStagingDeployment(commit, 'v0.1.0-beta.1')),
+    ).toThrow('Staging Pages build must not contain a root 404.html');
+  });
   it('refuses to generate metadata without a built site', () => {
     expect(() =>
       writeStagingAssets(directory, createStagingDeployment(commit, 'v0.1.0-beta.1')),

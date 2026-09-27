@@ -6,9 +6,9 @@ if [[ ! "${BETA_TAG:-}" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)-b
   exit 1
 fi
 
-# This workflow deploys only the fixed staging Worker, never a production hostname.
-if [[ ! "${STAGING_URL:-}" =~ ^https://gakumas-produce-memory-deck-staging\.[a-z0-9-]+\.workers\.dev$ ]]; then
-  echo 'Staging release validation failed: STAGING_URL must be the staging workers.dev origin without a trailing slash' >&2
+# Use the fixed staging Pages project, not a preview alias or production project.
+if [[ "${STAGING_URL:-}" != 'https://gakumas-produce-memory-deck-staging.pages.dev' ]]; then
+  echo 'Staging release validation failed: STAGING_URL must be https://gakumas-produce-memory-deck-staging.pages.dev without a trailing slash' >&2
   exit 1
 fi
 

@@ -22,7 +22,7 @@ function runScript(script: string, overrides: Record<string, string> = {}) {
       ...process.env,
       PATH: `${directory}/bin:${process.env.PATH}`,
       BETA_TAG: 'v0.1.0-beta.1',
-      STAGING_URL: 'https://gakumas-produce-memory-deck-staging.example.workers.dev',
+      STAGING_URL: 'https://gakumas-produce-memory-deck-staging.pages.dev',
       GITHUB_SHA: commit,
       GH_REPO: 'example/repository',
       STAGING_RUN_URL: 'https://github.com/example/repository/actions/runs/1',
@@ -80,8 +80,13 @@ describe('staging release validation', () => {
   it.each([
     '',
     'https://production.example.com',
-    'http://gakumas-produce-memory-deck-staging.example.workers.dev',
-    'https://gakumas-produce-memory-deck-staging.example.workers.dev/',
+    'https://gakumas-produce-memory-deck-staging.example.workers.dev',
+    'http://gakumas-produce-memory-deck-staging.pages.dev',
+    'https://gakumas-produce-memory-deck-staging.pages.dev/',
+    'https://gakumas-produce-memory-deck.pages.dev',
+    'https://preview.gakumas-produce-memory-deck-staging.pages.dev',
+    'https://gakumas-produce-memory-deck-staging.pages.dev.evil.example',
+    'https://gakumas-produce-memory-deck-staging.pages.dev\n',
   ])('rejects invalid staging URL %s', (url) =>
     expect(runScript('validate-staging-release', { STAGING_URL: url }).status).not.toBe(0),
   );
