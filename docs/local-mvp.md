@@ -249,11 +249,12 @@ E2E 用ポートは `4179` 固定です。使用中の場合はテストが失�
 
 ## Cloudflare staging 公開手順
 
-Cloudflare Workers Static Assets へ GitHub Actions から手動デプロイします。
+Cloudflare Pages の staging 専用プロジェクトへ GitHub Actions から手動デプロイします。
 画像はサイトに同梱し、D1 や API は使いません。
 認証情報の登録、初回公開、beta Release の運用は [staging デプロイ](staging-deployment.md) を参照してください。
 
-`wrangler.staging.jsonc` で SPA フォールバックを設定しています。
-`/memories/new` や `/settings` を直接開いても `index.html` を返します。
+`wrangler.jsonc` でビルド出力を `dist/` に設定しています。
+Pages はルートに `404.html` がない場合、SPA フォールバックを有効にします。
+`/memories/new` や `/settings` を直接開いてもアプリを表示できます。
 他の静的サーバーでも、未一致パスを `index.html` に戻す設定が必要です。
 SPA のエラー画面はアプリ側で表示します。

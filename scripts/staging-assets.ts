@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 /** Validates the commit and beta tag embedded in staging deployment metadata. */
@@ -23,6 +23,12 @@ export function writeStagingAssets(
 ) {
   // Fail if the build did not produce an entry point; never create a metadata-only dist.
   readFileSync(join(assetDirectory, 'index.html'));
+  // Pages only enables its automatic SPA fallback when no root 404.html exists.
+  if (existsSync(join(assetDirectory, '404.html'))) {
+    throw new Error(
+      'Staging Pages build must not contain a root 404.html: SPA fallback would be disabled',
+    );
+  }
   writeFileSync(
     join(assetDirectory, 'deployment.json'),
     `${JSON.stringify(deployment, null, 2)}\n`,

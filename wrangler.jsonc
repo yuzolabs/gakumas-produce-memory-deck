@@ -1,11 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "gakumas-produce-memory-deck-staging",
+  "pages_build_output_dir": "./dist",
   "compatibility_date": "2026-09-25",
-  "workers_dev": true,
-  "preview_urls": false,
-  "assets": {
-    "directory": "./dist",
-    "not_found_handling": "single-page-application",
-  },
 }
