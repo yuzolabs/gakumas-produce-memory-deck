@@ -247,23 +247,13 @@ E2E 用ポートは `4179` 固定です。使用中の場合はテストが失�
 スクリーンショットと失敗時のトレースは `test-results/` に出力します。
 テストは別ブラウザコンテキストで実行し、手動確認用ブラウザのデータは変更しません。
 
-## 将来のCloudflare公開手順（未実行）
+## Cloudflare staging 公開手順
 
-公開候補は Cloudflare Pages の静的配信です。D1 や API は不要です。
-以下はアカウントとデプロイ権限を用意できた後の手順です。今回のローカル実装では実行していません。
+Cloudflare Workers Static Assets へ GitHub Actions から手動デプロイします。
+画像はサイトに同梱し、D1 や API は使いません。
+認証情報の登録、初回公開、beta Release の運用は [staging デプロイ](staging-deployment.md) を参照してください。
 
-1. `bun run check` と `bun run test:e2e` を実行する。
-2. Cloudflare ダッシュボードの Workers & Pages から Pages の Direct Upload を作成する。
-3. プロジェクト名を指定し、ビルド済みの `dist/` をアップロードする。
-4. 公開操作後、提供された `<project>.pages.dev` を開く。独自ドメインは不要。
-5. `/memories/new`、実在 ID の `/memories/:id/edit`、`/settings` を直接開き、再読み込みを確認する。
-6. 公開先で登録・編集・バックアップを確認する。ローカルのデータ移動は JSON を使用する。
-
-Pages はルートに `404.html` がない場合、SPA として未一致パスをルートへ返します。
-この構成には `404.html` を置いていません。
-他の静的サーバーを使う場合は、未一致パスを `index.html` に戻す設定が必要です。
+`wrangler.staging.jsonc` で SPA フォールバックを設定しています。
+`/memories/new` や `/settings` を直接開いても `index.html` を返します。
+他の静的サーバーでも、未一致パスを `index.html` に戻す設定が必要です。
 SPA のエラー画面はアプリ側で表示します。
-
-公式ドキュメント:
-[Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/)、
-[Serving Pages](https://developers.cloudflare.com/pages/configuration/serving-pages/)。

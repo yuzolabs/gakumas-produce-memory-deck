@@ -6,6 +6,8 @@ useDefault = true
 [allowlist]
 description = "Global allowlist"
 paths = [
+  # Agent Skills 配下は prek と GitHub Actions の両方で検査対象から除外する。
+  '''^\.agents/skills/''',
   '''.*\.lock$''',
   '''(go|pnpm|package|yarn)-lock\.(json|yaml|toml)$''',
   '''node_modules/.*''',

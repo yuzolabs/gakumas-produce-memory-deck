@@ -6,13 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "bun run validate:master && tsc --noEmit && vite build",
+    "build:staging": "bun scripts/build-staging.ts",
     "validate:master": "bun scripts/validate-memory-master.ts",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "format": "prettier --write src scripts tests vite.config.ts vitest.config.ts playwright.config.ts package.json tsconfig.json components.json index.html",
-    "format:check": "prettier --check src scripts tests vite.config.ts vitest.config.ts playwright.config.ts package.json tsconfig.json components.json index.html",
+    "test:staging": "playwright test --config playwright.staging.config.ts",
+    "test:staging:local": "STAGING_LOCAL=1 playwright test --config playwright.staging.config.ts",
+    "verify:staging:local": "wrangler deploy --config wrangler.staging.jsonc --dry-run && bun run test:staging:local",
+    "deploy:staging": "bun run deploy:staging:dry-run && wrangler deploy --config wrangler.staging.jsonc",
+    "deploy:staging:dry-run": "bun run build:staging && bun run verify:staging:local",
+    "format": "prettier --write src scripts tests vite.config.ts vitest.config.ts 'playwright*.config.ts' wrangler.staging.jsonc .github/workflows/deploy-staging.yml package.json tsconfig.json components.json index.html",
+    "format:check": "prettier --check src scripts tests vite.config.ts vitest.config.ts 'playwright*.config.ts' wrangler.staging.jsonc .github/workflows/deploy-staging.yml package.json tsconfig.json components.json index.html",
     "check": "bun run typecheck && bun run test && bun run build"
   },
   "private": true,
@@ -50,6 +56,7 @@
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
     "typescript": "^7.0.2",
     "vite": "^8.3.0",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.1",
+    "wrangler": "4.135.0"
   }
 }

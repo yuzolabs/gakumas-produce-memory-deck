@@ -1,0 +1,96 @@
+name: Deploy staging
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Beta tag (e.g. v0.1.0-beta.1)'
+        required: true
+        type: string
+
+permissions: {}
+
+# Serialize deployment AND release creation, including retries.
+concurrency:
+  group: cloudflare-staging
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy and verify staging
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    environment:
+      name: staging
+      url: ${{ vars.STAGING_URL }}
+    outputs:
+      staging_url: ${{ steps.record.outputs.staging_url }}
+    env:
+      BETA_TAG: ${{ inputs.version }}
+      STAGING_URL: ${{ vars.STAGING_URL }}
+      EXPECTED_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Validate staging release inputs
+        shell: bash
+        run: bash scripts/validate-staging-release.sh
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: 1.3.6
+      - run: bun install --frozen-lockfile
+      - run: bun run check
+      - run: bun run format:check
+      - run: bunx playwright install --with-deps chromium
+      - run: bun run test:e2e
+      - name: Build staging assets
+        run: bun run build:staging
+      - name: Verify staging assets in local Cloudflare runtime
+        run: bun run verify:staging:local
+      - name: Deploy staging static assets
+        shell: bash
+        run: |
+          : "${CLOUDFLARE_API_TOKEN:?Register the staging Environment secret}"
+          : "${CLOUDFLARE_ACCOUNT_ID:?Register the staging Environment secret}"
+          # Deploy exactly the assets checked above, without rebuilding them.
+          bunx wrangler deploy --config wrangler.staging.jsonc
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Verify deployed staging site
+        run: bun run test:staging
+      - name: Record deployment
+        id: record
+        shell: bash
+        run: |
+          printf 'staging_url=%s\n' "$STAGING_URL" >> "$GITHUB_OUTPUT"
+          printf '## Staging\n\n- URL: %s\n- Commit: %s\n- Beta: %s\n' \
+            "$STAGING_URL" "$GITHUB_SHA" "$BETA_TAG" >> "$GITHUB_STEP_SUMMARY"
+
+  release:
+    name: Publish beta prerelease
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write # Create the beta tag and GitHub prerelease only after verification.
+    env:
+      BETA_TAG: ${{ inputs.version }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      STAGING_URL: ${{ needs.deploy.outputs.staging_url }}
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Create beta prerelease
+        shell: bash
+        env:
+          STAGING_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: bash scripts/create-staging-release.sh

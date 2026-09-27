@@ -3,8 +3,11 @@ repos:
     rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # v6.0.0
     hooks:
       - id: check-yaml
+      # Preserve vendored Cloudflare skills byte-for-byte; security hooks still scan them.
       - id: end-of-file-fixer
+        exclude: '^(\.agents/skills/(cloudflare|wrangler|workers-best-practices)/|licenses/cloudflare-skills-LICENSE\.txt$)'
       - id: trailing-whitespace
+        exclude: '^\.agents/skills/(cloudflare|wrangler|workers-best-practices)/'
       - id: check-json
         exclude: '^\.devcontainer/.*\.json$'
       - id: check-toml
