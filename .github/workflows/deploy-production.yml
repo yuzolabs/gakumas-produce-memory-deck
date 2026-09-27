@@ -1,0 +1,95 @@
+name: Deploy production
+
+on:
+  workflow_dispatch:
+    inputs:
+      beta_version:
+        description: 'Verified immutable beta (e.g. v0.1.0-beta.2 -> v0.1.0)'
+        required: true
+        type: string
+
+permissions: {}
+
+# Hold the lock through approval, deployment, verification and release publication.
+concurrency:
+  group: cloudflare-production
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    name: Verify beta provenance
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read # Verify the staging workflow and its recorded smoke-test attempt.
+    env:
+      BETA_VERSION: ${{ inputs.beta_version }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
+      - name: Verify immutable beta and successful staging run
+        run: python3 scripts/promote_production_release.py inspect
+
+  deploy:
+    name: Promote verified assets to production
+    needs: inspect
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write # Prepare a complete draft and publish the immutable stable release.
+      actions: read # Recheck beta provenance after the environment approval.
+    environment:
+      name: production
+      url: https://gakumas-produce-memory-deck.pages.dev
+    env:
+      BETA_VERSION: ${{ inputs.beta_version }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
+      - name: Prepare and upload production draft assets
+        id: prepare
+        run: python3 scripts/promote_production_release.py prepare
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        if: steps.prepare.outputs.already_published != 'true'
+        with:
+          bun-version: 1.3.6
+      - name: Install pinned deployment tooling without lifecycle scripts
+        if: steps.prepare.outputs.already_published != 'true'
+        run: bun install --frozen-lockfile --ignore-scripts
+      - name: Deploy downloaded production assets
+        if: steps.prepare.outputs.already_published != 'true'
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SOURCE_COMMIT: ${{ steps.prepare.outputs.commit }}
+        run: |
+          : "${CLOUDFLARE_API_TOKEN:?Register the production Environment secret}"
+          : "${CLOUDFLARE_ACCOUNT_ID:?Register the production Environment secret}"
+          "$GITHUB_WORKSPACE/node_modules/.bin/wrangler" --cwd .release/production pages deploy site \
+            --project-name=gakumas-produce-memory-deck \
+            --branch=main \
+            --commit-hash="$SOURCE_COMMIT"
+      - name: Verify production and publish immutable stable release
+        if: steps.prepare.outputs.already_published != 'true'
+        run: python3 scripts/promote_production_release.py finalize
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Record production promotion
+        shell: bash
+        env:
+          RELEASE_VERSION: ${{ steps.prepare.outputs.version }}
+          SOURCE_COMMIT: ${{ steps.prepare.outputs.commit }}
+          ALREADY_PUBLISHED: ${{ steps.prepare.outputs.already_published }}
+        run: |
+          printf '## Production\n\n- URL: https://gakumas-produce-memory-deck.pages.dev\n- Version: %s\n- Source beta: %s\n- Commit: %s\n- Already published (deployment skipped): %s\n' \
+            "$RELEASE_VERSION" "$BETA_VERSION" "$SOURCE_COMMIT" "$ALREADY_PUBLISHED" >> "$GITHUB_STEP_SUMMARY"
